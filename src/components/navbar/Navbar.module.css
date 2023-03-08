@@ -16,6 +16,11 @@
     border-color:#f0f0f0;
 }
 
+.image:hover {
+    border-color:rgb(45, 255, 52);
+    border-width: -5px;
+}
+
 .menu {
     display: flex;
     align-items: center;
@@ -33,7 +38,9 @@
 }
 
 .navbar a:hover {
-    /* text-decoration: underline; */
+    text-decoration: underline;
+    color: rgb(45, 255, 52);
+    font-style:oblique;
 }
 
 .mobile_btn {
