@@ -1,0 +1,33 @@
+h1 {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    display: block;
+    margin: auto;
+    margin-bottom: 60px;
+    width: 200px;
+    height: 40px;
+}
+
+input:active {
+    border: none;
+}
+
+button {
+    padding: 4px 10px;
+    background-color: #333;
+    color: #f8f8f8;
+    border: none;
+    box-shadow: rgba(0,0,0,.5) 0 4px 10px;
+}
+
+button:hover {
+    background-image: linear-gradient(rgb(79, 254, 85), rgb(9, 206, 16));
+    color: #333;
+}

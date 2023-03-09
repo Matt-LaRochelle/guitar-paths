@@ -1,0 +1,10 @@
+.songs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.mastered, .working, .dream {
+    border-style: solid;
+    box-shadow: rgba(0,0,0,.7) 0 8px 15px;
+}
