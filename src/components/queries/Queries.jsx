@@ -9,6 +9,9 @@ function Queries() {
             <button type="submit" >Submit</button>
         </form>
             <h1>Search Results:</h1>
+            <div className={styles.hide}>
+
+            
             <p>ABCDEFU</p>
             <p>A Thousand Years</p>
             <p>About A Girl</p>
@@ -74,6 +77,7 @@ function Queries() {
             <p>Motion Sickness</p>
             <p>My Heart Will Go On</p>
             <p>My Immortal</p>
+            </div>
         </div>
     );
 }
