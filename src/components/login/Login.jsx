@@ -4,11 +4,11 @@ import styles from './Login.module.css';
 function Login() {
     return (
         <div className={styles.container}>
-            <h1>Log In</h1>
-            <form>
-                <input type='text' name="username" placeholder="Username"></input>
-                <input type='password' name='password' placeholder="Password"></input>
-                <button type='submit'>Log In</button>
+            <h1 className={styles.title}>Log In</h1>
+            <form className={styles.content}>
+                <input className={styles.login} type='text' name="username" placeholder="Username"></input>
+                <input className={styles.login}type='password' name='password' placeholder="Password"></input>
+                <button className={styles.submit} type='submit'>Log In</button>
             </form>
         </div>
     );

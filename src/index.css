@@ -5,8 +5,26 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  color: #f8f8f8;
 }
 
 ul {
   list-style-type: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  padding: 4px 10px;
+  background-color: #333;
+  color: #f8f8f8;
+  border: none;
+  box-shadow: rgba(0,0,0,.5) 0 4px 10px;
+}
+
+button:hover {
+  background-image: linear-gradient(rgb(79, 254, 85), rgb(9, 206, 16));
+  color: #333;
 }

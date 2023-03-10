@@ -1,17 +1,66 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from './Queries.module.css';
+var data = require("../../songs.json");
 
 function Queries() {
+
+    const [value, setValue] = useState('');
+
+    const onChange = (event) => {
+        setValue(event.target.value);
+    }
+
+    const onSearch= (searchTerm) => {
+        setValue(searchTerm);
+        // our api to fetch the search result
+        console.log('search', searchTerm);
+    }
     return (
         <div>
-        <form>
+            <div className={styles.container}>
+                <div className={styles.searchContainer}>
+                    <div className={styles.searchInner}>
+                        <input type="text" placeholder="Search..."value={value} onChange={onChange} />
+                        <button onClick={()=>onSearch(value)}>Search</button>
+                    </div>
+                    <div className={styles.dropdown}>
+                        {data
+                            .filter(item => {
+                                const searchTerm = value.toLowerCase();
+                                const fullName = item.title.toLowerCase();
+
+                                return (
+                                    searchTerm && 
+                                    fullName.startsWith(searchTerm) && 
+                                    fullName !==searchTerm
+                                );
+                        })
+                        .slice(0,7)
+                        .map((item) => (
+                            <div 
+                                onClick={()=>onSearch(item.title)} 
+                                className={styles.dropdownRow}
+                                key={item.title}
+                            >
+                                {item.title}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        {/* <form>
             <input type="search" placeholder="search..."></input>
             <button type="submit" >Submit</button>
         </form>
-            <h1>Search Results:</h1>
-            <div className={styles.hide}>
+            <h1>Search Results:</h1> */}
 
-            
+
+
+
+
+
+
+            <div className={styles.hide}>
             <p>ABCDEFU</p>
             <p>A Thousand Years</p>
             <p>About A Girl</p>
@@ -78,6 +127,9 @@ function Queries() {
             <p>My Heart Will Go On</p>
             <p>My Immortal</p>
             </div>
+
+
+
         </div>
     );
 }

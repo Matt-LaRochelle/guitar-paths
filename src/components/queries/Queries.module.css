@@ -1,4 +1,4 @@
-div {
+/* div {
     background-color: rgb(1, 43, 67);
     color: #f8f8f8;
     padding: 20px;
@@ -6,8 +6,69 @@ div {
 
 h1 {
     padding-bottom: 10px;
-}
+} */
 
 .hide {
     display: none;
+}
+
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /* border: 1px solid red; */
+    margin: 30px;
+    height: 100vh;
+}
+
+.searchContainer {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid orange; */
+    /* margin: 30px; */
+}
+
+.dropdown {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid yellow; */
+}
+
+.dropdown:empty {
+    border: none;
+}
+
+.dropdownRow {
+    cursor: pointer;
+    text-align: left;
+    margin: 0;
+    /* border: 1px solid rgb(21, 66, 125); */
+}
+
+.dropdownRow:hover {
+    color: rgb(45, 255, 52);
+}
+
+input {
+    width: 80%;
+    border: none;
+    padding: 0 4px;
+    border-radius: 5px;
+    color: #333;
+}
+
+.searchInner {
+    display: flex;
+    /* border: 1px solid pink; */
+}
+
+button {
+    height: 40px;
+    border-radius: 5px;
+    width: 18%;
+    margin-left: 10px;
 }
