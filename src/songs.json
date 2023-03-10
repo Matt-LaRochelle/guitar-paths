@@ -1,0 +1,269 @@
+{
+    "title": "Greensleeves",
+    "artist": "King Henry VIII of England",
+    "instruments": ["guitar", "voice"],
+    "bpm": 86,
+    "tuning": "Standard",
+    "capo": false,
+    "rating": "Kid",
+    "voiceRange": 15,
+    "guitarRange": 3,
+    "exercise": false,
+    "difficulty": 1,
+    "type": ["GP", "PDF", "Video"]
+}
+
+{
+    "title": "Gollum's Song",
+    "artist": "Emilíana Torrini",
+    "instruments": ["guitar", "voice"],
+    "bpm": 120,
+    "tuning": "Standard",
+    "capo": false,
+    "rating": "Kid",
+    "voiceRange": 20,
+    "guitarRange": 6,
+    "exercise": false,
+    "difficulty": 3,
+    "type": ["GP", "PDF", "Video"]
+}
+
+{
+    "title": "Jenny of Oldstones",
+    "artist": "Florence and the Machine",
+    "instruments": ["guitar", "voice"],
+    "bpm": 120,
+    "tuning": "Standard",
+    "capo": false,
+    "rating": "Kid",
+    "voiceRange": 14,
+    "guitarRange": 4,
+    "exercise": false,
+    "difficulty": 3,
+    "type": ["GP", "PDF", "Video"]
+}
+
+{
+    "title": "Le Festin",
+    "artist": "Michael Giacchino",
+    "instruments": ["guitar", "voice"],
+    "bpm": 136,
+    "tuning": "Standard",
+    "capo": true,
+    "rating": "Kid",
+    "voiceRange": 19,
+    "guitarRange": 5,
+    "exercise": false,
+    "difficulty": 3,
+    "type": ["GP", "PDF", "Video"]
+}
+
+{
+    "title": "Oh Holy Night",
+    "artist": "Adolphe Adam",
+    "instruments": ["guitar", "voice"],
+    "bpm": 150,
+    "tuning": "Standard",
+    "capo": false,
+    "rating": "Kid",
+    "voiceRange": 19,
+    "guitarRange": 3,
+    "exercise": false,
+    "difficulty": 2,
+    "type": ["GP", "PDF", "Video"]
+}
+
+{
+    "title": "I'm Yours",
+    "artist": "Jason Mraz",
+    "instruments": ["guitar", "voice"],
+    "bpm": 150,
+    "tuning": "Different",
+    "capo": false,
+    "rating": "Kid",
+    "voiceRange": 16,
+    "guitarRange": 3,
+    "exercise": false,
+    "difficulty": 4,
+    "type": ["GP", "PDF", "Video"]
+}
+
+{
+    "title": "Have Yourself a Merry Little Christmas",
+    "artist": "Hugh Martin and Ralph Blane",
+    "instruments": ["guitar", "voice"],
+    "bpm": 152,
+    "tuning": "Standard",
+    "capo": false,
+    "rating": "Kid",
+    "voiceRange": 17,
+    "guitarRange": 4,
+    "exercise": false,
+    "difficulty": 2,
+    "type": ["GP", "PDF", "Video"]
+}
+
+{
+    "title": "Bittersweet Symphony",
+    "artist": "Boyce Avenue",
+    "instruments": ["guitar", "voice"],
+    "bpm": 176,
+    "tuning": "Different",
+    "capo": false,
+    "rating": "Teen",
+    "voiceRange": 19,
+    "guitarRange": 13,
+    "exercise": false,
+    "difficulty": 3,
+    "type": ["GP", "PDF", "Video"]
+}
+
+{
+    "title": "Havana",
+    "artist": "Camila Cabello",
+    "instruments": ["guitar", "voice"],
+    "bpm": 210,
+    "tuning": "Standard",
+    "capo": true,
+    "rating": "Teen",
+    "voiceRange": 15,
+    "guitarRange": 4,
+    "exercise": false,
+    "difficulty": 2,
+    "type": ["GP", "PDF", "Video"]
+}
+
+{
+    "title": "Circles",
+    "artist": "Post Malone",
+    "instruments": ["guitar", "voice"],
+    "bpm": 240,
+    "tuning": "Standard",
+    "capo": true,
+    "rating": "Teen",
+    "voiceRange": 14,
+    "guitarRange": 3,
+    "exercise": false,
+    "difficulty": 2,
+    "type": ["GP", "PDF", "Video"]
+}
+
+{
+    "title": "What's Up",
+    "artist": "4 Non Blondes",
+    "instruments": ["guitar", "voice"],
+    "bpm": 260,
+    "tuning": "Standard",
+    "capo": false,
+    "rating": "Teen",
+    "voiceRange": 22,
+    "guitarRange": 4,
+    "exercise": false,
+    "difficulty": 4,
+    "type": ["GP", "PDF", "Video"]
+}
+
+{
+    "title": "Brave Sir Robin",
+    "artist": "Monty Python",
+    "instruments": ["guitar", "voice"],
+    "bpm": 276,
+    "tuning": "Standard",
+    "capo": false,
+    "rating": "Teen",
+    "voiceRange": 12,
+    "guitarRange": 3,
+    "exercise": false,
+    "difficulty": 1,
+    "type": ["GP", "PDF", "Video"]
+}
+
+{
+    "title": "A Thousand Years",
+    "artist": "Christina Perri",
+    "instruments": ["guitar", "voice"],
+    "bpm": 284,
+    "tuning": "Standard",
+    "capo": false,
+    "rating": "Kid",
+    "voiceRange": 19,
+    "guitarRange": 3,
+    "exercise": false,
+    "difficulty": 4,
+    "type": ["GP", "PDF", "Video"]
+}
+
+{
+    "title": "Country Roads, Take Me Home",
+    "artist": "John Denver",
+    "instruments": ["guitar", "voice"],
+    "bpm": 328,
+    "tuning": "Standard",
+    "capo": true,
+    "rating": "Kid",
+    "voiceRange": 14,
+    "guitarRange": 5,
+    "exercise": false,
+    "difficulty": 2,
+    "type": ["GP", "PDF", "Video"]
+}
+
+{
+    "title": "Electric Love",
+    "artist": "Børns",
+    "instruments": ["guitar", "voice"],
+    "bpm": 354,
+    "tuning": "Standard",
+    "capo": true,
+    "rating": "Kid",
+    "voiceRange": 21,
+    "guitarRange": 5,
+    "exercise": false,
+    "difficulty": 2,
+    "type": ["GP", "PDF", "Video"]
+}
+
+{
+    "title": "Greensleeves",
+    "artist": "King Henry VIII of England",
+    "instruments": ["guitar", "voice"],
+    "bpm": 86,
+    "tuning": "Standard",
+    "capo": false,
+    "rating": "Kid",
+    "voiceRange": 15,
+    "guitarRange": 3,
+    "exercise": false,
+    "difficulty": 1,
+    "type": ["GP", "PDF", "Video"]
+}
+
+{
+    "title": "Fast Car",
+    "artist": "Tracy Chapman",
+    "instruments": ["guitar", "voice"],
+    "bpm": 400,
+    "tuning": "Standard",
+    "capo": true,
+    "rating": "Kid",
+    "voiceRange": 12,
+    "guitarRange": 12,
+    "exercise": false,
+    "difficulty": 3,
+    "type": ["GP", "PDF", "Video"]
+}
+
+{
+    "title": "Growing Old On Bleeker Street",
+    "artist": "AJR",
+    "instruments": ["guitar", "voice"],
+    "bpm": 600,
+    "tuning": "Standard",
+    "capo": true,
+    "rating": "Kid",
+    "voiceRange": 12,
+    "guitarRange": 7,
+    "exercise": false,
+    "difficulty": 2,
+    "type": ["GP", "PDF", "Video"]
+}

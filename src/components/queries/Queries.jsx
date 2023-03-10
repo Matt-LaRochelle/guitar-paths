@@ -4,6 +4,10 @@ import styles from './Queries.module.css';
 function Queries() {
     return (
         <div>
+        <form>
+            <input type="search" placeholder="search..."></input>
+            <button type="submit" >Submit</button>
+        </form>
             <h1>Search Results:</h1>
             <p>ABCDEFU</p>
             <p>A Thousand Years</p>
