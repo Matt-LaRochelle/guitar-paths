@@ -20,7 +20,7 @@ h1 {
     align-items: start;
     /* border: 1px solid red; */
     margin: 30px;
-    height: 100vh;
+    height: 80px;
 }
 
 .searchContainer {
@@ -71,4 +71,8 @@ button {
     border-radius: 5px;
     width: 18%;
     margin-left: 10px;
+}
+
+.entry {
+    padding-left: 40px;
 }

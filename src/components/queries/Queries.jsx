@@ -1,6 +1,17 @@
 import React, {useState} from "react";
 import styles from './Queries.module.css';
+import Entry from './Entry';
+
 var data = require("../../songs.json");
+
+
+function createEntry(songEntry) {
+    return <Entry 
+        key={songEntry.key}
+        songName={songEntry.title}
+        artistName={songEntry.artist}
+    />
+}
 
 function Queries() {
 
@@ -53,9 +64,7 @@ function Queries() {
             <button type="submit" >Submit</button>
         </form>
             <h1>Search Results:</h1> */}
-
-
-
+            {data.map(createEntry)}
 
 
 

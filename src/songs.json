@@ -1,5 +1,6 @@
 [
     {
+        "key": 1,
         "title": "Greensleeves",
         "artist": "King Henry VIII of England",
         "instruments": ["guitar", "voice"],
@@ -15,6 +16,7 @@
     },
 
     {
+        "key": 2,
         "title": "Gollum's Song",
         "artist": "Emilíana Torrini",
         "instruments": ["guitar", "voice"],
@@ -30,6 +32,7 @@
     },
 
     {
+        "key": 3,
         "title": "Jenny of Oldstones",
         "artist": "Florence and the Machine",
         "instruments": ["guitar", "voice"],
@@ -45,6 +48,7 @@
     },
 
     {
+        "key": 4,
         "title": "Le Festin",
         "artist": "Michael Giacchino",
         "instruments": ["guitar", "voice"],
@@ -60,6 +64,7 @@
     },
 
     {
+        "key": 5,
         "title": "Oh Holy Night",
         "artist": "Adolphe Adam",
         "instruments": ["guitar", "voice"],
@@ -75,6 +80,7 @@
     },
 
     {
+        "key": 6,
         "title": "I'm Yours",
         "artist": "Jason Mraz",
         "instruments": ["guitar", "voice"],
@@ -90,6 +96,7 @@
     },
 
     {
+        "key": 7,
         "title": "Have Yourself a Merry Little Christmas",
         "artist": "Hugh Martin and Ralph Blane",
         "instruments": ["guitar", "voice"],
@@ -105,6 +112,7 @@
     },
 
     {
+        "key": 8,
         "title": "Bittersweet Symphony",
         "artist": "Boyce Avenue",
         "instruments": ["guitar", "voice"],
@@ -120,6 +128,7 @@
     },
 
     {
+        "key": 9,
         "title": "Havana",
         "artist": "Camila Cabello",
         "instruments": ["guitar", "voice"],
@@ -135,6 +144,7 @@
     },
 
     {
+        "key": 10,
         "title": "Circles",
         "artist": "Post Malone",
         "instruments": ["guitar", "voice"],
@@ -150,6 +160,7 @@
     },
 
     {
+        "key": 11,
         "title": "What's Up",
         "artist": "4 Non Blondes",
         "instruments": ["guitar", "voice"],
@@ -165,6 +176,7 @@
     },
 
     {
+        "key": 12,
         "title": "Brave Sir Robin",
         "artist": "Monty Python",
         "instruments": ["guitar", "voice"],
@@ -180,6 +192,7 @@
     },
 
     {
+        "key": 13,
         "title": "A Thousand Years",
         "artist": "Christina Perri",
         "instruments": ["guitar", "voice"],
@@ -195,6 +208,7 @@
     },
 
     {
+        "key": 14,
         "title": "Country Roads, Take Me Home",
         "artist": "John Denver",
         "instruments": ["guitar", "voice"],
@@ -210,6 +224,7 @@
     },
 
     {
+        "key": 15,
         "title": "Electric Love",
         "artist": "Børns",
         "instruments": ["guitar", "voice"],
@@ -225,6 +240,7 @@
     },
 
     {
+        "key": 16,
         "title": "Greensleeves",
         "artist": "King Henry VIII of England",
         "instruments": ["guitar", "voice"],
@@ -240,6 +256,7 @@
     },
 
     {
+        "key": 17,
         "title": "Fast Car",
         "artist": "Tracy Chapman",
         "instruments": ["guitar", "voice"],
@@ -255,6 +272,7 @@
     },
 
     {
+        "key": 18,
         "title": "Growing Old On Bleeker Street",
         "artist": "AJR",
         "instruments": ["guitar", "voice"],
