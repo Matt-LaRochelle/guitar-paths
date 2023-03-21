@@ -285,5 +285,37 @@
         "exercise": false,
         "difficulty": 2,
         "type": ["GP", "PDF", "Video"]
+    },
+
+    {
+        "key": 19,
+        "title": "Wake Me Up",
+        "artist": "Avicii",
+        "instruments": ["guitar", "voice"],
+        "bpm": 756,
+        "tuning": "Standard",
+        "capo": false,
+        "rating": "Kid",
+        "voiceRange": 21,
+        "guitarRange": 5,
+        "exercise": false,
+        "difficulty": 5,
+        "type": ["GP", "PDF", "Video"]
+    },
+
+    {
+        "key": 20,
+        "title": "Children of the Grave",
+        "artist": "Black Sabbath",
+        "instruments": ["guitar", "voice"],
+        "bpm": 432,
+        "tuning": "Drop D Full step down",
+        "capo": false,
+        "rating": "Kid",
+        "voiceRange": 12,
+        "guitarRange": 15,
+        "exercise": false,
+        "difficulty": 4,
+        "type": ["GP", "PDF", "Video"]
     }
 ]
