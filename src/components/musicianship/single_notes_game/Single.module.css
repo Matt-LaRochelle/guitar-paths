@@ -22,6 +22,7 @@
 .note_game {
     max-width: 400px;
     position: relative;
+    border: 2px solid aqua;
 }
 
 .note_game:hover {
@@ -82,17 +83,42 @@
 .correct {
     /* opacity: 1; */
     color: lime;
-    font-size: 3rem;
+    font-size: 10rem;
     background-color: lime;
     position:absolute;
-    top: 250px;
-    left: 50px;
+    top: 177px;
+    left: 29%;
+    border-radius: 100%;
 }
 
 .incorrect {
     background-color: red;
-    font-size: 3rem;
+    font-size: 10rem;
     position: absolute;
-    top: 250px;
-    left: 50px;
+    top: 177px;
+    left: 29%;
+    border-radius: 100%;
+}
+
+
+@media screen and (max-width: 812px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 3rem;
+    }
+
+    .note_game {
+        display: block;
+        max-width: 100%;
+        margin-bottom: 50px;
+
+    }
+
+    .correct {
+        left: 10px;
+    }
+
+    .incorrect {
+        left: 10px;
+    }
 }
