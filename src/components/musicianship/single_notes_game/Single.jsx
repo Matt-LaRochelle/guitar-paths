@@ -255,16 +255,17 @@ function Single() {
 
 
     return (
-        <div>
-            <h2>Notes on the Guitar</h2>
-            <div>
-                <h3>Sharps</h3>
+        <div className={styles.grid}>
+            
+            <div className={styles.key}>
+                <h2 className={styles.title}>Notes on the Guitar</h2>
+                <h3 className={styles.title}>Sharps</h3>
                 <img className={styles.sharps} src={sharps} alt="notes and sharp notes on guitar neck" />
-                <h3>Flats</h3>
+                <h3 className={styles.title}>Flats</h3>
                 <img className={styles.flats} src={flats} alt="notes and flat notes on guitar neck" />
             </div>
             <div className={styles.note_game}>
-                <h3 className={styles.title}>Ear training game</h3>
+                <h2 className={styles.title}>Ear training game</h2>
                 <button className={styles.noteBtn} onClick={play_note}>Play note</button>
                 <label className={styles.tries}>Tries: {count}</label>
                 <input className={styles.input} onChange={handleChange} type="text" value={inputText} />

@@ -1,21 +1,31 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.key {
+    /* border: 2px solid aqua; */
+}
+
 .sharps {
     width: 400px;
+    display: block;
+    margin: 0 auto 30px;
 }
 
 .flats {
     width: 400px;
+    display: block;
+    margin: 0 auto 30px;
 }
 
 .note_game {
-    box-shadow: rgba(0,255,0,0.9) 0px 8px 24px 10px;
     max-width: 400px;
-    margin: 50px auto;
-    border-radius: 5px;
-    padding: 50px;
 }
 
 .title {
     text-align: center;
+    margin-top: 30px;
 }
 
 .noteBtn {

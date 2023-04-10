@@ -8,6 +8,10 @@
   color: #f8f8f8;
 }
 
+body {
+  background-color: rgb(1, 43, 67);
+}
+
 ul {
   list-style-type: none;
 }

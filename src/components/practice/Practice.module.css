@@ -1,3 +1,9 @@
+.container {
+    display: block;
+    margin: auto;
+    max-width: 75ch;
+}
+
 h2 {
     margin-bottom: 20px;
 }

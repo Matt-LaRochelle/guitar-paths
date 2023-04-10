@@ -5,9 +5,9 @@ import Single from './single_notes_game/Single';
 function Musicianship() {
     return (
         <div className={styles.container}>
-            <h1>Musicianship</h1>
+            <h1 className={styles.title}>Musicianship</h1>
             <Single />
-            <h2>Intervals</h2>
+            {/* <h2>Intervals</h2>
             <h4>Ascending:</h4>
             <ul>
                 <li>Minor 2nd: Jaws</li>
@@ -37,7 +37,7 @@ function Musicianship() {
                 <li>Minor 7th: ???</li>
                 <li>Major 7th: ???</li>
                 <li>Perfect Octave: ???</li>
-            </ul>
+            </ul> */}
         </div>
     );
 }

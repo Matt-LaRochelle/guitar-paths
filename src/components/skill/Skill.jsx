@@ -14,11 +14,11 @@ function Skill() {
             <h2>Two Hand Tapping</h2>
             <h2>Chucking</h2>
             <h2>Finger Style</h2>
-            <h2>Thumb slap</h2>
+            {/* <h2>Thumb slap</h2> */}
             <h2>Harmonics</h2>
             <h2>Artificial Harmonics</h2>
-            <h2>Whammy Bar</h2>
-            <h2>Sweep Picking</h2>
+            {/* <h2>Whammy Bar</h2>
+            <h2>Sweep Picking</h2> */}
         </div>
     );
 }

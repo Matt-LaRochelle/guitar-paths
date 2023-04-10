@@ -64,7 +64,7 @@ function Queries() {
             <button type="submit" >Submit</button>
         </form>
             <h1>Search Results:</h1> */}
-            {data.map(createEntry)}
+            {/* {data.map(createEntry)} */}
 
 
 
