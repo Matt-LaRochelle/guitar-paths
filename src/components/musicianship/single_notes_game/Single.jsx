@@ -43,27 +43,168 @@ import s37 from '../../guitar_notes/number_notes/37.mp3';
 
 function Single() {
 
-    const audioClips = [s1, s2, s3, s4, s5]
+    const audioClips = [
+                    {
+                        "clip": s1,
+                        "note_name": ["e"]
+                    },
+                    {
+                        "clip": s2,
+                        "note_name": ["f"]
+                    },
+                    {
+                        "clip": s3,
+                        "note_name": ["f#", "gb"]
+                    },
+                    {
+                        "clip": s4,
+                        "note_name": ["g"]
+                    },
+                    {
+                        "clip": s5,
+                        "note_name": ["g#", "ab"]
+                    },
+                    {
+                        "clip": s6,
+                        "note_name": ["a"]
+                    },
+                    {
+                        "clip": s7,
+                        "note_name": ["a#", "bb"]
+                    },
+                    {
+                        "clip": s8,
+                        "note_name": ["b"]
+                    },
+                    {
+                        "clip": s9,
+                        "note_name": ["c"]
+                    },
+                    {
+                        "clip": s10,
+                        "note_name": ["c#", "db"]
+                    },
+                    {
+                        "clip": s11,
+                        "note_name": ["d"]
+                    },
+                    {
+                        "clip": s12,
+                        "note_name": ["d#", "eb"]
+                    },
+                    {
+                        "clip": s13,
+                        "note_name": ["e"]
+                    },
+                    {
+                        "clip": s14,
+                        "note_name": ["f"]
+                    },
+                    {
+                        "clip": s15,
+                        "note_name": ["f#", "gb"]
+                    },
+                    {
+                        "clip": s16,
+                        "note_name": ["g"]
+                    },
+                    {
+                        "clip": s17,
+                        "note_name": ["g#", "ab"]
+                    },
+                    {
+                        "clip": s18,
+                        "note_name": ["a"]
+                    },
+                    {
+                        "clip": s19,
+                        "note_name": ["a#", "bb"]
+                    },
+                    {
+                        "clip": s20,
+                        "note_name": ["b"]
+                    },
+                    {
+                        "clip": s21,
+                        "note_name": ["c"]
+                    },
+                    {
+                        "clip": s22,
+                        "note_name": ["c#", "db"]
+                    },
+                    {
+                        "clip": s23,
+                        "note_name": ["d"]
+                    },
+                    {
+                        "clip": s24,
+                        "note_name": ["d#", "eb"]
+                    },
+                    {
+                        "clip": s25,
+                        "note_name": ["e"]
+                    },
+                    {
+                        "clip": s26,
+                        "note_name": ["f"]
+                    },
+                    {
+                        "clip": s27,
+                        "note_name": ["f#", "gb"]
+                    },
+                    {
+                        "clip": s28,
+                        "note_name": ["g"]
+                    },
+                    {
+                        "clip": s29,
+                        "note_name": ["g#", "ab"]
+                    },
+                    {
+                        "clip": s30,
+                        "note_name": ["a"]
+                    },
+                    {
+                        "clip": s31,
+                        "note_name": ["a#", "bb"]
+                    },
+                    {
+                        "clip": s32,
+                        "note_name": ["b"]
+                    },
+                    {
+                        "clip": s33,
+                        "note_name": ["c"]
+                    },
+                    {
+                        "clip": s34,
+                        "note_name": ["c#", "db"]
+                    },
+                    {
+                        "clip": s35,
+                        "note_name": ["d"]
+                    },
+                    {
+                        "clip": s36,
+                        "note_name": ["d#", "eb"]
+                    },
+                    {
+                        "clip": s37,
+                        "note_name": ["e"]
+                    },
+                    ]
+
     const [sound, setSound] = useState(s5);
     const [count, setCount] = useState(4);
-    const [answer, setAnswer] = useState("D");
-
-    // s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31, s32, s33, s34, s35, s36, s37
-
-    const answers = [
-        {"s1": "E"},
-        {"s2": "F"},
-        {"s3": "F#"},
-        {"s4": "G"},
-        {"s5": "G#"}
-    ]
+    const [answer, setAnswer] = useState(["d"]);
+    const [inputText, setInputText] = useState("");
 
     function play_note() {
         const note = new Audio(sound);
         note.play();
     }
 
-    const [inputText, setInputText] = useState("");
+    
 
     function handleChange(event) {
         const newValue = event.target.value;
@@ -71,16 +212,44 @@ function Single() {
     }
     
     function check_answer() {
+
+        //First three tries:
         if (count > 1) {
             console.log(inputText);
-            setInputText("");
-            setCount(count - 1);
-        } else if (count === 1) {
-            setCount(count + 3);
-            // Get a new number
-            const number = Math.floor(Math.random() * 5)
-            setSound(audioClips[number]);
-            const note = new Audio(sound);
+            if (answer.includes(inputText.toLowerCase()) === true) {
+                alert("yay!");
+                setInputText("");
+                setCount(4);
+
+                // Get a new number
+                const number = Math.floor(Math.random() * 37)
+                setSound(audioClips[number].clip)
+                setAnswer(audioClips[number].note_name);
+
+            } else if (answer.includes(inputText.toLowerCase()) !== true) {
+                alert("Try again");
+                setInputText("");
+                setCount(count - 1);
+            }
+            
+        } 
+        // Last try:
+        else if (count === 1) {
+            if (answer.includes(inputText.toLowerCase()) === true) {
+                alert("yay!");
+                setInputText("");
+                setCount(4);
+
+                // Get a new number
+                const number = Math.floor(Math.random() * 5)
+                setSound(audioClips[number].clip)
+                setAnswer(audioClips[number].note_name);
+
+            } else if (answer.includes(inputText.toLowerCase()) !== true) {
+                alert("Try again");
+                setInputText("");
+                setCount(4);
+            }      
         }
     }
 
