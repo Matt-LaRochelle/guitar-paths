@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from './Single.module.css';
 import sharps from '../../images/note-names-sharps.gif'
 import flats from '../../images/note-names-flats.gif';
@@ -43,13 +43,19 @@ import s37 from '../../guitar_notes/number_notes/37.mp3';
 
 function Single() {
 
+    const [sound, setSound] = useState(s10)
+    const audioClips = [s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31, s32, s33, s34, s35, s36, s37]
+
     function play_note() {
-        const number = Math.floor(Math.random() * 37) + 1
-        const s = "s";
-        const file = s.concat(number);
-        const note = new Audio(file);
+        const number = Math.floor(Math.random() * 37)
+        // const s = "s";
+        // const file = s.concat(number);
+        // console.log(file);
+        setSound(audioClips[number]);
+        const note = new Audio(sound);
         note.play();
-    }
+        }
+    
 
 
     return (
