@@ -1,0 +1,12 @@
+{
+    "id": 1,
+    "note": ["E"],
+    "octave": 2,
+    "sound": url('./')
+},
+
+{
+    "id": 2,
+    "note": ["F"],
+    "octave", 2
+}
