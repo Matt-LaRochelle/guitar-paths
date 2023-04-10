@@ -48,9 +48,6 @@ function Single() {
 
     function play_note() {
         const number = Math.floor(Math.random() * 37)
-        // const s = "s";
-        // const file = s.concat(number);
-        // console.log(file);
         setSound(audioClips[number]);
         const note = new Audio(sound);
         note.play();
@@ -71,6 +68,7 @@ function Single() {
                 <h3>Ear training game</h3>
                 <button onClick={play_note}>Play note</button>
                 <input></input>
+                <button type="submit">Guess</button>
             </div>
         </div>
     );
