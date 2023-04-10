@@ -21,6 +21,7 @@
 
 .note_game {
     max-width: 400px;
+    position: relative;
 }
 
 .note_game:hover {
@@ -78,6 +79,20 @@
     text-align: center;
 }
 
-.animate {
-    opacity: 1;
+.correct {
+    /* opacity: 1; */
+    color: lime;
+    font-size: 3rem;
+    background-color: lime;
+    position:absolute;
+    top: 250px;
+    left: 50px;
+}
+
+.incorrect {
+    background-color: red;
+    font-size: 3rem;
+    position: absolute;
+    top: 250px;
+    left: 50px;
 }

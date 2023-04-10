@@ -40,6 +40,8 @@ import s35 from '../../guitar_notes/number_notes/35.mp3';
 import s36 from '../../guitar_notes/number_notes/36.mp3';
 import s37 from '../../guitar_notes/number_notes/37.mp3';
 
+import { AiOutlineCheckCircle, AiFillCloseCircle } from 'react-icons/ai';
+
 
 function Single() {
 
@@ -198,7 +200,7 @@ function Single() {
     const [count, setCount] = useState(4);
     const [answer, setAnswer] = useState(["g#", "ab"]);
     const [inputText, setInputText] = useState("");
-    const [gotAnswer, setGotAnswer] = useState(true);
+    const [gotAnswer, setGotAnswer] = useState(null);
 
     function play_note() {
         const note = new Audio(sound);
@@ -225,12 +227,20 @@ function Single() {
                 const number = Math.floor(Math.random() * 37)
                 setSound(audioClips[number].clip)
                 setAnswer(audioClips[number].note_name);
+                
                 setGotAnswer(true);
+                setInterval(() => {
+                    setGotAnswer(null);
+                }, 5000);
 
             } else if (answer.includes(inputText.toLowerCase()) !== true) {
                 setInputText("");
                 setCount(count - 1);
+                
                 setGotAnswer(false);
+                setInterval(() => {
+                    setGotAnswer(null);
+                }, 5000);
             }
             
         } 
@@ -239,7 +249,11 @@ function Single() {
             if (answer.includes(inputText.toLowerCase()) === true) {
                 setInputText("");
                 setCount(4);
+                
                 setGotAnswer(true);
+                setInterval(() => {
+                    setGotAnswer(null);
+                }, 5000);
 
                  // Get a new number
                  const number = Math.floor(Math.random() * 37)
@@ -249,7 +263,11 @@ function Single() {
             } else if (answer.includes(inputText.toLowerCase()) !== true) {
                 setInputText("");
                 setCount(4);
+                
                 setGotAnswer(false);
+                setInterval(() => {
+                    setGotAnswer(null);
+                }, 5000);
 
                  // Get a new number
                  const number = Math.floor(Math.random() * 37)
@@ -276,7 +294,8 @@ function Single() {
                 <label className={styles.tries}>Tries: {count}</label>
                 <input className={styles.input} onChange={handleChange} type="text" value={inputText} />
                 <button className={styles.guess} type="submit" onClick={check_answer}>Guess</button>
-                { gotAnswer ? <p className={styles.animate}>Correct!</p> : <p className={styles.animate}>Nope...</p> }
+                { gotAnswer === true ? <AiOutlineCheckCircle className={styles.correct} /> : null }
+                { gotAnswer === false ? <AiFillCloseCircle className={styles.incorrect} /> : null }
                 
             </div>
         </div>
