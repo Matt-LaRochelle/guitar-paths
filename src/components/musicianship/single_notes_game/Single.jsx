@@ -196,7 +196,7 @@ function Single() {
 
     const [sound, setSound] = useState(s5);
     const [count, setCount] = useState(4);
-    const [answer, setAnswer] = useState(["d"]);
+    const [answer, setAnswer] = useState(["g#", "ab"]);
     const [inputText, setInputText] = useState("");
 
     function play_note() {
