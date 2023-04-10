@@ -198,6 +198,7 @@ function Single() {
     const [count, setCount] = useState(4);
     const [answer, setAnswer] = useState(["g#", "ab"]);
     const [inputText, setInputText] = useState("");
+    const [gotAnswer, setGotAnswer] = useState(true);
 
     function play_note() {
         const note = new Audio(sound);
@@ -217,7 +218,6 @@ function Single() {
         if (count > 1) {
             console.log(inputText);
             if (answer.includes(inputText.toLowerCase()) === true) {
-                alert("yay!");
                 setInputText("");
                 setCount(4);
 
@@ -225,30 +225,36 @@ function Single() {
                 const number = Math.floor(Math.random() * 37)
                 setSound(audioClips[number].clip)
                 setAnswer(audioClips[number].note_name);
+                setGotAnswer(true);
 
             } else if (answer.includes(inputText.toLowerCase()) !== true) {
-                alert("Try again");
                 setInputText("");
                 setCount(count - 1);
+                setGotAnswer(false);
             }
             
         } 
         // Last try:
         else if (count === 1) {
             if (answer.includes(inputText.toLowerCase()) === true) {
-                alert("yay!");
                 setInputText("");
                 setCount(4);
+                setGotAnswer(true);
 
-                // Get a new number
-                const number = Math.floor(Math.random() * 5)
-                setSound(audioClips[number].clip)
-                setAnswer(audioClips[number].note_name);
+                 // Get a new number
+                 const number = Math.floor(Math.random() * 37)
+                 setSound(audioClips[number].clip)
+                 setAnswer(audioClips[number].note_name);
 
             } else if (answer.includes(inputText.toLowerCase()) !== true) {
-                alert("Try again");
                 setInputText("");
                 setCount(4);
+                setGotAnswer(false);
+
+                 // Get a new number
+                 const number = Math.floor(Math.random() * 37)
+                 setSound(audioClips[number].clip)
+                 setAnswer(audioClips[number].note_name);
             }      
         }
     }
@@ -270,6 +276,8 @@ function Single() {
                 <label className={styles.tries}>Tries: {count}</label>
                 <input className={styles.input} onChange={handleChange} type="text" value={inputText} />
                 <button className={styles.guess} type="submit" onClick={check_answer}>Guess</button>
+                { gotAnswer ? <p className={styles.animate}>Correct!</p> : <p className={styles.animate}>Nope...</p> }
+                
             </div>
         </div>
     );
