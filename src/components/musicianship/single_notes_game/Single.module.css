@@ -5,3 +5,27 @@
 .flats {
     width: 400px;
 }
+
+.noteBtn {
+    display: block;
+    margin: 50px auto;
+}
+
+.tries {
+    display: block;
+    text-align: center;
+}
+
+.input {
+    display: block;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.guess {
+    display: block;
+    margin: 50px auto;
+}

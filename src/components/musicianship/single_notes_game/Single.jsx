@@ -43,16 +43,49 @@ import s37 from '../../guitar_notes/number_notes/37.mp3';
 
 function Single() {
 
-    const [sound, setSound] = useState(s10)
-    const audioClips = [s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31, s32, s33, s34, s35, s36, s37]
+    const audioClips = [s1, s2, s3, s4, s5]
+    const [sound, setSound] = useState(s5);
+    const [count, setCount] = useState(4);
+    const [answer, setAnswer] = useState("D");
+
+    // s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31, s32, s33, s34, s35, s36, s37
+
+    const answers = [
+        {"s1": "E"},
+        {"s2": "F"},
+        {"s3": "F#"},
+        {"s4": "G"},
+        {"s5": "G#"}
+    ]
 
     function play_note() {
-        const number = Math.floor(Math.random() * 37)
-        setSound(audioClips[number]);
-        const note = new Audio(sound);
-        note.play();
+        if (count > 1) {
+            console.log(count);
+            const note = new Audio(sound);
+            note.play();
+            setCount(count - 1);
+        } else if (count === 1) {
+            setCount(count + 3);
+
+            // Get a new number
+            const number = Math.floor(Math.random() * 5)
+            setSound(audioClips[number]);
+            const note = new Audio(sound);
+            note.play();
         }
+    }
+
+    const [inputText, setInputText] = useState("");
+
+    function handleChange(event) {
+        const newValue = event.target.value;
+        setInputText(newValue);
+    }
     
+    function check_answer() {
+        console.log(inputText);
+        setInputText("");
+    }
 
 
     return (
@@ -66,9 +99,10 @@ function Single() {
             </div>
             <div className={styles.note_game}>
                 <h3>Ear training game</h3>
-                <button onClick={play_note}>Play note</button>
-                <input></input>
-                <button type="submit">Guess</button>
+                <button className={styles.noteBtn} onClick={play_note}>Play note</button>
+                <label className={styles.tries}>Tries: {count}</label>
+                <input className={styles.input} onChange={handleChange} type="text" value={inputText} />
+                <button className={styles.guess} type="submit" onClick={check_answer}>Guess</button>
             </div>
         </div>
     );
