@@ -20,7 +20,7 @@ function Practice() {
                 <li>When strumming go through all strings quickly and evenly</li>
                 <li>Movement should be left to right on the wrist</li>
             </ul>
-            <h4>Using a metronome</h4>
+            <h4>Using a metronome:</h4>
             <ul>
                 <li>Start very slow (around 60bpm)</li>
                 <li>Speed up the metronome by 10 bpm only when you can play a passage constistenly correct, with minimal effort</li>

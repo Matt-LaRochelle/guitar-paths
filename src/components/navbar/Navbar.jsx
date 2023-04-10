@@ -13,25 +13,25 @@ const Navbar = () => {
             <nav>
                 <ul className={nav ? [styles.menu, styles.active].join(' ') : [styles.menu]}>
                     <li>
-                        <Link to="practice" >Practice tips</Link>
+                        <Link to="practice" onClick={()=> setNav(false)} >Practice tips</Link>
                     </li>
                     <li>
-                    <Link to="musicianship" >Musicianship</Link>
+                    <Link to="musicianship" onClick={()=> setNav(false)}>Musicianship</Link>
                     </li>
                     <li>
-                        <Link to="skill" >Skills</Link>
+                        <Link to="skill" onClick={()=> setNav(false)}>Skills</Link>
                     </li>
                     <li>
-                        <Link to="theory" >Theory</Link>
+                        <Link to="theory" onClick={()=> setNav(false)}>Theory</Link>
                     </li>
                     <li>
-                        <Link to="login" >Log in</Link>
+                        <Link to="login" onClick={()=> setNav(false)}>Log in</Link>
                     </li>
                     <li>
-                        <Link to="queries" ><AiOutlineSearch size={25} style={{marginTop: "6px"}} /></Link>
+                        <Link to="queries" onClick={()=> setNav(false)}><AiOutlineSearch size={25} style={{marginTop: "6px"}} /></Link>
                     </li>
                     <li>
-                        <Link to="profile" ><AiOutlineUser size={25} style={{marginTop: "6px"}} /></Link>
+                        <Link to="profile" onClick={()=> setNav(false)}><AiOutlineUser size={25} style={{marginTop: "6px"}} /></Link>
                     </li>
                 </ul>
             </nav>
