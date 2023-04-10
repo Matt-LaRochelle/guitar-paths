@@ -6,9 +6,22 @@
     width: 400px;
 }
 
+.note_game {
+    box-shadow: rgba(0,255,0,0.9) 0px 8px 24px 10px;
+    max-width: 400px;
+    margin: 50px auto;
+    border-radius: 5px;
+    padding: 50px;
+}
+
+.title {
+    text-align: center;
+}
+
 .noteBtn {
     display: block;
     margin: 50px auto;
+    padding: 10px 20px;
 }
 
 .tries {
@@ -23,9 +36,12 @@
     height: 80px;
     font-size: 2rem;
     font-weight: 500;
+    color: #333;
 }
 
 .guess {
     display: block;
-    margin: 50px auto;
+    margin: 50px auto 0;
+    padding: 10px 20px;
+    text-align: center;
 }

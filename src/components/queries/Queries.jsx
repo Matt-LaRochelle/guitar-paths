@@ -31,8 +31,8 @@ function Queries() {
             <div className={styles.container}>
                 <div className={styles.searchContainer}>
                     <div className={styles.searchInner}>
-                        <input type="text" placeholder="Search..."value={value} onChange={onChange} />
-                        <button onClick={()=>onSearch(value)}>Search</button>
+                        <input className={styles.input} type="text" placeholder="Search..."value={value} onChange={onChange} />
+                        <button className={styles.button} onClick={()=>onSearch(value)}>Search</button>
                     </div>
                     <div className={styles.dropdown}>
                         {data

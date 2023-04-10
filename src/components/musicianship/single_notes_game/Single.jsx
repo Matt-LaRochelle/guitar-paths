@@ -59,20 +59,8 @@ function Single() {
     ]
 
     function play_note() {
-        if (count > 1) {
-            console.log(count);
-            const note = new Audio(sound);
-            note.play();
-            setCount(count - 1);
-        } else if (count === 1) {
-            setCount(count + 3);
-
-            // Get a new number
-            const number = Math.floor(Math.random() * 5)
-            setSound(audioClips[number]);
-            const note = new Audio(sound);
-            note.play();
-        }
+        const note = new Audio(sound);
+        note.play();
     }
 
     const [inputText, setInputText] = useState("");
@@ -83,8 +71,17 @@ function Single() {
     }
     
     function check_answer() {
-        console.log(inputText);
-        setInputText("");
+        if (count > 1) {
+            console.log(inputText);
+            setInputText("");
+            setCount(count - 1);
+        } else if (count === 1) {
+            setCount(count + 3);
+            // Get a new number
+            const number = Math.floor(Math.random() * 5)
+            setSound(audioClips[number]);
+            const note = new Audio(sound);
+        }
     }
 
 
@@ -98,7 +95,7 @@ function Single() {
                 <img className={styles.flats} src={flats} alt="notes and flat notes on guitar neck" />
             </div>
             <div className={styles.note_game}>
-                <h3>Ear training game</h3>
+                <h3 className={styles.title}>Ear training game</h3>
                 <button className={styles.noteBtn} onClick={play_note}>Play note</button>
                 <label className={styles.tries}>Tries: {count}</label>
                 <input className={styles.input} onChange={handleChange} type="text" value={inputText} />
