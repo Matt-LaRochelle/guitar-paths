@@ -40,7 +40,7 @@ import s35 from '../../guitar_notes/number_notes/35.mp3';
 import s36 from '../../guitar_notes/number_notes/36.mp3';
 import s37 from '../../guitar_notes/number_notes/37.mp3';
 
-import { AiOutlineCheckCircle, AiFillCloseCircle } from 'react-icons/ai';
+import { AiOutlineCheckCircle, AiOutlineCloseCircle } from 'react-icons/ai';
 
 
 function Single() {
@@ -315,7 +315,7 @@ function Single() {
                     <input className={styles.input} onChange={handleChange} type="text" value={inputText} />
                     <button className={styles.guess} type="submit" onClick={check_answer}>Guess</button>
                     { gotAnswer === true ? <AiOutlineCheckCircle className={styles.correct} /> : null }
-                    { gotAnswer === false ? <AiFillCloseCircle className={styles.incorrect} /> : null }
+                    { gotAnswer === false ? <AiOutlineCloseCircle className={styles.incorrect} /> : null }
                 </div>
             </div>
 

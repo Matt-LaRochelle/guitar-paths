@@ -84,21 +84,29 @@
 
 .correct {
     /* opacity: 1; */
-    color: lime;
+    /* color: lime; */
     font-size: 10rem;
-    background-color: lime;
+    /* background-color: lime; */
+    background-color: rgb(1, 43, 67);
+    fill: rgb(0, 255, 0);
     position:absolute;
-    top: 162px;
-    left: 30%;
+    display: block;
+    top: 166px;
+    left: 50%;
+    margin-left: -80px;
     border-radius: 100%;
+    /* border: 2px solid aqua; */
 }
 
 .incorrect {
-    background-color: red;
+    /* background-color: red; */
+    fill: rgb(255,0,0);
+    background-color: rgb(1, 43, 67);
     font-size: 10rem;
     position: absolute;
-    top: 162px;
-    left: 30%;
+    top: 166px;
+    left: 50%;
+    margin-left: -80px;
     border-radius: 100%;
 }
 
@@ -124,7 +132,7 @@
     opacity: 0;
     pointer-events: none;
     transform: translateY(-100px);
-    transition: opacity 1500ms ease-in-out, transform 1500ms ease-in-out;
+    transition: opacity 1000ms ease-in-out, transform 1000ms ease-in-out;
 }
 
 .howToPlayHidden {
@@ -139,7 +147,7 @@
 
     opacity: 1;
     transform: translateY(-10px);
-    transition: opacity 1500ms ease-in-out, transform 1500ms ease-in-out;
+    transition: opacity 1000ms ease-in-out, transform 1000ms ease-in-out;
 }
 
 .ul {
@@ -162,14 +170,6 @@
         max-width: 100%;
         margin-bottom: 50px;
 
-    }
-
-    .correct {
-        left: 10px;
-    }
-
-    .incorrect {
-        left: 10px;
     }
 
     .howToPlayHidden {
