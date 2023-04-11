@@ -5,7 +5,7 @@ import jack from '../images/download.jpg';
 function Home() {
     return (
         <div className={styles.container}>
-            <h1>Welcome Cowards</h1>
+            {/* <h1>Welcome Cowards</h1> */}
             <img className={styles.img} src={jack} alt="Jack Black" />
             {/* <h2>This weeks performances:</h2>
             <h2>Random tab of the week:</h2>

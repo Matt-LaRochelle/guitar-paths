@@ -196,10 +196,20 @@ function Single() {
                     },
                     ]
 
-    const [sound, setSound] = useState(s5);
+
+    //Which sound is being used
+    const [sound, setSound] = useState(s30);
+
+    //Amount of tries
     const [count, setCount] = useState(4);
-    const [answer, setAnswer] = useState(["g#", "ab"]);
+
+    //Name of note
+    const [answer, setAnswer] = useState(["a"]);
+
+    //Input text answer
     const [inputText, setInputText] = useState("");
+
+    //Green check mark or red x
     const [gotAnswer, setGotAnswer] = useState(null);
 
     function play_note() {
@@ -208,12 +218,13 @@ function Single() {
     }
 
     
-
+    //Function for loggin what is written in input
     function handleChange(event) {
         const newValue = event.target.value;
         setInputText(newValue);
     }
     
+    //Main logic of the game
     function check_answer() {
 
         //First three tries:
@@ -232,7 +243,7 @@ function Single() {
                 setTimeout(() => {
                     setGotAnswer(null);
                 }, 1000);
-
+            
             } else if (answer.includes(inputText.toLowerCase()) !== true) {
                 setInputText("");
                 setCount(count - 1);
@@ -278,25 +289,55 @@ function Single() {
     }
 
 
+    const [help, setHelp] = useState(false)
+    //Help menu
+    function handleClick() {
+        setHelp(!help)
+    }
+
+
     return (
-        <div className={styles.grid}>
-            
-            <div className={styles.key}>
-                <h2 className={styles.title}>Notes on the Guitar</h2>
-                <h3 className={styles.title}>Sharps</h3>
-                <img className={styles.sharps} src={sharps} alt="notes and sharp notes on guitar neck" />
-                <h3 className={styles.title}>Flats</h3>
-                <img className={styles.flats} src={flats} alt="notes and flat notes on guitar neck" />
+
+        //Game
+        <div className={styles.page}>
+            <div className={styles.grid}>
+                <div className={styles.key}>
+                    <h2 className={styles.title}>Notes on the Guitar</h2>
+                    <h3 className={styles.title}>Sharps</h3>
+                    <img className={styles.sharps} src={sharps} alt="notes and sharp notes on guitar neck" />
+                    <h3 className={styles.title}>Flats</h3>
+                    <img className={styles.flats} src={flats} alt="notes and flat notes on guitar neck" />
+                </div>
+                <div className={styles.note_game}>
+                    <h2 className={styles.title}>Ear training game</h2>
+                    <button className={styles.noteBtn} onClick={play_note}>Play note</button>
+                    <label className={styles.tries}>Tries: {count}</label>
+                    <input className={styles.input} onChange={handleChange} type="text" value={inputText} />
+                    <button className={styles.guess} type="submit" onClick={check_answer}>Guess</button>
+                    { gotAnswer === true ? <AiOutlineCheckCircle className={styles.correct} /> : null }
+                    { gotAnswer === false ? <AiFillCloseCircle className={styles.incorrect} /> : null }
+                </div>
             </div>
-            <div className={styles.note_game}>
-                <h2 className={styles.title}>Ear training game</h2>
-                <button className={styles.noteBtn} onClick={play_note}>Play note</button>
-                <label className={styles.tries}>Tries: {count}</label>
-                <input className={styles.input} onChange={handleChange} type="text" value={inputText} />
-                <button className={styles.guess} type="submit" onClick={check_answer}>Guess</button>
-                { gotAnswer === true ? <AiOutlineCheckCircle className={styles.correct} /> : null }
-                { gotAnswer === false ? <AiFillCloseCircle className={styles.incorrect} /> : null }
-                
+
+            {/* help menu */}
+            <div className={styles.help}>
+                <button className={styles.btn} onClick={handleClick}>How to play</button>
+                <div className={ help ? styles.howToPlayHidden : styles.howToPlay}>
+                    <h1>How to Play</h1>
+                    <ul className={styles.ul}>
+                        <li className={styles.li}>Press "Play note" button to hear the note</li>
+                        <li className={styles.li}>Play notes on your guitar until you find one that matches</li>
+                        <li className={styles.li}>Note will be somewhere on first 12 frets of guitar</li>
+                        <li className={styles.li}>Refer to "Notes on the Guitar" charts to see which note it is</li>
+                        <li className={styles.li}>Type note into white box</li>
+                        <li className={styles.li}>Can use capitol "A" or lowercase "a"</li>
+                        <li className={styles.li}>Use # for sharp and b for flat</li>
+                        <li className={styles.li}>You can decide to write in sharps or flats, whichever you want practice in (A# = Bb)</li>
+                        <li className={styles.li}>Examples of responses: A, a, Bb, bb, C#, c#</li>
+                        <li className={styles.li}>Check your answer by clicking "Guess"</li>
+                        <li className={styles.li}>You get four guesses before a new note will be played</li>
+                    </ul>
+                </div>
             </div>
         </div>
     );
