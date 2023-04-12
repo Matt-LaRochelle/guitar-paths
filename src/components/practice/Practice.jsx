@@ -5,6 +5,7 @@ function Practice() {
     return (
         <div className={styles.container}>
             <h1>Practice tips</h1>
+            <a href='https://donate.stripe.com/28o4jj5mO8DB1kk000'>Donations</a>
             <h2>Level 1</h2>
             <h4>Left hand:</h4>
             <ul>
