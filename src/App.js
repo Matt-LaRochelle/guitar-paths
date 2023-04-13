@@ -10,6 +10,7 @@ import Skill from './components/skill/Skill';
 import Theory from './components/theory/Theory';
 import Login from './components/login/Login';
 import Profile from './components/profile/Profile';
+import Game from './components/game/Game';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/theory" element={<Theory />}/>
         <Route path="/login" element={<Login />}/>
         <Route path="/profile" element={<Profile />}/>
+        <Route path="/game" element={<Game />}/>
 
       </Routes>
       
