@@ -16,13 +16,13 @@ const Navbar = () => {
                         {/* <Link to="practice" onClick={()=> setNav(false)} >Practice tips</Link> */}
                     </li>
                     <li>
-                    <Link to="musicianship" onClick={()=> setNav(false)}>Musicianship</Link>
+                    <Link to="eartraining" onClick={()=> setNav(false)}>Ear Training</Link>
                     </li>
                     <li>
                         {/* <Link to="skill" onClick={()=> setNav(false)}>Skills</Link> */}
                     </li>
                     <li>
-                        {/* <Link to="theory" onClick={()=> setNav(false)}>Theory</Link> */}
+                        <Link to="theory" onClick={()=> setNav(false)}>Theory</Link>
                     </li>
                     <li>
                         {/* <Link to="login" onClick={()=> setNav(false)}>Log in</Link> */}

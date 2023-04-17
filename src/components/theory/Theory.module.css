@@ -4,3 +4,15 @@
     max-width: 75ch;
     padding: 5px;
 }
+
+.title {
+    margin-top: 50px;
+}
+
+.guitarDiagram {
+    width: 300px;
+}
+
+.img {
+    max-width: 600px;
+}
