@@ -1,13 +1,48 @@
 import React from "react";
 import styles from './Intervals.module.css';
+import audioClip from '../noteSounds/noteSounds';
+import m2 from './intervalDiagrams/m2.png';
+
+import jaws from './intervalDiagrams/jaws.mp3';
+
+
 
 function Intervals() {
+    const audioClips = audioClip;
+
+    function min2() {
+        const note = new Audio(audioClips[0].clip);
+        note.play();
+        setTimeout(() => {
+            const note2 = new Audio(audioClips[1].clip);
+            note2.play();
+        }, 1000); 
+    }
+
+    function jaws() {
+        const sample = new Audio(jaws);
+        sample.play();
+    }
     return (
         <div className={styles.container}>
             <h2>Intervals</h2>
             <h4>Ascending:</h4>
             <ul>
-                <li>Minor 2nd: Jaws</li>
+                <li className={styles.li}>
+                    <p>Minor 2nd: Jaws</p>
+                    <button className={styles.btn} onClick={min2}>Interval Sound</button>
+                    <button className={styles.btn} onClick={jaws}>Interval in Context</button>
+                    <iframe 
+                        width="200" 
+                        height="200" 
+                        src="https://www.youtube.com/embed/2J6IA5T7RTs" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen
+                        >
+                    </iframe>
+                    <img className={styles.diagram} src={m2} alt="diagram" /></li>
                 <li>Major 2nd: Happy Birthday</li>
                 <li>Minor 3rd: Greensleeves</li>
                 <li>Major 3rd: Oh When The Saints</li>

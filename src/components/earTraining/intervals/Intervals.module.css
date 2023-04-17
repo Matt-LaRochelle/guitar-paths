@@ -1,3 +1,25 @@
 .container {
     background-color: rgb(3, 62, 13);
 }
+
+.li {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    margin-top: 20px;
+}
+
+.diagram {
+    height: 150px;
+}
+
+.btn {
+    /* height: 20px; */
+    display: block;
+    margin: auto;
+    /* width: 40px; */
+}
+
+p {
+    font-size: 2rem;
+}
