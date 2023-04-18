@@ -3,7 +3,7 @@ import styles from './Intervals.module.css';
 import audioClip from '../noteSounds/noteSounds';
 import m2 from './intervalDiagrams/m2.png';
 
-import jaws from './intervalDiagrams/jaws.mp3';
+import intervals from '../noteSounds/intervalSounds';
 
 
 
@@ -20,7 +20,7 @@ function Intervals() {
     }
 
     function jaws() {
-        const sample = new Audio(jaws);
+        const sample = new Audio(intervals[0].clip);
         sample.play();
     }
     return (
