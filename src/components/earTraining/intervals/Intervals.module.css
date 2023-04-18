@@ -2,24 +2,39 @@
     background-color: rgb(3, 62, 13);
 }
 
+.h2 {
+    text-align: center;
+    padding: 50px;
+}
+
 .li {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr) ;
     grid-gap: 1rem;
     margin-top: 20px;
+    /* border: 2px solid red; */
+    padding: 30px;
 }
 
 .diagram {
-    height: 150px;
+    height: 200px;
+    /* border: 2px solid orange; */
+}
+
+.video {
+    /* border: 2px solid purple; */
+    margin: 0px auto;
 }
 
 .btn {
     /* height: 20px; */
-    display: block;
-    margin: auto;
+    display: inline;
+    margin:  130px 20px 0 0;
     /* width: 40px; */
+    /* border: 2px solid lime; */
 }
 
-p {
+.p {
     font-size: 2rem;
+    /* border: 2px solid aqua; */
 }

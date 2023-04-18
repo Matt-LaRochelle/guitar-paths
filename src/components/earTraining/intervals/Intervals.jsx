@@ -34,13 +34,15 @@ function Intervals() {
 
     return (
         <div className={styles.container}>
-            <h2>Intervals</h2>
-            <h4>Ascending:</h4>
+            <h2 className={styles.h2}>Ascending Intervals</h2>
             <ul>
-                <li className={styles.li}>
-                    <p>Minor 2nd: Jaws</p>
-                    <button className={styles.btn} id="1" onClick={interval}>Interval Sound</button>
-                    <button className={styles.btn} id="0" onClick={context}>Interval in Context</button>
+                <li className={styles.li} style={{backgroundColor: 'green'}}>
+                    <div>
+                        <p className={styles.p}>Minor 2nd: Jaws</p>
+                        <button className={styles.btn} id="1" onClick={interval}>Interval Sound</button>
+                        <button className={styles.btn} id="0" onClick={context}>Interval in Context</button>
+                    </div>
+                    
                     <iframe 
                         width="200" 
                         height="200" 
@@ -49,62 +51,63 @@ function Intervals() {
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         allowfullscreen
+                        className={styles.video}
                         >
                     </iframe>
                     <img className={styles.diagram} src={m2} alt="diagram" />
                 </li>
-                <li className={styles.li}>
-                    <p>Major 2nd: Happy Birthday</p>
+                <li className={styles.li} style={{backgroundColor: 'blue'}}>
+                    <p className={styles.p}>Major 2nd: Happy Birthday</p>
                     <button className={styles.btn} id="2" onClick={interval}>Interval Sound</button>
                     <button className={styles.btn} id="1" onClick={context}>Interval in Context</button>
                 </li>
-                <li>
-                    <p>Minor 3rd: Greensleeves</p>
+                <li className={styles.li} style={{backgroundColor: 'purple'}}>
+                    <p className={styles.p}>Minor 3rd: Greensleeves</p>
                     <button className={styles.btn} id="3" onClick={interval}>Interval Sound</button>
                     <button className={styles.btn} id="2" onClick={context}>Interval in Context</button>
                 </li>
-                <li>
-                    <p>Major 3rd: Oh When The Saints</p>
+                <li className={styles.li} style={{backgroundColor: 'red'}}>
+                    <p className={styles.p}>Major 3rd: Oh When The Saints</p>
                     <button className={styles.btn} id="4" onClick={interval}>Interval Sound</button>
                     <button className={styles.btn} id="3" onClick={context}>Interval in Context</button>
                 </li>
-                <li>
-                    <p>Perfect 4th: Wedding March</p>
+                <li className={styles.li} style={{backgroundColor: 'orange'}}>
+                    <p className={styles.p}>Perfect 4th: Wedding March</p>
                     <button className={styles.btn} id="5" onClick={interval}>Interval Sound</button>
                     <button className={styles.btn} id="4" onClick={context}>Interval in Context</button>
                 </li>
-                <li>
-                    <p>Tritone: The Simpsons</p>
+                <li className={styles.li} style={{backgroundColor: 'yellow'}}>
+                    <p className={styles.p}>Tritone: The Simpsons</p>
                     <button className={styles.btn} id="6" onClick={interval}>Interval Sound</button>
                     <button className={styles.btn} id="5" onClick={context}>Interval in Context</button>
                 </li>
-                <li>
-                    <p>Perfect 5th: Star Wars</p>
+                <li className={styles.li} style={{backgroundColor: 'lime'}}>
+                    <p className={styles.p}>Perfect 5th: Star Wars</p>
                     <button className={styles.btn} id="7" onClick={interval}>Interval Sound</button>
                     <button className={styles.btn} id="6" onClick={context}>Interval in Context</button>
                 </li>
-                <li>
-                    <p>Minor 6th: Go Down Moses</p>
+                <li className={styles.li} style={{backgroundColor: 'aqua'}}>
+                    <p className={styles.p}>Minor 6th: Go Down Moses</p>
                     <button className={styles.btn} id="8" onClick={interval}>Interval Sound</button>
                     <button className={styles.btn} id="7" onClick={context}>Interval in Context</button>
                 </li>
-                <li>
-                    <p>Major 6th: My Bonnie Lies Over The Ocean</p>
+                <li className={styles.li} style={{backgroundColor: 'violet'}}>
+                    <p className={styles.p}>Major 6th: My Bonnie Lies Over The Ocean</p>
                     <button className={styles.btn} id="9" onClick={interval}>Interval Sound</button>
                     <button className={styles.btn} id="8" onClick={context}>Interval in Context</button>
                 </li>
-                <li>
-                    <p>Minor 7th: Somewhere</p>
+                <li className={styles.li} style={{backgroundColor: 'maroon'}}>
+                    <p className={styles.p}>Minor 7th: Somewhere</p>
                     <button className={styles.btn} id="10" onClick={interval}>Interval Sound</button>
                     <button className={styles.btn} id="9" onClick={context}>Interval in Context</button>
                 </li>
-                <li>
-                    <p>Major 7th: Take On Me</p>
+                <li className={styles.li} style={{backgroundColor: 'coral'}}>
+                    <p className={styles.p}>Major 7th: Take On Me</p>
                     <button className={styles.btn} id="11" onClick={interval}>Interval Sound</button>
                     <button className={styles.btn} id="10" onClick={context}>Interval in Context</button>
                 </li>
-                <li>
-                    <p>Perfect Octave: Somewhere Over The Rainbow</p>
+                <li className={styles.li} style={{backgroundColor: 'yellow'}}>
+                    <p className={styles.p}>Perfect Octave: Somewhere Over The Rainbow</p>
                     <button className={styles.btn} id="12" onClick={interval}>Interval Sound</button>
                     <button className={styles.btn} id="11" onClick={context}>Interval in Context</button>
                 </li>
