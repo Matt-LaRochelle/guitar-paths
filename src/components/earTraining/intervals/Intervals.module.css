@@ -7,37 +7,3 @@
     padding: 50px;
 }
 
-.li {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr) ;
-    grid-gap: 1rem;
-    margin-top: 20px;
-    /* border: 2px solid red; */
-    padding: 30px;
-    
-}
-
-.diagram {
-    height: 200px;
-    width: 600px;
-    /* border: 2px solid orange; */
-}
-
-.video {
-    /* border: 2px solid purple; */
-    margin: 0px auto;
-}
-
-.btn {
-    /* height: 20px; */
-    display: inline;
-    margin:  130px 20px 0 0;
-    /* width: 40px; */
-    /* border: 2px solid lime; */
-}
-
-.p {
-    font-size: 2rem;
-    /* border: 2px solid aqua; */
-    color: #333;
-}

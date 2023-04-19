@@ -1,6 +1,5 @@
 import React from "react";
 import styles from './Intervals.module.css';
-import audioClip from '../noteSounds/noteSounds';
 import min2 from './intervalDiagrams/min2.png';
 import maj2 from './intervalDiagrams/maj2.png';
 import min3 from './intervalDiagrams/min3.png';
@@ -13,270 +12,126 @@ import maj6 from './intervalDiagrams/maj6.png';
 import min7 from './intervalDiagrams/min7.png';
 import maj7 from './intervalDiagrams/maj7.png';
 import p8 from './intervalDiagrams/p8.png';
-
-import intervals from '../noteSounds/intervalSounds';
-
+import Interval from './Interval';
+import IntervalGame from './IntervalGame';
 
 
 function Intervals() {
-    const audioClips = audioClip;
-
-    // Plays the two note interval
-    function interval(e) {
-        const note = new Audio(audioClips[5].clip);
-
-        // Turn button ID into number for dynamic intervals
-        let n = (5 + Number(e.target.id))
-        note.play();
-        setTimeout(() => {
-            const note2 = new Audio(audioClips[n].clip);
-            note2.play();
-        }, 1000); 
-    }
-
-    // Plays brief clip of interval in context of song
-    function context(e) {
-        // Turn button ID into number for dynamic intervals
-        let n = Number(e.target.id);
-        const sample = new Audio(intervals[n].clip);
-        sample.play();
-    }
-
-
     return (
         <div className={styles.container}>
             <h2 className={styles.h2}>Ascending Intervals</h2>
             <ul>
-                <li className={styles.li} style={{backgroundColor: 'green'}}>
-                    <div>
-                        <p className={styles.p}>Minor 2nd: Jaws</p>
-                        <button className={styles.btn} id="1" onClick={interval}>Interval Sound</button>
-                        <button className={styles.btn} id="0" onClick={context}>Interval in Context</button>
-                    </div>
-                    <iframe 
-                        width="200" 
-                        height="200" 
-                        src="https://www.youtube.com/embed/2J6IA5T7RTs" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen
-                        className={styles.video}
-                        >
-                    </iframe>
-                    <img className={styles.diagram} src={min2} alt="diagram" />
+                <li>
+                    <Interval
+                        interval="Minor 2nd: Jaws"
+                        id="1"
+                        link="https://www.youtube.com/embed/2J6IA5T7RTs"
+                        diagram={min2}
+                        color="red"
+                    />
                 </li>
-                <li className={styles.li} style={{backgroundColor: 'blue'}}>
-                    <div>
-                    <p className={styles.p}>Major 2nd: Happy Birthday</p>
-                    <button className={styles.btn} id="2" onClick={interval}>Interval Sound</button>
-                    <button className={styles.btn} id="1" onClick={context}>Interval in Context</button>
-                    </div>
-                    <iframe 
-                        width="200" 
-                        height="200" 
-                        src="https://www.youtube.com/embed/HwOA917qJTs" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen
-                        className={styles.video}
-                        >
-                    </iframe>
-                    <img className={styles.diagram} src={maj2} alt="diagram" />
+                <li>
+                    <Interval
+                        interval="Major 2nd: Happy Birthday"
+                        id="2"
+                        link="https://www.youtube.com/embed/HwOA917qJTs"
+                        diagram={maj2}
+                        color="orange"
+                    />
                 </li>
-                <li className={styles.li} style={{backgroundColor: 'purple'}}>
-                    <div>
-                    <p className={styles.p}>Minor 3rd: Greensleeves</p>
-                    <button className={styles.btn} id="3" onClick={interval}>Interval Sound</button>
-                    <button className={styles.btn} id="2" onClick={context}>Interval in Context</button>
-                    </div>
-                    <iframe 
-                        width="200" 
-                        height="200" 
-                        src="https://www.youtube.com/embed/wARiOb80Zr0" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen
-                        className={styles.video}
-                        >
-                    </iframe>
-                    <img className={styles.diagram} src={min3} alt="diagram" />
+                <li>
+                    <Interval
+                        interval="Minor 3rd: Greensleeves"
+                        id="3"
+                        link="https://www.youtube.com/embed/wARiOb80Zr0"
+                        diagram={min3}
+                        color="yellow"
+                    />
                 </li>
-                <li className={styles.li} style={{backgroundColor: 'red'}}>
-                    <div>
-                    <p className={styles.p}>Major 3rd: Oh When The Saints</p>
-                    <button className={styles.btn} id="4" onClick={interval}>Interval Sound</button>
-                    <button className={styles.btn} id="3" onClick={context}>Interval in Context</button>
-                    </div>
-                    <iframe 
-                        width="200" 
-                        height="200" 
-                        src="https://www.youtube.com/embed/2eUzdTF3P2M" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen
-                        className={styles.video}
-                        >
-                    </iframe>
-                    <img className={styles.diagram} src={maj3} alt="diagram" />
+                <li>
+                    <Interval
+                        interval="Major 3rd: Oh When The Saints"
+                        id="4"
+                        link="https://www.youtube.com/embed/2eUzdTF3P2M"
+                        diagram={maj3}
+                        color="lime"
+                    />
                 </li>
-                <li className={styles.li} style={{backgroundColor: 'orange'}}>
-                    <div>
-                    <p className={styles.p}>Perfect 4th: Wedding March</p>
-                    <button className={styles.btn} id="5" onClick={interval}>Interval Sound</button>
-                    <button className={styles.btn} id="4" onClick={context}>Interval in Context</button>
-                    </div>
-                    <iframe 
-                        width="200" 
-                        height="200" 
-                        src="https://www.youtube.com/embed/5C5FOW2ekHo" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen
-                        className={styles.video}
-                        >
-                    </iframe>
-                    <img className={styles.diagram} src={p4} alt="diagram" />
+                <li>
+                    <Interval
+                        interval="Perfect 4th: Wedding March"
+                        id="5"
+                        link="https://www.youtube.com/embed/5C5FOW2ekHo"
+                        diagram={p4}
+                        color="aqua"
+                    />
                 </li>
-                <li className={styles.li} style={{backgroundColor: 'yellow'}}>
-                    <div>
-                    <p className={styles.p}>Tritone: The Simpsons</p>
-                    <button className={styles.btn} id="6" onClick={interval}>Interval Sound</button>
-                    <button className={styles.btn} id="5" onClick={context}>Interval in Context</button>
-                    </div>
-                    <iframe 
-                        width="200" 
-                        height="200" 
-                        src="https://www.youtube.com/embed/YIKPpDSNjR0" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen
-                        className={styles.video}
-                        >
-                    </iframe>
-                    <img className={styles.diagram} src={tt} alt="diagram" />
+                <li>
+                    <Interval
+                        interval="Tritone: The Simpsons"
+                        id="6"
+                        link="https://www.youtube.com/embed/YIKPpDSNjR0"
+                        diagram={tt}
+                        color="blue"
+                    />
                 </li>
-                <li className={styles.li} style={{backgroundColor: 'lime'}}>
-                    <div>
-                    <p className={styles.p}>Perfect 5th: Star Wars</p>
-                    <button className={styles.btn} id="7" onClick={interval}>Interval Sound</button>
-                    <button className={styles.btn} id="6" onClick={context}>Interval in Context</button>
-                    </div>
-                    <iframe 
-                        width="200" 
-                        height="200" 
-                        src="https://www.youtube.com/embed/JG5OsfOuEy0" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen
-                        className={styles.video}
-                        >
-                    </iframe>
-                    <img className={styles.diagram} src={p5} alt="diagram" />
+                <li>
+                    <Interval
+                        interval="Perfect 5th: Star Wars"
+                        id="7"
+                        link="https://www.youtube.com/embed/JG5OsfOuEy0"
+                        diagram={p5}
+                        color="magenta"
+                    />
                 </li>
-                <li className={styles.li} style={{backgroundColor: 'aqua'}}>
-                    <div>
-                    <p className={styles.p}>Minor 6th: Go Down Moses</p>
-                    <button className={styles.btn} id="8" onClick={interval}>Interval Sound</button>
-                    <button className={styles.btn} id="7" onClick={context}>Interval in Context</button>
-                    </div>
-                    <iframe 
-                        width="200" 
-                        height="200" 
-                        src="https://www.youtube.com/embed/XU_GcxTZx8k" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen
-                        className={styles.video}
-                        >
-                    </iframe>
-                    <img className={styles.diagram} src={min6} alt="diagram" />
+                <li>
+                    <Interval
+                        interval="Minor 6th: Go Down Moses"
+                        id="8"
+                        link="https://www.youtube.com/embed/XU_GcxTZx8k"
+                        diagram={min6}
+                        color="red"
+                    />
                 </li>
-                <li className={styles.li} style={{backgroundColor: 'violet'}}>
-                    <div>
-                    <p className={styles.p}>Major 6th: My Bonnie Lies Over The Ocean</p>
-                    <button className={styles.btn} id="9" onClick={interval}>Interval Sound</button>
-                    <button className={styles.btn} id="8" onClick={context}>Interval in Context</button>
-                    </div>
-                    <iframe 
-                        width="200" 
-                        height="200" 
-                        src="https://www.youtube.com/embed/pTqc6EBwr8Y" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen
-                        className={styles.video}
-                        >
-                    </iframe>
-                    <img className={styles.diagram} src={maj6} alt="diagram" />
+                <li>
+                    <Interval
+                        interval="Major 6th: My Bonnie Lies Over The Ocean"
+                        id="9"
+                        link="https://www.youtube.com/embed/pTqc6EBwr8Y"
+                        diagram={maj6}
+                        color="orange"
+                    />
                 </li>
-                <li className={styles.li} style={{backgroundColor: 'maroon'}}>
-                    <div>
-                    <p className={styles.p}>Minor 7th: Somewhere</p>
-                    <button className={styles.btn} id="10" onClick={interval}>Interval Sound</button>
-                    <button className={styles.btn} id="9" onClick={context}>Interval in Context</button>
-                    </div>
-                    <iframe 
-                        width="200" 
-                        height="200" 
-                        src="https://www.youtube.com/embed/HQ32cIGqgdE" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen
-                        className={styles.video}
-                        >
-                    </iframe>
-                    <img className={styles.diagram} src={min7} alt="diagram" />
+                <li>
+                    <Interval
+                        interval="Minor 7th: Somewhere"
+                        id="10"
+                        link="https://www.youtube.com/embed/HQ32cIGqgdE"
+                        diagram={min7}
+                        color="yellow"
+                    />
                 </li>
-                <li className={styles.li} style={{backgroundColor: 'coral'}}>
-                    <div>
-                    <p className={styles.p}>Major 7th: Take On Me</p>
-                    <button className={styles.btn} id="11" onClick={interval}>Interval Sound</button>
-                    <button className={styles.btn} id="10" onClick={context}>Interval in Context</button>
-                    </div>
-                    <iframe 
-                        width="200" 
-                        height="200" 
-                        src="https://www.youtube.com/embed/djV11Xbc914" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen
-                        className={styles.video}
-                        >
-                    </iframe>
-                    <img className={styles.diagram} src={maj7} alt="diagram" />
+                <li>
+                    <Interval
+                        interval="Major 7th: Take On Me"
+                        id="11"
+                        link="https://www.youtube.com/embed/djV11Xbc914"
+                        diagram={maj7}
+                        color="lime"
+                    />
                 </li>
-                <li className={styles.li} style={{backgroundColor: 'yellow'}}>
-                    <div>
-                    <p className={styles.p}>Perfect Octave: Somewhere Over The Rainbow</p>
-                    <button className={styles.btn} id="12" onClick={interval}>Interval Sound</button>
-                    <button className={styles.btn} id="11" onClick={context}>Interval in Context</button>
-                    </div>
-                    <iframe 
-                        width="200" 
-                        height="200" 
-                        src="https://www.youtube.com/embed/PSZxmZmBfnU" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen
-                        className={styles.video}
-                        >
-                    </iframe>
-                    <img className={styles.diagram} src={p8} alt="diagram" />
+                <li>
+                    <Interval
+                        interval="Perfect Octave: Somewhere Over the Rainbow"
+                        id="12"
+                        link="https://www.youtube.com/embed/PSZxmZmBfnU"
+                        diagram={p8}
+                        color="aqua"
+                    />
                 </li>
             </ul>
-            <h4>Descending:</h4>
+            <IntervalGame />
+            {/* <h4>Descending:</h4>
             <ul>
                 <li>Minor 2nd: Für Elise</li>
                 <li>Major 2nd: ???</li>
@@ -290,7 +145,7 @@ function Intervals() {
                 <li>Minor 7th: ???</li>
                 <li>Major 7th: ???</li>
                 <li>Perfect Octave: ???</li>
-            </ul>
+            </ul> */}
         </div>
     );
 }

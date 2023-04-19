@@ -1,0 +1,44 @@
+.li {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-gap: 1rem;
+    margin-top: 20px;
+    /* border: 2px solid red; */
+    padding: 10px;
+    
+}
+
+.diagram {
+    height: 200px;
+    width: 600px;
+    box-shadow: rgba(0,0,0,.5) 0 4px 10px;
+    /* border: 2px solid orange; */
+}
+
+.video {
+    /* border: 2px solid purple; */
+    margin: 0px auto;
+    box-shadow: rgba(0,0,0,.5) 0 4px 10px;
+}
+
+.gridLeft {
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    /* height: 20px; */
+    display: block;
+    /* margin:  22px 20px 0 0; */
+    width: 200px;
+    /* border: 2px solid lime; */
+}
+
+.p {
+    font-size: 2rem;
+    /* border: 2px solid aqua; */
+    color: #333;
+}
