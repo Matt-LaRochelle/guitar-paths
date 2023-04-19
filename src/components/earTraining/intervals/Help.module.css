@@ -13,7 +13,7 @@
     /* left: 10%; */
     top: -500px;
     z-index: 2;
-    background: linear-gradient(rgb(4, 133, 133), rgb(0, 73, 73));
+    background: linear-gradient(rgb(1, 45, 58), rgb(19, 74, 74));
     padding: 100px;
     width: 100vw;
     height: 500px;
@@ -28,7 +28,7 @@
     /* left: 10%; */
     top: -500px;
     z-index: 2;
-    background: linear-gradient(rgb(4, 97, 133), rgb(1, 45, 58));
+    background: linear-gradient(rgb(1, 45, 58), rgb(19, 74, 74));
     padding: 100px;
     width: 100vw;
     height: 500px;

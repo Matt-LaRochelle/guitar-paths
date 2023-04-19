@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from './Interval.module.css';
+import styles from './IntervalD.module.css';
 import audioClip from '../noteSounds/noteSounds';
 import intervals from '../noteSounds/intervalSounds';
 import Aos from 'aos';
@@ -18,10 +18,12 @@ function Interval(props) {
 
     // Plays the two note interval
     function intervalM(e) {
-        const note = new Audio(audioClips[5].clip);
+
+        //This is D (12th fret D string)
+        const note = new Audio(audioClips[22].clip);
 
         // Turn button ID into number for dynamic intervals
-        let n = (5 + Number(e.target.id))
+        let n = (5 - Number(e.target.id))
         note.play();
         setTimeout(() => {
             const note2 = new Audio(audioClips[n].clip);
@@ -30,10 +32,12 @@ function Interval(props) {
     }
 
     function intervalH(e) {
-        const note = new Audio(audioClips[5].clip);
+
+        //This is D (12th fret D string)
+        const note = new Audio(audioClips[22].clip);
 
         // Turn button ID into number for dynamic intervals
-        let n = (5 + Number(e.target.id))
+        let n = (5 - Number(e.target.id))
         note.play();
         const note2 = new Audio(audioClips[n].clip);
         note2.play();
@@ -72,4 +76,4 @@ function Interval(props) {
     );
 }
 
-export default Interval;
+export default IntervalD;

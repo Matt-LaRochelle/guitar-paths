@@ -12,7 +12,7 @@ import maj6 from './intervalDiagrams/maj6.png';
 import min7 from './intervalDiagrams/min7.png';
 import maj7 from './intervalDiagrams/maj7.png';
 import p8 from './intervalDiagrams/p8.png';
-import Interval from './Interval';
+import IntervalA from './IntervalA';
 import IntervalGame from './IntervalGame';
 
 
@@ -30,7 +30,7 @@ function Intervals() {
                 your skills! </p>
             <ul>
                 <li>
-                    <Interval
+                    <IntervalA
                         interval="Minor 2nd: Jaws"
                         id="1"
                         link="https://www.youtube.com/embed/2J6IA5T7RTs"
@@ -39,7 +39,7 @@ function Intervals() {
                     />
                 </li>
                 <li>
-                    <Interval
+                    <IntervalA
                         interval="Major 2nd: Happy Birthday"
                         id="2"
                         link="https://www.youtube.com/embed/HwOA917qJTs"
@@ -48,7 +48,7 @@ function Intervals() {
                     />
                 </li>
                 <li>
-                    <Interval
+                    <IntervalA
                         interval="Minor 3rd: Greensleeves"
                         id="3"
                         link="https://www.youtube.com/embed/wARiOb80Zr0"
@@ -57,7 +57,7 @@ function Intervals() {
                     />
                 </li>
                 <li>
-                    <Interval
+                    <IntervalA
                         interval="Major 3rd: Oh When The Saints"
                         id="4"
                         link="https://www.youtube.com/embed/2eUzdTF3P2M"
@@ -66,7 +66,7 @@ function Intervals() {
                     />
                 </li>
                 <li>
-                    <Interval
+                    <IntervalA
                         interval="Perfect 4th: Wedding March"
                         id="5"
                         link="https://www.youtube.com/embed/5C5FOW2ekHo"
@@ -75,7 +75,7 @@ function Intervals() {
                     />
                 </li>
                 <li>
-                    <Interval
+                    <IntervalA
                         interval="Tritone: The Simpsons"
                         id="6"
                         link="https://www.youtube.com/embed/YIKPpDSNjR0"
@@ -84,7 +84,7 @@ function Intervals() {
                     />
                 </li>
                 <li>
-                    <Interval
+                    <IntervalA
                         interval="Perfect 5th: Star Wars"
                         id="7"
                         link="https://www.youtube.com/embed/JG5OsfOuEy0"
@@ -93,7 +93,7 @@ function Intervals() {
                     />
                 </li>
                 <li>
-                    <Interval
+                    <IntervalA
                         interval="Minor 6th: Go Down Moses"
                         id="8"
                         link="https://www.youtube.com/embed/XU_GcxTZx8k"
@@ -102,7 +102,7 @@ function Intervals() {
                     />
                 </li>
                 <li>
-                    <Interval
+                    <IntervalA
                         interval="Major 6th: My Bonnie Lies Over The Ocean"
                         id="9"
                         link="https://www.youtube.com/embed/pTqc6EBwr8Y"
@@ -111,7 +111,7 @@ function Intervals() {
                     />
                 </li>
                 <li>
-                    <Interval
+                    <IntervalA
                         interval="Minor 7th: Somewhere"
                         id="10"
                         link="https://www.youtube.com/embed/HQ32cIGqgdE"
@@ -120,7 +120,7 @@ function Intervals() {
                     />
                 </li>
                 <li>
-                    <Interval
+                    <IntervalA
                         interval="Major 7th: Take On Me"
                         id="11"
                         link="https://www.youtube.com/embed/djV11Xbc914"
@@ -129,7 +129,7 @@ function Intervals() {
                     />
                 </li>
                 <li>
-                    <Interval
+                    <IntervalA
                         interval="Perfect Octave: Somewhere Over the Rainbow"
                         id="12"
                         link="https://www.youtube.com/embed/PSZxmZmBfnU"
@@ -137,6 +137,7 @@ function Intervals() {
                         color="magenta"
                     />
                 </li>
+                <h2 className={styles.h2}>Descending Intervals</h2>
             </ul>
             <IntervalGame />
             {/* <h4>Descending:</h4>
