@@ -33,7 +33,7 @@ function Single() {
     }
 
     
-    //Function for loggin what is written in input
+    //Function for logging what is written in input
     function handleChange(event) {
         const newValue = event.target.value;
         setInputText(newValue);

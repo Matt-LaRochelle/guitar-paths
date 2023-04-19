@@ -1,3 +1,61 @@
 .container {
     background-color: teal;
+    padding: 100px 20px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.h2 {
+    text-align: center;
+
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    padding: 10px 20px;
+}
+
+.tries {
+    display: block;
+    text-align: center;
+}
+
+.input {
+    display: block;
+    margin: 50px auto;
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #333;
+}
+
+
+.correct {
+    /* opacity: 1; */
+    /* color: lime; */
+    font-size: 10rem;
+    /* background-color: lime; */
+    background-color: teal;
+    fill: rgb(0, 255, 0);
+    position:absolute;
+    display: block;
+    top: 260px;
+    left: 50%;
+    margin-left: -80px;
+    border-radius: 100%;
+    /* border: 2px solid aqua; */
+}
+
+.incorrect {
+    /* background-color: red; */
+    fill: rgb(255,0,0);
+    background-color: teal;
+    font-size: 10rem;
+    position: absolute;
+    top: 260px;
+    left: 50%;
+    margin-left: -80px;
+    border-radius: 100%;
 }
