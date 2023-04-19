@@ -1,5 +1,9 @@
 import React, { useEffect } from "react";
 import styles from './IntervalD.module.css';
+
+//Update these two to come from different files... or???
+//Audio clips should be fine, but how to calculate.
+//Intervals will need to be from a different source
 import audioClip from '../noteSounds/noteSounds';
 import intervals from '../noteSounds/intervalSounds';
 import Aos from 'aos';
