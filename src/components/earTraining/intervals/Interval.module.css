@@ -5,28 +5,25 @@
     margin-top: 20px;
     /* border: 2px solid red; */
     padding: 10px;
+    background: linear-gradient(rgb(15, 154, 73), rgb(13, 51, 13));
     
 }
 
-.diagram {
-    height: 200px;
-    width: 600px;
-    box-shadow: rgba(0,0,0,.5) 0 4px 10px;
-    /* border: 2px solid orange; */
-}
-
-.video {
-    /* border: 2px solid purple; */
-    margin: 0px auto;
-    box-shadow: rgba(0,0,0,.5) 0 4px 10px;
-}
-
 .gridLeft {
-    max-height: 200px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+
+.p {
+    font-size: 1.5rem;
+    /* border: 2px solid aqua; */
+    background-color: #333;
+    padding: 20px;
+    border-radius: 50px;
+    border: 2px solid #f8f8f8;
 }
 
 .btn {
@@ -34,11 +31,53 @@
     display: block;
     /* margin:  22px 20px 0 0; */
     width: 200px;
+    border-radius: 5px;
     /* border: 2px solid lime; */
 }
 
-.p {
-    font-size: 2rem;
-    /* border: 2px solid aqua; */
-    color: #333;
+.video {
+    /* border: 2px solid purple; */
+    margin: 0px auto;
+    box-shadow: rgba(0,0,0,.5) 0 4px 10px;
+    border-radius: 5px;
+}
+
+.diagram {
+    height: 200px;
+    width: 600px;
+    box-shadow: rgba(0,0,0,.5) 0 4px 10px;
+    border-radius: 5px;
+    /* border: 2px solid orange; */
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1070px) {
+    .li {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .video {
+        margin: 30px auto;
+        width: 400px;
+        height: 400px;
+    }
+
+    .diagram {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .video {
+        width: 200px;
+        height: 200px;
+    }
 }

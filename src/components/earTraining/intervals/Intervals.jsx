@@ -20,6 +20,14 @@ function Intervals() {
     return (
         <div className={styles.container}>
             <h2 className={styles.h2}>Ascending Intervals</h2>
+            <p className={styles.p}>
+                Learning to hear the distance between intervals is essential to ear training. 
+                The best way I have learned to recognize the interval is by associating it with 
+                a song. Here I have a song picked out for each interval of the octave, from a 
+                half step (minor 2nd) all the way to the octave (perfect octave). If you like, 
+                you can come up with your own songs from your own experiences, but these are 
+                here to get you started. Study them regularly and use the game below to test 
+                your skills! </p>
             <ul>
                 <li>
                     <Interval
@@ -72,7 +80,7 @@ function Intervals() {
                         id="6"
                         link="https://www.youtube.com/embed/YIKPpDSNjR0"
                         diagram={tt}
-                        color="blue"
+                        color="magenta"
                     />
                 </li>
                 <li>
@@ -81,7 +89,7 @@ function Intervals() {
                         id="7"
                         link="https://www.youtube.com/embed/JG5OsfOuEy0"
                         diagram={p5}
-                        color="magenta"
+                        color="red"
                     />
                 </li>
                 <li>
@@ -90,7 +98,7 @@ function Intervals() {
                         id="8"
                         link="https://www.youtube.com/embed/XU_GcxTZx8k"
                         diagram={min6}
-                        color="red"
+                        color="orange"
                     />
                 </li>
                 <li>
@@ -99,7 +107,7 @@ function Intervals() {
                         id="9"
                         link="https://www.youtube.com/embed/pTqc6EBwr8Y"
                         diagram={maj6}
-                        color="orange"
+                        color="yellow"
                     />
                 </li>
                 <li>
@@ -108,7 +116,7 @@ function Intervals() {
                         id="10"
                         link="https://www.youtube.com/embed/HQ32cIGqgdE"
                         diagram={min7}
-                        color="yellow"
+                        color="lime"
                     />
                 </li>
                 <li>
@@ -117,7 +125,7 @@ function Intervals() {
                         id="11"
                         link="https://www.youtube.com/embed/djV11Xbc914"
                         diagram={maj7}
-                        color="lime"
+                        color="aqua"
                     />
                 </li>
                 <li>
@@ -126,7 +134,7 @@ function Intervals() {
                         id="12"
                         link="https://www.youtube.com/embed/PSZxmZmBfnU"
                         diagram={p8}
-                        color="aqua"
+                        color="magenta"
                     />
                 </li>
             </ul>
