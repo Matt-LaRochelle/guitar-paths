@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from './IntervalGame.module.css'
 import audioClip from '../noteSounds/noteSounds';
 import { AiOutlineCheckCircle, AiOutlineCloseCircle } from 'react-icons/ai';
+import Help from './Help';
 
 function IntervalGame() {
 
@@ -147,6 +148,7 @@ function IntervalGame() {
             <button className={styles.btn} type="submit" onClick={check_answer}>Guess</button>
             { gotAnswer === true ? <AiOutlineCheckCircle className={styles.correct} /> : null }
             { gotAnswer === false ? <AiOutlineCloseCircle className={styles.incorrect} /> : null }
+            <Help />
         </div>
     );
 }

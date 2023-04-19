@@ -1,0 +1,47 @@
+.help {
+    position: relative;
+}
+
+.btn {
+    display: block;
+    margin: 10px auto 50px;
+    font-size: 2rem;
+}
+
+.howToPlay {
+    position: absolute;
+    /* left: 10%; */
+    top: -500px;
+    z-index: 2;
+    background: linear-gradient(rgb(4, 133, 133), rgb(0, 73, 73));
+    padding: 100px;
+    width: 100vw;
+    height: 500px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-100px);
+    transition: opacity 1000ms ease-in-out, transform 1000ms ease-in-out;
+}
+
+.howToPlayHidden {
+    position: absolute;
+    /* left: 10%; */
+    top: -500px;
+    z-index: 2;
+    background: linear-gradient(rgb(4, 97, 133), rgb(1, 45, 58));
+    padding: 100px;
+    width: 100vw;
+    height: 500px;
+
+    opacity: 1;
+    transform: translateY(-10px);
+    transition: opacity 1000ms ease-in-out, transform 1000ms ease-in-out;
+}
+
+.ul {
+    list-style-type: disc;
+}
+
+.li {
+    margin-top: 8px;
+}
