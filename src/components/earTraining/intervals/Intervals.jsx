@@ -21,13 +21,29 @@ function Intervals() {
         <div className={styles.container}>
             <h2 className={styles.h2}>Ascending Intervals</h2>
             <p className={styles.p}>
-                Learning to hear the distance between intervals is essential to ear training. 
+                In learning to play the guitar, it is
+                extremely beneficial to train your ear to 
+                recognize intervals. Intervals are the building 
+                blocks of music and provide the foundation for 
+                understanding melody, harmony, and rhythm. By 
+                training your ear to recognize intervals, you'll 
+                be able to identify and play melodies by ear, 
+                harmonize melodies, and improvise with ease. 
+                Moreover, understanding intervals will help you 
+                to transcribe music, which is essential for 
+                developing your musicianship skills. It may seem 
+                daunting at first, but with practice, identifying 
+                intervals will become second nature, and you'll 
+                unlock a whole new level of musical understanding 
+                and creativity.
+                {/* Learning to hear the distance between intervals is essential to ear training. 
                 The best way I have learned to recognize the interval is by associating it with 
                 a song. Here I have a song picked out for each interval of the octave, from a 
                 half step (minor 2nd) all the way to the octave (perfect octave). If you like, 
                 you can come up with your own songs from your own experiences, but these are 
                 here to get you started. Study them regularly and use the game below to test 
-                your skills! </p>
+                your skills! </p> */}
+                </p>
             <ul>
                 <li>
                     <IntervalA

@@ -52,9 +52,9 @@ function IntervalA(props) {
         <div data-aos="fade-right" className={styles.li} style={{backgroundColor: props.color}}>
             <div className={styles.gridLeft}>
                 <p  className={styles.p}>{props.interval}</p>
-                <button className={styles.btn} id={props.id} onClick={intervalM}>Interval played melodically</button>
-                <button className={styles.btn} id={props.id} onClick={intervalH}>Interval played harmonically</button>
-                <button className={styles.btn} id={props.id} onClick={context}>Interval in context of song</button>
+                <button className={styles.btn} id={props.id} onClick={intervalM}>Melodic</button>
+                <button className={styles.btn} id={props.id} onClick={intervalH}>Harmonic</button>
+                <button className={styles.btn} id={props.id} onClick={context}>Context</button>
             </div>
             <iframe 
                 width="200" 

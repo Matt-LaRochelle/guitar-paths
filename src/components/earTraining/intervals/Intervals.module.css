@@ -5,9 +5,12 @@
 .h2 {
     text-align: center;
     padding: 50px;
+    font-size: 1.5rem;
 }
 
 .p {
     max-width: 75ch;
     margin: 0 auto 50px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
 }
