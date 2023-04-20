@@ -26,7 +26,25 @@ function IntervalGame() {
     const [harmonic, setHarmonic] = useState(false);
 
     function playInterval() {
-        if (melodic === true) {
+        if (melodic === true && harmonic === true) {
+            // alert("How do I do this?")
+            let randomChoice = Math.round(Math.random());
+            if (randomChoice) {
+                const first_note = new Audio(note1);
+                first_note.play();
+                setTimeout(() => {
+                    const second_note = new Audio(note2);
+                    second_note.play();
+                }, 1000);
+            } else if (!randomChoice) {
+                const first_note = new Audio(note1);
+                first_note.play();
+                const second_note = new Audio(note2);
+                second_note.play();
+            }
+            
+
+        } else if (melodic === true) {
             const first_note = new Audio(note1);
             first_note.play();
             setTimeout(() => {
@@ -39,8 +57,10 @@ function IntervalGame() {
             first_note.play();
             const second_note = new Audio(note2);
             second_note.play();
-        } else {
+        } else if (harmonic !== true && melodic !==true) {
             alert("You must have either melodic or harmonic selected, or both")
+        } else if (ascending !==true && descending !==true) {
+            alert("You must have either ascending or descending selected or both!")
         }
     }
 
@@ -102,10 +122,33 @@ function IntervalGame() {
         }
 
         //Set N1 between 0-36 (No +1 because list of sounds goes from 0-36)
-        const n1 = Math.floor(Math.random() * (37 - interval));
-        const n2 = n1 + interval
-        setNote1(audioClips[n1].clip);
-        setNote2(audioClips[n2].clip);
+        if (ascending === true && descending === true) {
+            let randomChoice = Math.round(Math.random());
+            if (randomChoice) {
+                const n1 = Math.floor(Math.random() * (37 - interval));
+                const n2 = n1 + interval
+                setNote1(audioClips[n1].clip);
+                setNote2(audioClips[n2].clip);
+            } else if (!randomChoice) {
+                const n1 = Math.floor(Math.random() * (37 - interval)) + interval;
+                const n2 = n1 - interval
+                setNote1(audioClips[n1].clip);
+                setNote2(audioClips[n2].clip);
+            }
+        } else if (ascending === true) {
+            const n1 = Math.floor(Math.random() * (37 - interval));
+            const n2 = n1 + interval
+            setNote1(audioClips[n1].clip);
+            setNote2(audioClips[n2].clip);
+        } else if (descending === true) {
+            const n1 = Math.floor(Math.random() * (37 - interval)) + interval;
+            const n2 = n1 - interval
+            setNote1(audioClips[n1].clip);
+            setNote2(audioClips[n2].clip);
+        } else {
+            alert("You must select either ascending, or descending, or both")
+        }
+        
         // console.log("Interval: ", interval);
         // console.log("Answer: ", answer);
         // console.log("Note 1: ", n1);
@@ -154,14 +197,32 @@ function IntervalGame() {
         }
 
         //Set N1 between 0-36 (No +1 because list of sounds goes from 0-36)
-        const n1 = Math.floor(Math.random() * (37 - interval));
-        const n2 = n1 + interval
-        setNote1(audioClips[n1].clip);
-        setNote2(audioClips[n2].clip);
-        // console.log("Interval: ", interval);
-        // console.log("Answer: ", answer);
-        // console.log("Note 1: ", n1);
-        // console.log("Note 2: ", n2);
+        if (ascending === true && descending === true) {
+            let randomChoice = Math.round(Math.random());
+            if (randomChoice) {
+                const n1 = Math.floor(Math.random() * (37 - interval));
+                const n2 = n1 + interval
+                setNote1(audioClips[n1].clip);
+                setNote2(audioClips[n2].clip);
+            } else if (!randomChoice) {
+                const n1 = Math.floor(Math.random() * (37 - interval)) + interval;
+                const n2 = n1 - interval
+                setNote1(audioClips[n1].clip);
+                setNote2(audioClips[n2].clip);
+            }
+        } else if (ascending === true) {
+            const n1 = Math.floor(Math.random() * (37 - interval));
+            const n2 = n1 + interval
+            setNote1(audioClips[n1].clip);
+            setNote2(audioClips[n2].clip);
+        } else if (descending === true) {
+            const n1 = Math.floor(Math.random() * (37 - interval)) + interval;
+            const n2 = n1 - interval
+            setNote1(audioClips[n1].clip);
+            setNote2(audioClips[n2].clip);
+        } else {
+            alert("You must select either ascending, or descending, or both")
+        }
         setCount(4);
         setInputText("");
         setGotAnswer(false);
