@@ -10,7 +10,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 
-function Interval(props) {
+function IntervalD(props) {
 
     //Scrolling effects time
     useEffect(() => {
@@ -57,7 +57,7 @@ function Interval(props) {
 
 
     return (
-        <div data-aos="fade-right" className={styles.li} style={{backgroundColor: props.color}}>
+        <div data-aos="fade-left" className={styles.li} style={{backgroundColor: props.color}}>
             <div className={styles.gridLeft}>
                 <p  className={styles.p}>{props.interval}</p>
                 <button className={styles.btn} id={props.id} onClick={intervalM}>Interval played melodically</button>
