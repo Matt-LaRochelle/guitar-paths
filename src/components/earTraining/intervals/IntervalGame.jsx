@@ -8,7 +8,7 @@ function IntervalGame() {
 
     //Individual sound clips
     const audioClips = audioClip;
-
+    //Game logic without additional settings
     const [note1, setNote1] = useState(audioClips[10].clip);
     const [note2, setNote2] = useState(audioClips[22].clip);
     const [interval, setInterval] = useState(12);
@@ -19,13 +19,29 @@ function IntervalGame() {
     //Green check mark or red x
     const [gotAnswer, setGotAnswer] = useState(null);
 
+    //Additional settings
+    const [ascending, setAscending] = useState(false);
+    const [descending, setDescending] = useState(false);
+    const [melodic, setMelodic] = useState(false);
+    const [harmonic, setHarmonic] = useState(false);
+
     function playInterval() {
-        const first_note = new Audio(note1);
-        first_note.play();
-        setTimeout(() => {
+        if (melodic === true) {
+            const first_note = new Audio(note1);
+            first_note.play();
+            setTimeout(() => {
+                const second_note = new Audio(note2);
+                second_note.play();
+            }, 1000);
+
+        } else if (harmonic === true) {
+            const first_note = new Audio(note1);
+            first_note.play();
             const second_note = new Audio(note2);
             second_note.play();
-        }, 1000); 
+        } else {
+            alert("You must have either melodic or harmonic selected, or both")
+        }
     }
 
 
@@ -34,6 +50,24 @@ function IntervalGame() {
         const newValue = event.target.value;
         setInputText(newValue);
         // console.log(inputText)
+    }
+
+    function settings(e) {
+        if (e.target.id === "ascending") {
+            setAscending(!ascending)
+        } else if (e.target.id === "descending") {
+            setDescending(!descending)
+        } else if (e.target.id === "melodic") {
+            setMelodic(!melodic)
+        } else if (e.target.id === "harmonic") {
+            setHarmonic(!harmonic)
+        }
+        console.log(
+            "Ascending: ", ascending,
+            "Descending: ", descending,
+            "Melodic: ", melodic,
+            "Harmonic :", harmonic
+        )
     }
 
     function check_answer() {
@@ -142,6 +176,17 @@ function IntervalGame() {
     return (
         <div className={styles.container}>
             <h2 className={styles.h2}>Interval Game</h2>
+            <button>Settings</button>
+                <label>Ascending</label>
+                <input type="checkbox" id="ascending" onChange={settings} ></input>
+                <label>Descending</label>
+                <input type="checkbox" id="descending" onChange={settings} ></input>
+                <label>Melodic</label>
+                <input type="checkbox" id="melodic" onChange={settings} ></input>
+                <label>Harmonic</label>
+                <input type="checkbox" id="harmonic" onChange={settings} ></input>
+                
+
             <button className={styles.btn} onClick={playInterval}>Play Interval</button>
             <label className={styles.tries}>Tries: {count}</label>
             <input className={styles.input} onChange={handleChange} type="text" value={inputText} />
