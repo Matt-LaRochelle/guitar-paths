@@ -197,7 +197,7 @@ function Intervals() {
                         <IntervalD
                             interval="Major 3rd: Imperial March"
                             id="4"
-                            link="https://www.youtube.com/watch?v=-bzWSJG93P8"
+                            link="https://www.youtube.com/embed/B_iFRoJJLzc"
                             diagram={dmaj3}
                         />
                     </li>

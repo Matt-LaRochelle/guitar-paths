@@ -5,7 +5,7 @@ import styles from './IntervalD.module.css';
 //Audio clips should be fine, but how to calculate.
 //Intervals will need to be from a different source
 import audioClip from '../noteSounds/noteSounds';
-import intervals from '../noteSounds/intervalSounds';
+import intervals from '../noteSounds/intervalSoundsDescending';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -24,10 +24,10 @@ function IntervalD(props) {
     function intervalM(e) {
 
         //This is D (12th fret D string)
-        const note = new Audio(audioClips[22].clip);
+        const note = new Audio(audioClips[17].clip);
 
         // Turn button ID into number for dynamic intervals
-        let n = (5 - Number(e.target.id))
+        let n = (17 - Number(e.target.id))
         note.play();
         setTimeout(() => {
             const note2 = new Audio(audioClips[n].clip);
@@ -38,10 +38,10 @@ function IntervalD(props) {
     function intervalH(e) {
 
         //This is D (12th fret D string)
-        const note = new Audio(audioClips[22].clip);
+        const note = new Audio(audioClips[17].clip);
 
         // Turn button ID into number for dynamic intervals
-        let n = (5 - Number(e.target.id))
+        let n = (17 - Number(e.target.id))
         note.play();
         const note2 = new Audio(audioClips[n].clip);
         note2.play();
