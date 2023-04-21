@@ -32,33 +32,33 @@ function IntervalGame() {
     function settings(e) {
         if (e.target.id === "ascending") {
             if (ascending === "Off") {
-                setAscending("On");
+                setAscending(() => "On");
             } else if (ascending === "On") {
-                setAscending("Off");
+                setAscending(() => "Off");
             } else {
                 console.log(ascending);
             }
         } else if (e.target.id === "descending") {
             if (descending === "Off") {
-                setDescending("On");
+                setDescending(() => "On");
             } else if (descending === "On") {
-                setDescending("Off");
+                setDescending(() => "Off");
             } else {
                 console.log(descending);
             }
         } else if (e.target.id === "melodic") {
             if (melodic === "Off") {
-                setMelodic("On");
+                setMelodic(() => "On");
             } else if (melodic === "On") {
-                setMelodic("Off");
+                setMelodic(() => "Off");
             } else {
                 console.log(melodic);
             }
         } else if (e.target.id === "harmonic") {
             if (harmonic === "Off") {
-                setHarmonic("On");
+                setHarmonic(() => "On");
             } else if (harmonic === "On") {
-                setHarmonic("Off");
+                setHarmonic(() => "Off");
             } else {
                 console.log(harmonic);
             }
@@ -77,31 +77,35 @@ function IntervalGame() {
     function newInterval() {
         //Set interval between 1-12
         //Then set the answer according to randomly chosen interval
-        setInterval(Math.floor(Math.random() * 12) + 1)
-        if (interval === 1) {
-            setAnswer("m2");
-        } else if (interval === 2) {
-            setAnswer("M2");
-        } else if (interval === 3) {
-            setAnswer("m3");
-        } else if (interval === 4) {
-            setAnswer("M3");
-        } else if (interval === 5) {
-            setAnswer("p4");
-        } else if (interval === 6) {
-            setAnswer("tt");
-        } else if (interval === 7) {
-            setAnswer("p5");
-        } else if (interval === 8) {
-            setAnswer("m6");
-        } else if (interval === 9) {
-            setAnswer("M6");
-        } else if (interval === 10) {
-            setAnswer("m7");
-        } else if (interval === 11) {
-            setAnswer("M7");
-        } else if (interval === 12) {
-            setAnswer("p8");
+        setInterval(() => Math.floor(Math.random() * 12) + 1);
+        newAnswer(interval);
+    }
+
+    function newAnswer(n) {
+        if (n === 1) {
+            setAnswer(() => "m2");
+        } else if (n === 2) {
+            setAnswer(() => "M2");
+        } else if (n === 3) {
+            setAnswer(() => "m3");
+        } else if (n === 4) {
+            setAnswer(() => "M3");
+        } else if (n === 5) {
+            setAnswer(() => "p4");
+        } else if (n === 6) {
+            setAnswer(() => "tt");
+        } else if (n === 7) {
+            setAnswer(() => "p5");
+        } else if (n === 8) {
+            setAnswer(() => "m6");
+        } else if (n === 9) {
+            setAnswer(() => "M6");
+        } else if (n === 10) {
+            setAnswer(() => "m7");
+        } else if (n === 11) {
+            setAnswer(() => "M7");
+        } else if (n === 12) {
+            setAnswer(() => "p8");
         }
         //Generate new notes
         newNotes();
@@ -114,26 +118,24 @@ function IntervalGame() {
             if (randomChoice) {
                 const n1 = Math.floor(Math.random() * (37 - interval));
                 const n2 = n1 + interval
-                setNote1(audioClips[n1].clip);
-                setNote2(audioClips[n2].clip);
+                setNote1(() => audioClips[n1].clip);
+                setNote2(() => audioClips[n2].clip);
             } else if (!randomChoice) {
                 const n1 = Math.floor(Math.random() * (37 - interval)) + interval;
                 const n2 = n1 - interval
-                setNote1(audioClips[n1].clip);
-                setNote2(audioClips[n2].clip);
+                setNote1(() => audioClips[n1].clip);
+                setNote2(() => audioClips[n2].clip);
             }
         } else if (ascending === "On") {
             const n1 = Math.floor(Math.random() * (37 - interval));
             const n2 = n1 + interval
-            setNote1(audioClips[n1].clip);
-            setNote2(audioClips[n2].clip);
+            setNote1(() => audioClips[n1].clip);
+            setNote2(() => audioClips[n2].clip);
         } else if (descending === "On") {
             const n1 = Math.floor(Math.random() * (37 - interval)) + interval;
             const n2 = n1 - interval
-            setNote1(audioClips[n1].clip);
-            setNote2(audioClips[n2].clip);
-        } else {
-            alert("Must have A or D on...")
+            setNote1(() => audioClips[n1].clip);
+            setNote2(() => audioClips[n2].clip);
         }
         //Check whether notes will be played melodically or harmonically
         melOrHarm();
@@ -145,39 +147,39 @@ function IntervalGame() {
         if (melodic === "On" && harmonic === "On") {
             let randomChoice = Math.round(Math.random());
             if (randomChoice === 1) {
-                setMelodicOrHarmonic(true);
+                setMelodicOrHarmonic(() => true);
             } else {
-                setMelodicOrHarmonic(false);
+                setMelodicOrHarmonic(() => false);
             }
         } else if (melodic === "On") {
-            setMelodicOrHarmonic(true);
+            setMelodicOrHarmonic(() => true);
         } else if (harmonic === "On") {
-            setMelodicOrHarmonic(false);
-        } else {
-            alert("Must have M or H on...")
+            setMelodicOrHarmonic(() => false);
         }
     }
 
 
 
     function playInterval() {
-        if (melodicOrHarmonic === true) {
-            const first_note = new Audio(note1);
-            first_note.play();
-            setTimeout(() => {
+        if (melodic === "Off" && harmonic === "Off") {
+            alert("Must have m or h selected...")
+        } else if (ascending === "Off" && descending === "Off") {
+            alert("Must have a and d selected...")
+        } else {
+            if (melodicOrHarmonic === true) {
+                const first_note = new Audio(note1);
+                first_note.play();
+                setTimeout(() => {
+                    const second_note = new Audio(note2);
+                    second_note.play();
+                }, 1000);
+            } else if (melodicOrHarmonic === false) {
+                const first_note = new Audio(note1);
+                first_note.play();
                 const second_note = new Audio(note2);
                 second_note.play();
-            }, 1000);
-        } else if (melodicOrHarmonic === false) {
-            const first_note = new Audio(note1);
-            first_note.play();
-            const second_note = new Audio(note2);
-            second_note.play();
+            }
         }
-        console.log(interval);
-        console.log(answer);
-        console.log(note1);
-        console.log(note2);
     }
 
     //Function for logging what is written in input
@@ -200,7 +202,7 @@ function IntervalGame() {
                 }, 1000);
 
         } else if (inputText !== answer) {
-            setCount(count - 1);
+            setCount(() => count - 1);
             setInputText("");
             setGotAnswer(false);
                 setTimeout(() => {
@@ -251,6 +253,8 @@ function IntervalGame() {
             <p>Note 1: {note1} Note 2: {note2}</p>
             <p>Interval: {interval} Answer: {answer}</p>
             <p>{melodicOrHarmonic}</p>
+            <p>Ascending: {ascending} Descending: {descending}</p>
+            <p>Melodic: {melodic} Harmonic: {harmonic}</p>
         </div>
     );
 }
