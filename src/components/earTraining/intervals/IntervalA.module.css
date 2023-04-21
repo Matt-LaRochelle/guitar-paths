@@ -1,7 +1,48 @@
+.li {
+    position: relative;
+}
+
+.liExpand {
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
 .small {
     width: 300px;
-    position: relative;
+    background: #333;
+    /* position: relative; */
     /* border: 2px solid lime; */
+}
+
+.pBTN {
+    font-size: 1.5rem;
+    /* border: 2px solid aqua; */
+    background: #333;
+    padding: 10px 40px 10px 20px;
+    border-radius: 50px;
+    border: 2px solid #f8f8f8;
+    /* position: absolute; */
+}
+
+.pBTN:hover {
+    background: repeating-linear-gradient(to right, red, orange, yellow, lime, aqua, blue, indigo, violet, red);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 10s linear infinite;
+    cursor: pointer;
+}
+@keyframes animate{
+    0%{
+        background-position: 0%;
+    }
+
+    100%{
+        background-position: 400%;
+    }
 }
 
 .p {
@@ -13,7 +54,11 @@
     border: 2px solid #f8f8f8;
 }
 
-.expand {
+.hidden {
+    display: none;
+}
+
+.expandBtn {
     position: absolute;
     right: 10px;
     top: 50%;
@@ -21,12 +66,24 @@
     font-size: 1.5rem;
 }
 
+.expandBtn:hover {
+    font-size: 1.9rem;
+    cursor: pointer;
+    margin-top: -15.2px;
+}
+
 .expanded {
-    display: none;
-    /* display: grid; */
+    /* position: absolute; */
+    /* z-index: 10; */
+    /* width: 100%; */
+    /* width: 100vw; */
+    /* margin-left: -182px;
+    margin-top: -100px; */
+    /* border: 2px solid aqua; */
+    /* display: grid;
     grid-template-columns: repeat(3, 1fr) ;
-    grid-gap: 1rem;
-    margin: 150px 0;
+    grid-gap: 1rem; */
+    /* margin: 150px 0; */
     /* border: 2px solid red; */
     padding: 50px 10px;
     background: linear-gradient(rgb(15, 154, 73), rgb(13, 51, 13));

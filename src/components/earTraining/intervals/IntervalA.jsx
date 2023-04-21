@@ -10,7 +10,7 @@ function IntervalA(props) {
     const [expand, setExpand] = useState(false);
 
     function handleClick() {
-        console.log("You clicked me!");
+        setExpand(!expand);
     }
 
 
@@ -55,20 +55,21 @@ function IntervalA(props) {
 
 
     return (
-        <div data-aos="fade-right" className={styles.li}>
-            <div className={styles.small}>
+        <div className={ expand ? styles.liExpand : styles.li}>
+            <div className={ expand ? styles.hidden : styles.small}>
                 <p 
-                className={styles.p} 
+                className={styles.pBTN} 
                 id={props.id} 
                 onClick={intervalM}
                 >
                     {props.interval}
                 </p>
-                <AiOutlineExpand onClick={handleClick} className={styles.expand}/>
+                <AiOutlineExpand onClick={handleClick} className={styles.expandBtn}/>
             </div>
-            <div className={styles.expanded}>
+            <div className={ expand ? styles.expanded : styles.hidden}>
                 <div className={styles.gridLeft}>
                     <p  className={styles.p}>{props.interval}</p>
+                    <AiOutlineExpand onClick={handleClick} className={styles.expand}/>
                     <button className={styles.btn} id={props.id} onClick={intervalM}>Melodic</button>
                     <button className={styles.btn} id={props.id} onClick={intervalH}>Harmonic</button>
                     <button className={styles.btn} id={props.id} onClick={context}>Context</button>
@@ -85,6 +86,7 @@ function IntervalA(props) {
                     >
                 </iframe>
                 <img className={styles.diagram} src={props.diagram} alt="diagram" />
+                
             </div>
             
         </div>
