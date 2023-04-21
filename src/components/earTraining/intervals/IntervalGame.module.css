@@ -10,6 +10,28 @@
 
 }
 
+.btnShowSettings {
+    display: block;
+    margin: 20px auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.settingsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    width: 40%;
+    margin: auto;
+}
+
+.btnSettings {
+    display:block;
+    margin: auto;
+}
+
 .btn {
     display: block;
     margin: 50px auto;
@@ -19,6 +41,10 @@
 .tries {
     display: block;
     text-align: center;
+}
+
+.answerContainer {
+    position: relative;
 }
 
 .input {
@@ -41,7 +67,7 @@
     fill: rgb(0, 255, 0);
     position:absolute;
     display: block;
-    top: 260px;
+    top: -44px;
     left: 50%;
     margin-left: -80px;
     border-radius: 100%;
@@ -54,7 +80,7 @@
     background-color: teal;
     font-size: 10rem;
     position: absolute;
-    top: 260px;
+    top: -44px;
     left: 50%;
     margin-left: -80px;
     border-radius: 100%;

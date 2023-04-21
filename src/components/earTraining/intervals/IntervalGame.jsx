@@ -29,6 +29,8 @@ function IntervalGame() {
     //If true: interval is melodic, else if false: interval is harmonic
     const [melodicOrHarmonic, setMelodicOrHarmonic] = useState(false);
 
+    const [displaySettings, setDisplaySettings] = useState(false);
+
     function settings(e) {
         if (e.target.id === "ascending") {
             if (ascending === "Off") {
@@ -226,12 +228,13 @@ function IntervalGame() {
     return (
         <div className={styles.container}>
             <h2 className={styles.h2}>Interval Game</h2>
-            <button>Settings</button>
-                <button id="ascending" onClick={settings} >Ascending: {ascending}</button>
-                <button id="descending" onClick={settings} >Descending: {descending}</button>
-                <button id="melodic" onClick={settings} >Melodic: {melodic}</button>
-                <button id="harmonic" onClick={settings} >Harmonic: {harmonic}</button>
-
+            <button className={styles.btnShowSettings} onClick={() => setDisplaySettings(prevValue => !prevValue)}>Settings</button>
+                <div className={ displaySettings ? styles.settingsContainer: styles.hidden}>
+                    <button className={styles.btnSettings} id="ascending" onClick={settings} >Ascending: {ascending}</button>
+                    <button className={styles.btnSettings} id="descending" onClick={settings} >Descending: {descending}</button>
+                    <button className={styles.btnSettings} id="melodic" onClick={settings} >Melodic: {melodic}</button>
+                    <button className={styles.btnSettings} id="harmonic" onClick={settings} >Harmonic: {harmonic}</button>
+                </div>
                 {/* <label>Ascending</label>
                 <input type="checkbox" id="ascending" onChange={settings} ></input>
                 <label>Descending</label>
@@ -244,10 +247,13 @@ function IntervalGame() {
 
             <button className={styles.btn} onClick={playInterval}>Play Interval</button>
             <label className={styles.tries}>Tries: {count}</label>
-            <input className={styles.input} onChange={handleChange} type="text" value={inputText} />
+            <div className={styles.answerContainer}>
+                <input className={styles.input} onChange={handleChange} type="text" value={inputText} />
+                { gotAnswer === true ? <AiOutlineCheckCircle className={styles.correct} /> : null }
+                { gotAnswer === false ? <AiOutlineCloseCircle className={styles.incorrect} /> : null }
+            </div>
             <button className={styles.btn} type="submit" onClick={check_answer}>Guess</button>
-            { gotAnswer === true ? <AiOutlineCheckCircle className={styles.correct} /> : null }
-            { gotAnswer === false ? <AiOutlineCloseCircle className={styles.incorrect} /> : null }
+            
             <Help />
             <p>Cheat sheet:</p>
             <p>Note 1: {note1} Note 2: {note2}</p>
