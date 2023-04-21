@@ -72,7 +72,6 @@
     left: 0;
     top: 0;
     z-index: 10;
-    border: 2px solid aqua;
 }
 
 .expanded {
@@ -80,10 +79,10 @@
     grid-template-columns: 350px 600px 200px;
     /* grid-gap: 1rem; */
     justify-items: center;
-    border: 2px solid red;
     padding: 50px 10px;
-    background: linear-gradient(rgb(15, 154, 73), rgb(13, 51, 13));
+    background: linear-gradient(rgb(128, 149, 137), rgb(13, 51, 13));
     height: 500px;
+    
     align-items: center;
     justify-content: space-evenly;
     /* justify-items: center; */
@@ -92,6 +91,7 @@
 .gridLeft {
     height: 200px;
     display: flex;
+    
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -99,32 +99,33 @@
     /* border: 2px solid aqua; */
 }
 
+.pBefore {
+    background: #333;
+    border-radius: 50px;
+    box-shadow: rgba(0,0,0,.5) 0 4px 10px;
+}
 .p {
     font-size: 1.5rem;
     /* border: 2px solid aqua; */
     background-color: #333;
     padding: 10px 20px;
-    /* border-radius: 50px; */
-    border: 2px solid;
-    border-width: 2px;
-    border-color: repeating-linear-gradient(to right, red, orange, yellow, lime, aqua, blue, indigo, violet, red);
-    animation: animate 10s linear infinite;
+    border-radius: 50px;
+    background: repeating-linear-gradient(to right, red, orange, yellow, lime, aqua, blue, indigo, violet, red);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 40s linear infinite;
+    cursor: pointer;
+}
+@keyframes animate{
+    0%{
+        background-position: 0%;
+    }
 
-    border-image-slice: 1;
-    border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
-    animation: 20s rotate linear infinite;
+    100%{
+        background-position: 400%;
     }
-    @keyframes rotate {
-        to {
-            --angle: 360deg;
-        }
-    }
-    
-    @property --angle {
-      syntax: '<angle>';
-      initial-value: 0deg;
-      inherits: false;
-    }
+}
 
 .btn {
     /* height: 20px; */
@@ -132,15 +133,21 @@
     padding: 8px 15px;
     width: 200px;
     border-radius: 5px;
-    border: 2px solid lime;
+}
+
+.btnContainer {
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 2px solid lime; */
 }
 
 .diagram {
     height: 200px;
     width: 600px;
     box-shadow: rgba(0,0,0,.5) 0 4px 10px;
-    border-radius: 5px;
-    border: 2px solid orange;
+    border-radius: 30px;
 }
 
 .video {
@@ -149,7 +156,6 @@
     /* right: 10px; */
     box-shadow: rgba(0,0,0,.5) 0 4px 10px;
     border-radius: 5px;
-    border: 2px solid lime;
 }
 
 .expandBtn2 {
@@ -183,9 +189,10 @@
         margin-bottom: 0px;
         height: 300px;
         display: block;
+        border: 2px solid aqua;
     }
 
-    .p {
+    .pBefore {
         margin: -20px auto 30px;
         width: 300px;
         text-align: center;
@@ -193,7 +200,10 @@
 
     .btnContainer {
         display: flex;
+        flex-direction: row;
+        align-items: center;
         justify-content: space-around;
+        border: 2px solid red;
     }
 
     .btn {

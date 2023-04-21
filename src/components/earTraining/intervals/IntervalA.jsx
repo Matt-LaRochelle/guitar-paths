@@ -68,7 +68,9 @@ function IntervalA(props) {
             </div>
             <div className={ expand ? styles.expanded : styles.hidden}>
                 <div className={styles.gridLeft}>
+                    <div className={styles.pBefore}>
                     <p  className={styles.p}>{props.interval}</p>
+                    </div>
                     <AiOutlineExpand onClick={handleClick} className={styles.expandBtn2}/>
                     <div className={styles.btnContainer}>
                         <button className={styles.btn} id={props.id} onClick={intervalM}>Melodic</button>
