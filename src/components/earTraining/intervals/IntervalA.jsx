@@ -4,7 +4,7 @@ import audioClip from '../noteSounds/noteSounds';
 import intervals from '../noteSounds/intervalSounds';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-
+import {AiOutlineExpand} from 'react-icons/ai';
 
 function IntervalA(props) {
 
@@ -49,9 +49,16 @@ function IntervalA(props) {
 
 
     return (
-        <div data-aos="fade-right" className={styles.li} style={{backgroundColor: props.color}}>
+        <div data-aos="fade-right" className={styles.li}>
             <div className={styles.small}>
-                <p className={styles.p} id={props.id} onClick={intervalM}>{props.interval}</p>
+                <p 
+                className={styles.p} 
+                id={props.id} 
+                onClick={intervalM}
+                >
+                    {props.interval}
+                </p>
+                <AiOutlineExpand className={styles.expand}/>
             </div>
             <div className={styles.expanded}>
                 <div className={styles.gridLeft}>

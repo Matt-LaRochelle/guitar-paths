@@ -13,4 +13,38 @@
     margin: 0 auto 50px;
     font-size: 1.2rem;
     line-height: 1.8rem;
+    padding: 1rem;
+}
+
+.gridContainer {
+    display: block;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+    justify-items: center;
+}
+
+
+@media screen and (max-width: 1280px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

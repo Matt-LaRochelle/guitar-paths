@@ -33,7 +33,7 @@ import IntervalGame from './IntervalGame';
 function Intervals() {
     return (
         <div className={styles.container}>
-            <h2 className={styles.h2}>Ascending Intervals</h2>
+            <h2 className={styles.h2}>Intervals</h2>
             <p className={styles.p}>
                 In learning to play the guitar, it is
                 extremely beneficial to train your ear to 
@@ -58,7 +58,9 @@ function Intervals() {
                 here to get you started. Study them regularly and use the game below to test 
                 your skills! </p> */}
                 </p>
-            <ul>
+                <h2 className={styles.h2}>Ascending Intervals</h2>
+            <div className={styles.gridContainer}>
+            <ul className={styles.grid}>
                 <li>
                     <IntervalA
                         interval="Minor 2nd: Jaws"
@@ -167,6 +169,8 @@ function Intervals() {
                         color="magenta"
                     />
                 </li>
+            </ul>
+            </div>
                 <h2 className={styles.h2}>Descending Intervals</h2>
                 <ul>
                     <li>
@@ -266,7 +270,6 @@ function Intervals() {
                         />
                     </li>
                 </ul>
-            </ul>
             <IntervalGame />
 
         </div>
