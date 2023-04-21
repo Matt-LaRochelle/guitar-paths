@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import styles from './IntervalD.module.css';
 
 //Update these two to come from different files... or???
@@ -6,16 +6,15 @@ import styles from './IntervalD.module.css';
 //Intervals will need to be from a different source
 import audioClip from '../noteSounds/noteSounds';
 import intervals from '../noteSounds/intervalSoundsDescending';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+import {AiOutlineExpand} from 'react-icons/ai';
 
 
 function IntervalD(props) {
+    const [expand, setExpand] = useState(false);
 
-    //Scrolling effects time
-    useEffect(() => {
-        Aos.init({duration: 2000});
-    }, []);
+    function handleClick() {
+        setExpand(!expand);
+    }
 
     //Audio clips
     const audioClips = audioClip;
@@ -57,26 +56,43 @@ function IntervalD(props) {
 
 
     return (
-        <div data-aos="fade-left" className={styles.li} style={{backgroundColor: props.color}}>
-            <div className={styles.gridLeft}>
-                <p  className={styles.p}>{props.interval}</p>
-                <button className={styles.btn} id={props.id} onClick={intervalM}>Interval played melodically</button>
-                <button className={styles.btn} id={props.id} onClick={intervalH}>Interval played harmonically</button>
-                <button className={styles.btn} id={props.id} onClick={context}>Interval in context of song</button>
-            </div>
-            <iframe 
-                width="200" 
-                height="200" 
-                src={props.link} 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen
-                className={styles.video}
+        <div className={ expand ? styles.liExpand : styles.li}>
+            <div className={ expand ? styles.hidden : styles.small}>
+            <p 
+                className={styles.pBTN} 
+                id={props.id} 
+                onClick={intervalM}
                 >
-            </iframe>
-            <img className={styles.diagram} src={props.diagram} alt="diagram" />
+                    {props.interval}
+                </p>
+                <AiOutlineExpand onClick={handleClick} className={styles.expandBtn}/>
+            </div>
+            <div className={ expand ? styles.expanded : styles.hidden}>
+                <div className={styles.gridLeft}>
+                    <div className={styles.pBefore}>
+                    <p  className={styles.p}>{props.interval}</p>
+                    </div>
+                    <AiOutlineExpand onClick={handleClick} className={styles.expandBtn2}/>
+                    <div className={styles.btnContainer}>
+                        <button className={styles.btn} id={props.id} onClick={intervalM}>Melodic</button>
+                        <button className={styles.btn} id={props.id} onClick={intervalH}>Harmonic</button>
+                        <button className={styles.btn} id={props.id} onClick={context}>Context</button>
+                    </div>
+                </div>
+                <img className={styles.diagram} src={props.diagram} alt="diagram" />
+                <iframe 
+                    width="200" 
+                    height="200" 
+                    src={props.link} 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen
+                    className={styles.video}
+                    >
+                </iframe>
         </div>
+    </div>
     );
 }
 

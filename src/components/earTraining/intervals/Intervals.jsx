@@ -172,7 +172,7 @@ function Intervals() {
             </ul>
             </div>
                 <h2 className={styles.h2}>Descending Intervals</h2>
-                <ul>
+                <ul className={styles.grid}>
                     <li>
                         <IntervalD
                             interval="Minor 2nd: Für Elise"
