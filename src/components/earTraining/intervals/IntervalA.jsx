@@ -15,9 +15,9 @@ function IntervalA(props) {
 
 
     //Scrolling effects time
-    useEffect(() => {
-        Aos.init({duration: 2000});
-    }, []);
+    // useEffect(() => {
+    //     Aos.init({duration: 2000});
+    // }, []);
 
     //Audio clips
     const audioClips = audioClip;
@@ -69,11 +69,14 @@ function IntervalA(props) {
             <div className={ expand ? styles.expanded : styles.hidden}>
                 <div className={styles.gridLeft}>
                     <p  className={styles.p}>{props.interval}</p>
-                    <AiOutlineExpand onClick={handleClick} className={styles.expand}/>
-                    <button className={styles.btn} id={props.id} onClick={intervalM}>Melodic</button>
-                    <button className={styles.btn} id={props.id} onClick={intervalH}>Harmonic</button>
-                    <button className={styles.btn} id={props.id} onClick={context}>Context</button>
+                    <AiOutlineExpand onClick={handleClick} className={styles.expandBtn2}/>
+                    <div className={styles.btnContainer}>
+                        <button className={styles.btn} id={props.id} onClick={intervalM}>Melodic</button>
+                        <button className={styles.btn} id={props.id} onClick={intervalH}>Harmonic</button>
+                        <button className={styles.btn} id={props.id} onClick={context}>Context</button>
+                    </div>
                 </div>
+                <img className={styles.diagram} src={props.diagram} alt="diagram" />
                 <iframe 
                     width="200" 
                     height="200" 
@@ -85,7 +88,7 @@ function IntervalA(props) {
                     className={styles.video}
                     >
                 </iframe>
-                <img className={styles.diagram} src={props.diagram} alt="diagram" />
+                
                 
             </div>
             

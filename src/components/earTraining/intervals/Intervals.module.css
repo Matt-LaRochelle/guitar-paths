@@ -26,9 +26,14 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
     padding: 1rem;
-    align-items: center;
+    /* align-items: center; */
     justify-items: center;
     position: relative;
+}
+
+.li {
+    /* border-radius: 50px;
+    border: 2px solid lime; */
 }
 
 

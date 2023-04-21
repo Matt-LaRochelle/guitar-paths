@@ -61,7 +61,7 @@ function Intervals() {
                 <h2 className={styles.h2}>Ascending Intervals</h2>
             <div className={styles.gridContainer}>
             <ul className={styles.grid}>
-                <li>
+                <li className={styles.li}>
                     <IntervalA
                         interval="Minor 2nd: Jaws"
                         id="1"
@@ -70,7 +70,7 @@ function Intervals() {
                         color="red"
                     />
                 </li>
-                <li>
+                <li className={styles.li}>
                     <IntervalA
                         interval="Major 2nd: Happy Birthday"
                         id="2"
@@ -79,7 +79,7 @@ function Intervals() {
                         color="orange"
                     />
                 </li>
-                <li>
+                <li className={styles.li}>
                     <IntervalA
                         interval="Minor 3rd: Greensleeves"
                         id="3"
@@ -88,7 +88,7 @@ function Intervals() {
                         color="yellow"
                     />
                 </li>
-                <li>
+                <li className={styles.li}>
                     <IntervalA
                         interval="Major 3rd: Oh When The Saints"
                         id="4"
