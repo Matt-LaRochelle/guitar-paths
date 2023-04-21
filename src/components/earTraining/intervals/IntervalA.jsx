@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from './IntervalA.module.css';
 import audioClip from '../noteSounds/noteSounds';
 import intervals from '../noteSounds/intervalSounds';
@@ -7,6 +7,12 @@ import 'aos/dist/aos.css';
 import {AiOutlineExpand} from 'react-icons/ai';
 
 function IntervalA(props) {
+    const [expand, setExpand] = useState(false);
+
+    function handleClick() {
+        console.log("You clicked me!");
+    }
+
 
     //Scrolling effects time
     useEffect(() => {
@@ -58,7 +64,7 @@ function IntervalA(props) {
                 >
                     {props.interval}
                 </p>
-                <AiOutlineExpand className={styles.expand}/>
+                <AiOutlineExpand onClick={handleClick} className={styles.expand}/>
             </div>
             <div className={styles.expanded}>
                 <div className={styles.gridLeft}>
