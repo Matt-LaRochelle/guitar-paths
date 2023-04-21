@@ -50,24 +50,30 @@ function IntervalA(props) {
 
     return (
         <div data-aos="fade-right" className={styles.li} style={{backgroundColor: props.color}}>
-            <div className={styles.gridLeft}>
-                <p  className={styles.p}>{props.interval}</p>
-                <button className={styles.btn} id={props.id} onClick={intervalM}>Melodic</button>
-                <button className={styles.btn} id={props.id} onClick={intervalH}>Harmonic</button>
-                <button className={styles.btn} id={props.id} onClick={context}>Context</button>
+            <div className={styles.small}>
+                <p className={styles.p} id={props.id} onClick={intervalM}>{props.interval}</p>
             </div>
-            <iframe 
-                width="200" 
-                height="200" 
-                src={props.link} 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen
-                className={styles.video}
-                >
-            </iframe>
-            <img className={styles.diagram} src={props.diagram} alt="diagram" />
+            <div className={styles.expanded}>
+                <div className={styles.gridLeft}>
+                    <p  className={styles.p}>{props.interval}</p>
+                    <button className={styles.btn} id={props.id} onClick={intervalM}>Melodic</button>
+                    <button className={styles.btn} id={props.id} onClick={intervalH}>Harmonic</button>
+                    <button className={styles.btn} id={props.id} onClick={context}>Context</button>
+                </div>
+                <iframe 
+                    width="200" 
+                    height="200" 
+                    src={props.link} 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen
+                    className={styles.video}
+                    >
+                </iframe>
+                <img className={styles.diagram} src={props.diagram} alt="diagram" />
+            </div>
+            
         </div>
     );
 }

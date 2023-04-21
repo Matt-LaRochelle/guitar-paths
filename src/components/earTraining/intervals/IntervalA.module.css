@@ -9,6 +9,14 @@
     
 }
 
+.small {
+    width: 300px;
+}
+
+.expanded {
+    display: none;
+}
+
 .gridLeft {
     height: 200px;
     display: flex;

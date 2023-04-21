@@ -235,16 +235,6 @@ function IntervalGame() {
                     <button className={styles.btnSettings} id="melodic" onClick={settings} >Melodic: {melodic}</button>
                     <button className={styles.btnSettings} id="harmonic" onClick={settings} >Harmonic: {harmonic}</button>
                 </div>
-                {/* <label>Ascending</label>
-                <input type="checkbox" id="ascending" onChange={settings} ></input>
-                <label>Descending</label>
-                <input type="checkbox" id="descending" onChange={settings} ></input>
-                <label>Melodic</label>
-                <input type="checkbox" id="melodic" onChange={settings} ></input>
-                <label>Harmonic</label>
-                <input type="checkbox" id="harmonic" onChange={settings} ></input> */}
-                
-
             <button className={styles.btn} onClick={playInterval}>Play Interval</button>
             <label className={styles.tries}>Tries: {count}</label>
             <div className={styles.answerContainer}>
@@ -255,12 +245,12 @@ function IntervalGame() {
             <button className={styles.btn} type="submit" onClick={check_answer}>Guess</button>
             
             <Help />
-            <p>Cheat sheet:</p>
+            {/* <p>Cheat sheet:</p>
             <p>Note 1: {note1} Note 2: {note2}</p>
             <p>Interval: {interval} Answer: {answer}</p>
             <p>{melodicOrHarmonic}</p>
             <p>Ascending: {ascending} Descending: {descending}</p>
-            <p>Melodic: {melodic} Harmonic: {harmonic}</p>
+            <p>Melodic: {melodic} Harmonic: {harmonic}</p> */}
         </div>
     );
 }
