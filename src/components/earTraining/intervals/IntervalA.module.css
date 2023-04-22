@@ -81,7 +81,7 @@
     justify-items: center;
     padding: 50px 10px;
     background: linear-gradient(rgb(128, 149, 137), rgb(13, 51, 13));
-    height: 500px;
+    height: 380px;
     
     align-items: center;
     justify-content: space-evenly;
@@ -176,20 +176,23 @@
 
 
 
-
+@media screen and (max-width: 1282px) {
+    .expanded {
+        height: 500px;
+    }
+}
 
 @media screen and (max-width: 1185px) {
     .expanded {
         display: block;
         /* grid-template-columns: repeat(1, 1fr); */
-        height: 1000px
+        height: 1133px
     }
 
     .gridLeft {
         margin-bottom: 0px;
         height: 300px;
         display: block;
-        border: 2px solid aqua;
     }
 
     .pBefore {
@@ -203,7 +206,6 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        border: 2px solid red;
     }
 
     .btn {
@@ -215,7 +217,7 @@
     .diagram {
         display: block;
         margin: -100px auto 0;
-        width: 80%;
+        width: 50%;
         height: auto;
     }
 
@@ -229,9 +231,15 @@
     
 }
 
+@media screen and (max-width: 1000px) {
+    .expanded {
+        height: 900px;
+    }
+}
+
 @media screen and (max-width: 700px) {
     .expanded {
-        height: 1200px;
+        height: 1250px;
     }
     
     .diagram {
