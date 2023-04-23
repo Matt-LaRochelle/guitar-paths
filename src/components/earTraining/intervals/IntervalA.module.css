@@ -80,7 +80,7 @@
     /* grid-gap: 1rem; */
     justify-items: center;
     padding: 50px 10px;
-    background: linear-gradient(rgb(128, 149, 137), rgb(13, 51, 13));
+    background: linear-gradient(rgb(83, 137, 107), rgb(13, 51, 13));
     height: 380px;
     
     align-items: center;
@@ -110,7 +110,7 @@
     background-color: #333;
     padding: 10px 20px;
     border-radius: 50px;
-    background: repeating-linear-gradient(to right, red, orange, yellow, lime, aqua, blue, indigo, violet, red);
+    background: repeating-linear-gradient(to right, #f8f8f8, rgb(226, 173, 173), red, orange, yellow, lime, aqua, blue, indigo, violet, rgb(244, 191, 244), #f8f8f8);
     background-size: 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -174,31 +174,12 @@
 
 
 
-
+/* Grid down to 3 columns */
 
 @media screen and (max-width: 1282px) {
     .expanded {
         height: 500px;
-    }
-}
-
-@media screen and (max-width: 1185px) {
-    .expanded {
         display: block;
-        /* grid-template-columns: repeat(1, 1fr); */
-        height: 1133px
-    }
-
-    .gridLeft {
-        margin-bottom: 0px;
-        height: 300px;
-        display: block;
-    }
-
-    .pBefore {
-        margin: -20px auto 30px;
-        width: 300px;
-        text-align: center;
     }
 
     .btnContainer {
@@ -210,33 +191,37 @@
 
     .btn {
         display: inline;
-        margin: 0 10px;
+        margin: -80px 10px 0;
+    }
 
+    .diagram {
+        margin-left: 80px;
+    }
+
+    .video {
+        margin-left: 80px;
+    }
+}
+
+/* Grid down to 2 columns */
+@media screen and (max-width: 1000px) {
+    .expanded {
+        height: 700px;
     }
 
     .diagram {
         display: block;
-        margin: -100px auto 0;
-        width: 50%;
-        height: auto;
+        margin: -50px auto 35px;
     }
 
     .video {
         display: block;
-        margin: 50px auto;
-        width: 400px;
-        height: 400px;
-    }
-
-    
-}
-
-@media screen and (max-width: 1000px) {
-    .expanded {
-        height: 900px;
+        margin: 0 auto;
     }
 }
 
+
+/* One column */
 @media screen and (max-width: 700px) {
     .expanded {
         height: 1250px;
@@ -246,6 +231,16 @@
         width: 100%;
         height: auto;
     }
+
+    .video {
+        width: 400px;
+        height: 400px;
+    }
+
+    .btn {
+        padding: 5px 4px;
+        width: 80px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -253,4 +248,6 @@
         width: 200px;
         height: 200px;
     }
+
+    
 }
