@@ -187,7 +187,8 @@ function Intervals() {
                 <ul className={styles.grid}>
                     <li>
                         <IntervalD
-                            interval="Minor 2nd: Für Elise"
+                            interval="Minor 2nd"
+                            song="Für Elise"
                             id="1"
                             link="https://www.youtube.com/embed/q9bU12gXUyM"
                             diagram={dmin2}
@@ -195,7 +196,8 @@ function Intervals() {
                     </li>
                     <li>
                         <IntervalD
-                            interval="Major 2nd: Mary Had a Little Lamb"
+                            interval="Major 2nd"
+                            song="Mary Had a Little Lamb"
                             id="2"
                             link="https://www.youtube.com/embed/II2Ey4d9EdA"
                             diagram={dmaj2}
@@ -203,7 +205,8 @@ function Intervals() {
                     </li>
                     <li>
                         <IntervalD
-                            interval="Minor 3rd: Hey Jude"
+                            interval="Minor 3rd"
+                            song="Hey Jude"
                             id="3"
                             link="https://www.youtube.com/embed/mQER0A0ej0M"
                             diagram={dmin3}
@@ -211,7 +214,8 @@ function Intervals() {
                     </li>
                     <li>
                         <IntervalD
-                            interval="Major 3rd: Imperial March"
+                            interval="Major 3rd"
+                            song="Imperial March"
                             id="4"
                             link="https://www.youtube.com/embed/B_iFRoJJLzc"
                             diagram={dmaj3}
@@ -219,7 +223,8 @@ function Intervals() {
                     </li>
                     <li>
                         <IntervalD
-                            interval="Perfect 4th: Oh Come All Ye Faithful"
+                            interval="Perfect 4th"
+                            song="Oh Come All Ye Faithful"
                             id="5"
                             link="https://www.youtube.com/embed/z51apErmAuw"
                             diagram={dp4}
@@ -227,7 +232,8 @@ function Intervals() {
                     </li>
                     <li>
                         <IntervalD
-                            interval="Tritone: Blue 7"
+                            interval="Tritone"
+                            song="Blue 7"
                             id="6"
                             link="https://www.youtube.com/embed/59aXJ8GvMYE"
                             diagram={dtt}
@@ -235,7 +241,8 @@ function Intervals() {
                     </li>
                     <li>
                         <IntervalD
-                            interval="Perfect 5th: Flinstones"
+                            interval="Perfect 5th"
+                            song="Flinstones"
                             id="7"
                             link="https://www.youtube.com/embed/2s13X66BFd8"
                             diagram={dp5}
@@ -243,7 +250,8 @@ function Intervals() {
                     </li>
                     <li>
                         <IntervalD
-                            interval="Minor 6th: Fire Nation Theme"
+                            interval="Minor 6th"
+                            song="Fire Nation Theme"
                             id="8"
                             link="https://www.youtube.com/embed/hCL2pQ6R66o"
                             diagram={dmin6}
@@ -251,7 +259,8 @@ function Intervals() {
                     </li>
                     <li>
                         <IntervalD
-                            interval="Major 6th: Nobody Knows the Trouble I've Seen"
+                            interval="Major 6th"
+                            song="Nobody Knows the Trouble I've Seen"
                             id="9"
                             link="https://www.youtube.com/embed/SVKKRzemX_w"
                             diagram={dmaj6}
@@ -259,7 +268,8 @@ function Intervals() {
                     </li>
                     <li>
                         <IntervalD
-                            interval="Minor 7th: Little Red's Fantasy"
+                            interval="Minor 7th"
+                            song="Little Red's Fantasy"
                             id="10"
                             link="https://www.youtube.com/embed/Aj14kiJPUp4"
                             diagram={dmin7}
@@ -267,7 +277,8 @@ function Intervals() {
                     </li>
                     <li>
                         <IntervalD
-                            interval="Major 7th: I Love You"
+                            interval="Major 7th"
+                            song="I Love You"
                             id="11"
                             link="https://www.youtube.com/embed/nXIXknT-iQ8"
                             diagram={dmaj7}
@@ -275,7 +286,8 @@ function Intervals() {
                     </li>
                     <li>
                         <IntervalD
-                            interval="Perfect Octave: Willow, Weep For Me"
+                            interval="Perfect Octave"
+                            song="Willow, Weep For Me"
                             id="12"
                             link="https://www.youtube.com/embed/w82NHDRRGJ0"
                             diagram={dp8}

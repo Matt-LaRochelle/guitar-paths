@@ -45,3 +45,17 @@
 .li {
     margin-top: 8px;
 }
+
+@media screen and (max-width: 812px) {
+    .li {
+        margin-top: 6px;
+    }
+
+    .howToPlayHidden {
+        padding: 40px;
+    }
+
+    .howToPlay {
+        padding: 40px;
+    }
+}
