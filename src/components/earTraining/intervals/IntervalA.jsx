@@ -16,6 +16,7 @@ function IntervalA(props) {
 
     // Plays the two note interval
     function intervalM(e) {
+        console.log(e.target.id);
         const note = new Audio(audioClips[5].clip);
 
         // Turn button ID into number for dynamic intervals
@@ -47,14 +48,21 @@ function IntervalA(props) {
 
 
     return (
-        <div className={ expand ? styles.containerExpanded : styles.containerShrink}>
+        <div className={ expand ? styles.containerExpanded : styles.containerSmall}>
             <div className={ expand ? styles.hidden : styles.layoutSmall}>
-                <p 
-                className={styles.pSmall} 
-                id={props.id} 
-                onClick={intervalM}
+                <h3 
+                onClick={intervalM} 
+                id={props.id}
+                className={styles.intervalSmall} 
                 >
                     {props.interval}
+                </h3>
+                <p 
+                className={styles.song}
+                onClick={intervalM} 
+                id={props.id}
+                >
+                    {props.song}
                 </p>
                 <AiOutlineExpand onClick={handleClick} className={styles.expandBtn}/>
             </div>

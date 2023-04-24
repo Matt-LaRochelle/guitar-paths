@@ -63,7 +63,8 @@ function Intervals() {
             <ul className={styles.grid}>
                 <li className={styles.li}>
                     <IntervalA
-                        interval="Minor 2nd: Jaws"
+                        interval="Minor 2nd"
+                        song="Jaws"
                         id="1"
                         link="https://www.youtube.com/embed/2J6IA5T7RTs"
                         diagram={min2}
@@ -72,7 +73,8 @@ function Intervals() {
                 </li>
                 <li className={styles.li}>
                     <IntervalA
-                        interval="Major 2nd: Happy Birthday"
+                        interval="Major 2nd"
+                        song="Happy Birthday"
                         id="2"
                         link="https://www.youtube.com/embed/HwOA917qJTs"
                         diagram={maj2}
@@ -81,7 +83,8 @@ function Intervals() {
                 </li>
                 <li className={styles.li}>
                     <IntervalA
-                        interval="Minor 3rd: Greensleeves"
+                        interval="Minor 3rd"
+                        song="Greensleeves"
                         id="3"
                         link="https://www.youtube.com/embed/wARiOb80Zr0"
                         diagram={min3}
@@ -90,7 +93,8 @@ function Intervals() {
                 </li>
                 <li className={styles.li}>
                     <IntervalA
-                        interval="Major 3rd: Oh When The Saints"
+                        interval="Major 3rd"
+                        song="Oh When The Saints"
                         id="4"
                         link="https://www.youtube.com/embed/2eUzdTF3P2M"
                         diagram={maj3}
@@ -99,7 +103,8 @@ function Intervals() {
                 </li>
                 <li>
                     <IntervalA
-                        interval="Perfect 4th: Wedding March"
+                        interval="Perfect 4th"
+                        song="Wedding March"
                         id="5"
                         link="https://www.youtube.com/embed/5C5FOW2ekHo"
                         diagram={p4}
@@ -108,7 +113,8 @@ function Intervals() {
                 </li>
                 <li>
                     <IntervalA
-                        interval="Tritone: The Simpsons"
+                        interval="Tritone"
+                        song="The Simpsons"
                         id="6"
                         link="https://www.youtube.com/embed/YIKPpDSNjR0"
                         diagram={tt}
@@ -117,7 +123,8 @@ function Intervals() {
                 </li>
                 <li>
                     <IntervalA
-                        interval="Perfect 5th: Star Wars"
+                        interval="Perfect 5th"
+                        song="Star Wars"
                         id="7"
                         link="https://www.youtube.com/embed/JG5OsfOuEy0"
                         diagram={p5}
@@ -126,7 +133,8 @@ function Intervals() {
                 </li>
                 <li>
                     <IntervalA
-                        interval="Minor 6th: Go Down Moses"
+                        interval="Minor 6th"
+                        song="Go Down Moses"
                         id="8"
                         link="https://www.youtube.com/embed/XU_GcxTZx8k"
                         diagram={min6}
@@ -135,7 +143,8 @@ function Intervals() {
                 </li>
                 <li>
                     <IntervalA
-                        interval="Major 6th: My Bonnie Lies Over The Ocean"
+                        interval="Major 6th"
+                        song="My Bonnie Lies Over The Ocean"
                         id="9"
                         link="https://www.youtube.com/embed/pTqc6EBwr8Y"
                         diagram={maj6}
@@ -144,7 +153,8 @@ function Intervals() {
                 </li>
                 <li>
                     <IntervalA
-                        interval="Minor 7th: Somewhere"
+                        interval="Minor 7th"
+                        song="Somewhere"
                         id="10"
                         link="https://www.youtube.com/embed/HQ32cIGqgdE"
                         diagram={min7}
@@ -153,7 +163,8 @@ function Intervals() {
                 </li>
                 <li>
                     <IntervalA
-                        interval="Major 7th: Take On Me"
+                        interval="Major 7th"
+                        song="Take On Me"
                         id="11"
                         link="https://www.youtube.com/embed/djV11Xbc914"
                         diagram={maj7}
@@ -162,7 +173,8 @@ function Intervals() {
                 </li>
                 <li>
                     <IntervalA
-                        interval="Perfect Octave: Somewhere Over the Rainbow"
+                        interval="Perfect Octave"
+                        song="Somewhere Over the Rainbow"
                         id="12"
                         link="https://www.youtube.com/embed/PSZxmZmBfnU"
                         diagram={p8}

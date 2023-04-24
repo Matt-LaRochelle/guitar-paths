@@ -4,41 +4,21 @@
 
 /* --- Styles for small list item --- */
 
-.containerShrink {
+.containerSmall {
     position: relative;
     border-radius: 50px;
-    /* border: 2px solid aqua; */
+    background: #333;
 }
 
 .layoutSmall {
     width: 300px;
+    height: 92px;
     background: #333;
-    /* position: relative; */
-    /* border: 2px solid lime; */
-    border-radius: 50px;
-}
-
-.pSmall {
-    font-size: 1.3rem;
-    /* border: 2px solid aqua; */
-    background: #333;
-    padding: 10px 40px 10px 20px;
     border-radius: 50px;
     box-shadow: rgba(0,0,0,.5) 0 4px 10px;
-    height: 92px;
-    text-align: center;
-    /* border: 2px solid #f8f8f8; */
-    /* position: absolute; */
+    padding: 10px 20px;
 }
 
-.pSmall:hover {
-    background: repeating-linear-gradient(to right, red, orange, yellow, lime, aqua, blue, indigo, violet, red);
-    background-size: 400%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: animate 10s linear infinite;
-    cursor: pointer;
-}
 @keyframes animate{
     0%{
         background-position: 0%;
@@ -48,6 +28,36 @@
         background-position: 400%;
     }
 }
+
+.intervalSmall {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.intervalSmall:hover {
+    background: repeating-linear-gradient(to right, red, orange, yellow, lime, aqua, blue, indigo, violet, red);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 10s linear infinite;
+    cursor: pointer;
+}
+
+.song {
+    text-align: center;
+}
+
+.song:hover {
+    background: repeating-linear-gradient(to right, red, orange, yellow, lime, aqua, blue, indigo, violet, red);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 10s linear infinite;
+    cursor: pointer;
+}
+
+
+
 
 .expandBtn {
     position: absolute;
@@ -210,7 +220,7 @@
         width: 140px;
     }
 
-    .pSmall {
+    .intervalSmall {
         font-size: .8rem;
     }
 
