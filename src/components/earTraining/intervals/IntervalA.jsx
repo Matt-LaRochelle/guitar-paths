@@ -47,10 +47,10 @@ function IntervalA(props) {
 
 
     return (
-        <div className={ expand ? styles.liExpand : styles.li}>
-            <div className={ expand ? styles.hidden : styles.small}>
+        <div className={ expand ? styles.containerExpanded : styles.containerShrink}>
+            <div className={ expand ? styles.hidden : styles.layoutSmall}>
                 <p 
-                className={styles.pBTN} 
+                className={styles.pSmall} 
                 id={props.id} 
                 onClick={intervalM}
                 >
@@ -58,10 +58,10 @@ function IntervalA(props) {
                 </p>
                 <AiOutlineExpand onClick={handleClick} className={styles.expandBtn}/>
             </div>
-            <div className={ expand ? styles.expanded : styles.hidden}>
-                <div className={styles.gridLeft}>
-                    <div className={styles.pBefore}>
-                    <p  className={styles.p}>{props.interval}</p>
+            <div className={ expand ? styles.layoutExpanded : styles.hidden}>
+                <div className={styles.gridTitleButtons}>
+                    <div className={styles.pExpanded}>
+                        <p className={styles.p}>{props.interval}</p>
                     </div>
                     <AiOutlineExpand onClick={handleClick} className={styles.expandBtn2}/>
                     <div className={styles.btnContainer}>

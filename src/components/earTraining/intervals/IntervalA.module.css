@@ -4,13 +4,13 @@
 
 /* --- Styles for small list item --- */
 
-.li {
+.containerShrink {
     position: relative;
     border-radius: 50px;
     /* border: 2px solid aqua; */
 }
 
-.small {
+.layoutSmall {
     width: 300px;
     background: #333;
     /* position: relative; */
@@ -18,7 +18,7 @@
     border-radius: 50px;
 }
 
-.pBTN {
+.pSmall {
     font-size: 1.3rem;
     /* border: 2px solid aqua; */
     background: #333;
@@ -31,7 +31,7 @@
     /* position: absolute; */
 }
 
-.pBTN:hover {
+.pSmall:hover {
     background: repeating-linear-gradient(to right, red, orange, yellow, lime, aqua, blue, indigo, violet, red);
     background-size: 400%;
     -webkit-background-clip: text;
@@ -64,7 +64,7 @@
 }
 
 /* --- Styles for expanded list item --- */
-.liExpand {
+.containerExpanded {
     display: block;
     margin: auto;
     position: absolute;
@@ -74,7 +74,7 @@
     z-index: 10;
 }
 
-.expanded {
+.layoutExpanded {
     display: grid;
     grid-template-columns: 350px 600px 200px;
     /* grid-gap: 1rem; */
@@ -88,7 +88,7 @@
     /* justify-items: center; */
 }
 
-.gridLeft {
+.gridTitleButtons {
     height: 200px;
     display: flex;
     
@@ -99,7 +99,7 @@
     /* border: 2px solid aqua; */
 }
 
-.pBefore {
+.pExpanded {
     background: #333;
     border-radius: 50px;
     box-shadow: rgba(0,0,0,.5) 0 4px 10px;
@@ -205,6 +205,18 @@
 
 /* Grid down to 2 columns */
 @media screen and (max-width: 1000px) {
+
+    .layoutSmall {
+        width: 140px;
+    }
+
+    .pSmall {
+        font-size: .8rem;
+    }
+
+
+
+
     .expanded {
         height: 700px;
     }
@@ -222,7 +234,7 @@
 
 
 /* One column */
-@media screen and (max-width: 700px) {
+/* @media screen and (max-width: 700px) {
     .expanded {
         height: 1250px;
     }
@@ -250,4 +262,4 @@
     }
 
     
-}
+} */

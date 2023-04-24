@@ -179,4 +179,16 @@
     .howToPlay {
         padding: 40px;
     }
+
+    .flats {
+        width: 300px;
+    }
+
+    .sharps {
+        width: 300px;
+    }
+
+    .li {
+        margin-top: 6px;
+    }
 }
