@@ -236,8 +236,12 @@
 /* Grid gets thin */
 @media screen and (max-width: 700px) {
     .layoutSmall {
-        width: 190px;
+        width: 160px;
         height: 130px;
+    }
+
+    .intervalSmall {
+        font-size: 1rem;
     }
 
     .layoutExpanded {
