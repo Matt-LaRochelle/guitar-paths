@@ -105,6 +105,21 @@ function Single() {
 
     return (
         <div className={styles.page}>
+            <p className={styles.description}>
+                Learning to identify notes by ear is an essential skill 
+                for any musician, and it's also a lot of fun! It can 
+                help you to play music more confidently and accurately, 
+                and can also improve your ability to improvise and compose. 
+                Additionally, it can make listening to music more enjoyable 
+                as you start to notice the nuances and subtleties in the 
+                melodies and harmonies. Don't be intimidated by the idea of 
+                ear training - it's a skill that can be developed with 
+                practice and patience. With each note you're able to recognize, 
+                you'll feel a sense of accomplishment and progress, which can 
+                be incredibly motivating. So, why not give it a try? Who knows, 
+                you might just discover a new passion for music!
+            </p>
+
             <div className={styles.grid}>
                 <div className={styles.key}>
                     <h2 className={styles.title}>Notes on the Guitar</h2>
@@ -114,7 +129,7 @@ function Single() {
                     <img className={styles.flats} src={flats} alt="notes and flat notes on guitar neck" />
                 </div>
                 <div className={styles.note_game}>
-                    <h2 className={styles.title}>Single Note Identification</h2>
+                    <h2 className={styles.title}>Single Note Identification Game</h2>
                     <button className={styles.noteBtn} onClick={play_note}>Play note</button>
                     <label className={styles.tries}>Tries: {count}</label>
                     <input className={styles.input} onChange={handleChange} type="text" value={inputText} />

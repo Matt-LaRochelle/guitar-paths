@@ -26,7 +26,7 @@ function IntervalD(props) {
         const note = new Audio(audioClips[17].clip);
 
         // Turn button ID into number for dynamic intervals
-        let n = (17 - Number(e.target.id))
+        let n = (17 - Number(e.currentTarget.id))
         note.play();
         setTimeout(() => {
             const note2 = new Audio(audioClips[n].clip);
@@ -40,7 +40,7 @@ function IntervalD(props) {
         const note = new Audio(audioClips[17].clip);
 
         // Turn button ID into number for dynamic intervals
-        let n = (17 - Number(e.target.id))
+        let n = (17 - Number(e.currentTarget.id))
         note.play();
         const note2 = new Audio(audioClips[n].clip);
         note2.play();
@@ -49,7 +49,7 @@ function IntervalD(props) {
     // Plays brief clip of interval in context of song
     function context(e) {
         // Turn button ID into number for dynamic intervals
-        let n = Number(e.target.id) - 1;
+        let n = Number(e.currentTarget.id) - 1;
         const sample = new Audio(intervals[n].clip);
         sample.play();
     }

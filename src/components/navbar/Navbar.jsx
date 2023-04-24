@@ -22,7 +22,7 @@ const Navbar = () => {
                         {/* <Link to="skill" onClick={()=> setNav(false)}>Skills</Link> */}
                     </li>
                     <li>
-                        <Link to="theory" onClick={()=> setNav(false)}>Theory</Link>
+                        {/* <Link to="theory" onClick={()=> setNav(false)}>Theory</Link> */}
                     </li>
                     <li>
                         {/* <Link to="login" onClick={()=> setNav(false)}>Log in</Link> */}

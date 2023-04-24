@@ -3,7 +3,16 @@
 }
 
 .img {
-    margin: 50px;
+    display: block;
+    margin: 50px auto;
+}
+
+.disclaimer {
+    max-width: 75ch;
+    margin: 0 auto 50px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    padding: 1rem;
 }
 
 .img:hover {

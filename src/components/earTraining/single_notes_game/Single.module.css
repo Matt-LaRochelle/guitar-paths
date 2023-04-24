@@ -3,6 +3,14 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
+.description {
+    max-width: 75ch;
+    margin: 0 auto 50px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    padding: 1rem;
+}
+
 .key {
     /* border: 2px solid aqua; */
 }
@@ -125,7 +133,7 @@
     /* left: 10%; */
     top: -500px;
     z-index: 2;
-    background: linear-gradient(rgb(0, 17, 43), rgb(1, 33, 62));
+    background: linear-gradient(rgb(3, 66, 126), rgb(1, 27, 66));
     padding: 100px;
     width: 100vw;
     height: 500px;
@@ -140,7 +148,7 @@
     /* left: 10%; */
     top: -500px;
     z-index: 2;
-    background: linear-gradient(rgb(0, 17, 43), rgb(1, 33, 62));
+    background: linear-gradient(rgb(3, 66, 126), rgb(1, 27, 66));
     padding: 100px;
     width: 100vw;
     height: 500px;
