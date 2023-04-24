@@ -19,6 +19,15 @@
     padding: 10px 20px;
 }
 
+.text:hover {
+    background: repeating-linear-gradient(to right, red, orange, yellow, lime, aqua, blue, indigo, violet, red);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 10s linear infinite;
+    cursor: pointer;
+}
+
 @keyframes animate{
     0%{
         background-position: 0%;
@@ -34,26 +43,8 @@
     text-align: center;
 }
 
-.intervalSmall:hover {
-    background: repeating-linear-gradient(to right, red, orange, yellow, lime, aqua, blue, indigo, violet, red);
-    background-size: 400%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: animate 10s linear infinite;
-    cursor: pointer;
-}
-
 .song {
     text-align: center;
-}
-
-.song:hover {
-    background: repeating-linear-gradient(to right, red, orange, yellow, lime, aqua, blue, indigo, violet, red);
-    background-size: 400%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: animate 10s linear infinite;
-    cursor: pointer;
 }
 
 
