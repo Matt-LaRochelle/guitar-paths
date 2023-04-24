@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from './IntervalGame.module.css'
 import audioClip from '../noteSounds/noteSounds';
 import { AiOutlineCheckCircle, AiOutlineCloseCircle } from 'react-icons/ai';
@@ -76,11 +76,17 @@ function IntervalGame() {
         // )
     }
 
+    useEffect(() => {
+        setInterval(() => Math.floor(Math.random() * 12) + 1);
+        newAnswer(interval);
+    }, [interval]);
+
     function newInterval() {
         //Set interval between 1-12
         //Then set the answer according to randomly chosen interval
         setInterval(() => Math.floor(Math.random() * 12) + 1);
         newAnswer(interval);
+        
     }
 
     function newAnswer(n) {
@@ -164,9 +170,9 @@ function IntervalGame() {
 
     function playInterval() {
         if (melodic === "Off" && harmonic === "Off") {
-            alert("Must have m or h selected...")
+            alert("Must have Melodic or Harmonic selected...")
         } else if (ascending === "Off" && descending === "Off") {
-            alert("Must have a and d selected...")
+            alert("Must have Ascending or Descending selected...")
         } else {
             if (melodicOrHarmonic === true) {
                 const first_note = new Audio(note1);
