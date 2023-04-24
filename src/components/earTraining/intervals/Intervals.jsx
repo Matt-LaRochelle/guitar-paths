@@ -260,7 +260,7 @@ function Intervals() {
                     <li>
                         <IntervalD
                             interval="Major 6th"
-                            song="Nobody Knows the Trouble I've Seen"
+                            song="Nobody Knows"
                             id="9"
                             link="https://www.youtube.com/embed/SVKKRzemX_w"
                             diagram={dmaj6}
