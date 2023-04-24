@@ -249,7 +249,16 @@
     }
 
     .expandedTitleBackground {
+        width: 300px;
         margin: 50px auto;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .song {
+        font-size: 1.2rem;
     }
 
     .btnContainer {
