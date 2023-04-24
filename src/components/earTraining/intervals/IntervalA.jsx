@@ -16,11 +16,10 @@ function IntervalA(props) {
 
     // Plays the two note interval
     function intervalM(e) {
-        console.log(e.target.id)
         const note = new Audio(audioClips[5].clip);
 
         // Turn button ID into number for dynamic intervals
-        let n = (5 + Number(e.target.id))
+        let n = (5 + Number(e.currentTarget.id))
         note.play();
         setTimeout(() => {
             const note2 = new Audio(audioClips[n].clip);
@@ -32,7 +31,7 @@ function IntervalA(props) {
         const note = new Audio(audioClips[5].clip);
 
         // Turn button ID into number for dynamic intervals
-        let n = (5 + Number(e.target.id))
+        let n = (5 + Number(e.currentTarget.id))
         note.play();
         const note2 = new Audio(audioClips[n].clip);
         note2.play();
@@ -41,7 +40,7 @@ function IntervalA(props) {
     // Plays brief clip of interval in context of song
     function context(e) {
         // Turn button ID into number for dynamic intervals
-        let n = Number(e.target.id) - 1;
+        let n = Number(e.currentTarget.id) - 1;
         const sample = new Audio(intervals[n].clip);
         sample.play();
     }
@@ -50,7 +49,7 @@ function IntervalA(props) {
     return (
         <div className={ expand ? styles.containerExpanded : styles.containerSmall}>
             <div className={ expand ? styles.hidden : styles.layoutSmall}>
-                <div id={props.id} onClick={intervalM} className={styles.text}>
+                <div className={styles.text} id={props.id} onClick={intervalM} >
                     <h3 className={styles.intervalSmall}>{props.interval}</h3>
                     <p className={styles.song}>{props.song}</p>
                 </div>

@@ -17,10 +17,11 @@
     border-radius: 50px;
     box-shadow: rgba(0,0,0,.5) 0 4px 10px;
     padding: 10px 20px;
+    position: relative;
 }
 
 .text:hover {
-    background: repeating-linear-gradient(to right, red, orange, yellow, lime, aqua, blue, indigo, violet, red);
+    background: repeating-linear-gradient(to right, red, orange, yellow, lime, aqua, rgb(64, 177, 247), violet, red);
     background-size: 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -52,16 +53,16 @@
 
 .expandBtn {
     position: absolute;
-    right: 10px;
-    top: 50%;
-    margin-top: -12px;
+    bottom: .4rem;
+    left: 50%;
+    margin-left: -12px;
     font-size: 1.5rem;
 }
 
 .expandBtn:hover {
     font-size: 1.9rem;
+    margin-left: -15px;
     cursor: pointer;
-    margin-top: -15.2px;
 }
 
 /* --- Styles for expanded list item --- */
@@ -177,7 +178,7 @@
 
 /* Grid down to 3 columns */
 
-@media screen and (max-width: 1282px) {
+@media screen and (max-width: 1280px) {
     .expanded {
         height: 500px;
         display: block;
@@ -205,18 +206,7 @@
 }
 
 /* Grid down to 2 columns */
-@media screen and (max-width: 1000px) {
-
-    .layoutSmall {
-        width: 140px;
-    }
-
-    .intervalSmall {
-        font-size: .8rem;
-    }
-
-
-
+@media screen and (max-width: 980px) {
 
     .expanded {
         height: 700px;
@@ -230,6 +220,15 @@
     .video {
         display: block;
         margin: 0 auto;
+    }
+}
+
+
+/* Grid gets thin */
+@media screen and (max-width: 700px) {
+    .layoutSmall {
+        width: 190px;
+        height: 130px;
     }
 }
 
