@@ -3,7 +3,7 @@ import styles from './Login.module.css';
 
 function Register(props) {
     return (
-            <form className={styles.content}>
+            <form className={styles.form}>
                 <input className={styles.input} type='text' name="username" placeholder="Username"></input>
                 <input className={styles.input}type='password' name='password' placeholder="Password"></input>
                 <input className={styles.input}type='password' name='password' placeholder="Confirm Password"></input>
