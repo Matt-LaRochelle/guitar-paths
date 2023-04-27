@@ -24,7 +24,14 @@ connection.once('open', () => {
 })
 
 
+//Import the files
+const exercisesRouter = require('./routes/exercises');
+const usersRouter = require('./routes/users');
 
+
+//use the files
+app.use('/exercises', exercisesRouter);
+app.use('/users', usersRouter);
 
 //Start backend server
 app.listen(port, () => {
