@@ -25,7 +25,7 @@ const Navbar = () => {
                         {/* <Link to="theory" onClick={()=> setNav(false)}>Theory</Link> */}
                     </li>
                     <li>
-                        {/* <Link to="login" onClick={()=> setNav(false)}>Log in</Link> */}
+                        <Link to="login" onClick={()=> setNav(false)}>Log in</Link>
                     </li>
                     <li>
                         {/* <Link to="queries" onClick={()=> setNav(false)}><AiOutlineSearch size={25} style={{marginTop: "6px"}} /></Link> */}
