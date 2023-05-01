@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 
-//I don't know...
+//Create the server (app) and run on port 2977 OR ??online?? URI?
 const app = express();
 const port = process.env.PORT || 2977;
 
