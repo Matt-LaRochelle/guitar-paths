@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 2977;
 
 
-//Middleware?
+//Middleware - express.json parses json files. Cors builds a bridge from front end to back end
 app.use(cors());
 app.use(express.json());
 
