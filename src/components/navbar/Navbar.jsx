@@ -33,6 +33,18 @@ const Navbar = () => {
                     <li>
                         {/* <Link to="profile" onClick={()=> setNav(false)}><AiOutlineUser size={25} style={{marginTop: "6px"}} /></Link> */}
                     </li>
+                    <li>
+                        <Link to="/" onClick={()=> setNav(false)}>Exercise List</Link>
+                    </li>
+                    <li>
+                        <Link to="edit:id" onClick={()=> setNav(false)}>Edit Exercise</Link>
+                    </li>
+                    <li>
+                        <Link to="create" onClick={()=> setNav(false)}>Create Exercise</Link>
+                    </li>
+                    <li>
+                        <Link to="user" onClick={()=> setNav(false)}>Create User</Link>
+                    </li>
                 </ul>
             </nav>
             <div onClick={()=> setNav(!nav)} className={styles.mobile_btn}>
