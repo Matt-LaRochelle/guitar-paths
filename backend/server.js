@@ -7,7 +7,7 @@ require('dotenv').config();
 
 //Create the server (app) and run on port 2977 OR ??online?? URI?
 const app = express();
-const port = process.env.PORT || 2977;
+const port = process.env.PORT || 3001;
 
 
 //Middleware - express.json parses json files. Cors builds a bridge from front end to back end
