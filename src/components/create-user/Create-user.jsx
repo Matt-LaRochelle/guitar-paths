@@ -9,6 +9,15 @@ function CreateUser() {
     const [birthday, setBirthday] = useState("");
 
 
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    const current = (mm + '/' + dd + '/' + yyyy);
+
+
+
     useEffect(() => {
         Axios.get("http://localhost:3001/users").then((response) => {
             setListOfUsers(response.data)
@@ -24,7 +33,8 @@ function CreateUser() {
 
     const createUser = () => {
         if (username.length >= 3) {
-            Axios.post("http://localhost:3001/users/add", {
+            if (Date(birthday) < Date(current)) {
+                Axios.post("http://localhost:3001/users/add", {
                 username,
                 password,
                 birthday,
@@ -39,6 +49,10 @@ function CreateUser() {
                 },
             ]);
         });
+            } else {
+                alert("Birthday must be before today...")
+            }
+            
         } else {
             alert("Username must be more than 3 characters!")
         }
@@ -48,6 +62,9 @@ function CreateUser() {
     return (
         <div>
             Hello Create User!
+            <div>
+                <h1>{current}</h1>
+            </div>
             <div>
                 {listOfUsers.map((user) => {
                     return (
