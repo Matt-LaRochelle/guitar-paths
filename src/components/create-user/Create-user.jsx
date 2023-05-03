@@ -3,9 +3,10 @@ import Axios from 'axios';
 
 function CreateUser() {
     const [listOfUsers, setListOfUsers] = useState([]);
-    const [name, setName] = useState("");
-    const [age, setAge] = useState(0);
     const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("");
+    const [birthday, setBirthday] = useState("");
 
 
     useEffect(() => {
@@ -14,21 +15,22 @@ function CreateUser() {
         })
     }, []);
 
-    const createUser = () => {
+    const createUser = (e) => {
         Axios.post("http://localhost:3001/users/add", {
-                name,
-                age,
                 username,
+                password,
+                birthday,
+                email,
             }).then((response) => {
             alert("User Created!");
             setListOfUsers([...listOfUsers, {
-                name,
-                age,
                 username,
+                password,
+                birthday,
+                email,
                 },
             ]);
         });
-        console.log("you clicked me!");
     };
 
     return (
@@ -38,22 +40,28 @@ function CreateUser() {
                 {listOfUsers.map((user) => {
                     return (
                         <div>
-                            <h1>Name: {user.name}</h1>
-                            {/* <h1>Age: {user.age}</h1>
-                            <h1>Username: {user.username}</h1> */}
+                            <h6>Username: {user.username}</h6>
+                            <h6>Password: {user.password}</h6>
+                            <h6>Birthday: {user.birthday}</h6>
+                            <h6>Email: {user.username}</h6>
+                            <br></br>
                         </div>
                     );
                 })}
             </div>
             <div>
-                <input type="text" placeholder="Name..." onChange={(event) => {
-                    setName(event.target.value);
-                }}/>
-                <input type="number" placeholder="Age..." onChange={(event) => {
-                    setAge(event.target.value);
-                }}/>
-                <input type="text" placeholder="Username..." onChange={(event) => {
+                <input type="text" placeholder="Username..." required onChange={(event) => {
                     setUsername(event.target.value);
+                }}/>
+                <input type="password" placeholder="Password..." required onChange={(event) => {
+                    setPassword(event.target.value);
+                }}/>
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday" required onChange={(event) => {
+                    setBirthday(event.target.value);
+                }}></input>
+                <input type="email" placeholder="Email..." required onChange={(event) => {
+                    setEmail(event.target.value);
                 }}/>
                 <button onClick={createUser}>Create User</button>
             </div>

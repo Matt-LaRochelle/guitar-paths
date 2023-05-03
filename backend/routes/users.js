@@ -11,14 +11,16 @@ router.route('/').get((req, res) => {
 
 //Handles Incoming http post requests
 router.route('/add').post((req, res) => {
-    const name = req.body.name;
-    const age = req.body.age;
     const username = req.body.username;
+    const password = req.body.password;
+    const birthday = req.body.birthday;
+    const email = req.body.email;
 
     const newUser = new User({
-        name,
-        age,
-        username
+        username,
+        password,
+        birthday,
+        email
     });
 
     newUser.save()
