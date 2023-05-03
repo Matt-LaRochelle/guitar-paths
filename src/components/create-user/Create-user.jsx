@@ -15,8 +15,16 @@ function CreateUser() {
         })
     }, []);
 
-    const createUser = (e) => {
-        Axios.post("http://localhost:3001/users/add", {
+
+    function inputUsername(e) {
+        setUsername(e.target.value);
+    }
+
+
+
+    const createUser = () => {
+        if (username.length >= 3) {
+            Axios.post("http://localhost:3001/users/add", {
                 username,
                 password,
                 birthday,
@@ -31,6 +39,10 @@ function CreateUser() {
                 },
             ]);
         });
+        } else {
+            alert("Username must be more than 3 characters!")
+        }
+        
     };
 
     return (
@@ -43,16 +55,14 @@ function CreateUser() {
                             <h6>Username: {user.username}</h6>
                             <h6>Password: {user.password}</h6>
                             <h6>Birthday: {user.birthday}</h6>
-                            <h6>Email: {user.username}</h6>
+                            <h6>Email: {user.email}</h6>
                             <br></br>
                         </div>
                     );
                 })}
             </div>
             <div>
-                <input type="text" placeholder="Username..." required onChange={(event) => {
-                    setUsername(event.target.value);
-                }}/>
+                <input type="text" placeholder="Username..." required onChange={inputUsername} />
                 <input type="password" placeholder="Password..." required onChange={(event) => {
                     setPassword(event.target.value);
                 }}/>
