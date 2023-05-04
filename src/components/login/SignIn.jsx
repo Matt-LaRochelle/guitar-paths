@@ -1,10 +1,20 @@
 import React, { useState } from "react";
+import Axios from 'axios';
 import styles from './Login.module.css';
 
 
 function SignIn(props) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+
+    const login = () => {
+        Axios.post("http://localhost:3001/users/", {
+            username,
+            password,
+            }).then((response) => {
+            alert("Success!");
+        });
+    }
 
     return (
         <div>
@@ -18,7 +28,7 @@ function SignIn(props) {
                 <input className={styles.input}type='password' name='password' placeholder="Password" onChange={(event) => {
                     setPassword(event.target.value);
                 }}></input>
-                <button className={styles.submit} type='submit'>Log In</button>
+                <button className={styles.submit} type='submit' onClick={login}>Log In</button>
                 <p className={styles.link} onClick={props.function}>Don't have an account? Register here</p>
             </form>
         </div>

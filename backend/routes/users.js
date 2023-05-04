@@ -9,7 +9,27 @@ router.route('/').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
-//Handles Incoming http post requests
+
+//Handles log in functionality
+router.route('/').post((req, res) => {
+    const username = req.body.username;
+    const password = req.body.password;
+
+    User.findOne({username: username})
+        .then((docs) => {
+            console.log("result: ", docs);
+            if (docs.password === password) {
+                console.log("You good.");
+            } else {
+                console.log("No good.");
+            }
+        })
+        .catch((err) => {
+            console.log(err)
+        });
+});
+
+//Handles Incoming http post requests ***FOR REGISTERING A USER***
 router.route('/add').post((req, res) => {
     const username = req.body.username;
     const password = req.body.password;
