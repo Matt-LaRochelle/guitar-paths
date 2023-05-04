@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from 'axios';
+import styles from './Register.module.css';
 
 function CreateUser() {
     const [listOfUsers, setListOfUsers] = useState([]);
@@ -96,6 +97,26 @@ function CreateUser() {
     return (
         <div>
             <div>
+            <h1 className={styles.h1}>Register</h1>
+                <label className={styles.label} for="username">Username</label>
+                <input type="text" className={styles.input} required onChange={(event) => {
+                    setUsername(event.target.value);
+                }} />
+                <label className={styles.label} for="password">Password</label>
+                <input type="password" className={styles.input} required onChange={(event) => {
+                    setPassword(event.target.value);
+                }}/>
+                <label className={styles.label} for="birthday">Birthday</label>
+                <input type="date" id="birthday" name="birthday" className={styles.input} required onChange={(event) => {
+                    setBirthday(event.target.value);
+                }}></input>
+                <label className={styles.label} for="email">Email</label>
+                <input type="email" className={styles.input} required onChange={(event) => {
+                    setEmail(event.target.value);
+                }}/>
+                <button className={styles.btn} onClick={createUser}>Create User</button>
+            </div>
+            {/* <div>
                 {listOfUsers.map((user) => {
                     return (
                         <div>
@@ -107,23 +128,7 @@ function CreateUser() {
                         </div>
                     );
                 })}
-            </div>
-            <div>
-                <input type="text" placeholder="Username..." required onChange={(event) => {
-                    setUsername(event.target.value);
-                }} />
-                <input type="password" placeholder="Password..." required onChange={(event) => {
-                    setPassword(event.target.value);
-                }}/>
-                <label for="birthday">Birthday:</label>
-                <input type="date" id="birthday" name="birthday" required onChange={(event) => {
-                    setBirthday(event.target.value);
-                }}></input>
-                <input type="email" placeholder="Email..." required onChange={(event) => {
-                    setEmail(event.target.value);
-                }}/>
-                <button onClick={createUser}>Create User</button>
-            </div>
+            </div> */}
         </div>
     );
 }
