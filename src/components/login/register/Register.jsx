@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from 'axios';
 import styles from './Register.module.css';
 
-function CreateUser() {
+function Register(props) {
     const [listOfUsers, setListOfUsers] = useState([]);
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -115,6 +115,7 @@ function CreateUser() {
                     setEmail(event.target.value);
                 }}/>
                 <button className={styles.btn} onClick={createUser}>Create User</button>
+                <p className={styles.link} onClick={props.function}>Already have an account? Sign in here</p>
             </div>
             {/* <div>
                 {listOfUsers.map((user) => {
@@ -133,4 +134,4 @@ function CreateUser() {
     );
 }
 
-export default CreateUser;
+export default Register;

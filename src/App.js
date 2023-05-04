@@ -15,7 +15,7 @@ import Game from './components/game/Game';
 import ExerciseList from './components/exercise-list/Exercise-list';
 import EditExercise from './components/edit-exercise/Edit-exercise';
 import CreateExercise from './components/create-exercise/Create-exercise';
-import CreateUser from './components/create-user/Create-user';
+// import Register from './components/login/register/Register';
 
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
     <main>
       <Navbar />
       <Routes>
-        {/* <Route path="/" element={<Home />}/> */}
+        <Route path="/" element={<Home />}/>
         <Route path="/queries" element={<Queries />}/>
         <Route path="/practice" element={<Practice />}/>
         <Route path="/eartraining" element={<EarTraining />}/>
@@ -35,10 +35,10 @@ function App() {
         <Route path="/game" element={<Game />}/>
 
         {/* Added for tutorial: */}
-        <Route path="/" element={<ExerciseList />}/>
+        {/* <Route path="/" element={<ExerciseList />}/> */}
         <Route path="/edit:id" element={<EditExercise />}/>
         <Route path="/create" element={<CreateExercise />}/>
-        <Route path="/user" element={<CreateUser />}/>
+        {/* <Route path="/user" element={<CreateUser />}/> */}
       </Routes>
       
     </main>

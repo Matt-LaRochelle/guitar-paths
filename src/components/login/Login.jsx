@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from './Login.module.css';
-import Register from './Register';
 import SignIn from './SignIn';
+import Register from './register/Register';
 
 function Login() {
 
@@ -13,7 +13,6 @@ function Login() {
 
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>Log In</h1>
             { isRegistered ? <SignIn function={handleClick} /> : <Register function={handleClick} />}
         </div>
     );

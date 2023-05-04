@@ -21,3 +21,14 @@
     display: block;
     margin: auto;
 }
+
+.link {
+    text-align: center;
+    margin: 40px auto;
+    text-decoration: underline;
+}
+
+.link:hover {
+    cursor: pointer;
+    color: lime;
+}
