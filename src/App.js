@@ -24,13 +24,13 @@ function App() {
     <main>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />}/>
+        <Route path="/home" element={<Home />}/>
         <Route path="/queries" element={<Queries />}/>
         <Route path="/practice" element={<Practice />}/>
         <Route path="/eartraining" element={<EarTraining />}/>
         <Route path="/skill" element={<Skill />}/>
         <Route path="/theory" element={<Theory />}/>
-        <Route path="/login" element={<Login />}/>
+        <Route path="/" element={<Login />}/>
         <Route path="/profile" element={<Profile />}/>
         <Route path="/game" element={<Game />}/>
 

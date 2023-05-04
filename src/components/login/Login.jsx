@@ -1,19 +1,18 @@
 import React, { useState } from "react";
-import styles from './Login.module.css';
-import SignIn from './SignIn';
+import SignIn from './signIn/SignIn';
 import Register from './register/Register';
 
 function Login() {
 
-    const [isRegistered, setIsRegistered] = useState(true);
+    const [register, setRegister] = useState(true);
 
     function handleClick() {
-        setIsRegistered(!isRegistered);
+        setRegister(!register);
     }
 
     return (
-        <div className={styles.container}>
-            { isRegistered ? <SignIn function={handleClick} /> : <Register function={handleClick} />}
+        <div>
+            { register ? <SignIn function={handleClick} /> : <Register function={handleClick} />}
         </div>
     );
 }

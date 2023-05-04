@@ -9,7 +9,7 @@ const Navbar = () => {
 
     return (
         <header className={styles.navbar}>
-            <Link to="/" ><img className={styles.image} src={Logo} alt="/" /></Link>
+            <Link to="/home" ><img className={styles.image} src={Logo} alt="/" /></Link>
             <nav>
                 <ul className={nav ? [styles.menu, styles.active].join(' ') : [styles.menu]}>
                     <li>
@@ -25,7 +25,7 @@ const Navbar = () => {
                         {/* <Link to="theory" onClick={()=> setNav(false)}>Theory</Link> */}
                     </li>
                     <li>
-                        <Link to="login" onClick={()=> setNav(false)}>Log in</Link>
+                        <Link to="/" onClick={()=> setNav(false)}>Log in</Link>
                     </li>
                     <li>
                         {/* <Link to="queries" onClick={()=> setNav(false)}><AiOutlineSearch size={25} style={{marginTop: "6px"}} /></Link> */}
