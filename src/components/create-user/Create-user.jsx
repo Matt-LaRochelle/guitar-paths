@@ -14,9 +14,7 @@ function CreateUser() {
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = today.getFullYear();
 
-    const current = (mm + '/' + dd + '/' + yyyy);
-
-
+    const current = (yyyy + '-' + mm + '-' + dd);
 
     useEffect(() => {
         Axios.get("http://localhost:3001/users").then((response) => {
@@ -25,46 +23,78 @@ function CreateUser() {
     }, []);
 
 
-    function inputUsername(e) {
-        setUsername(e.target.value);
+    function usernameValidation() {
+        if (listOfUsers.filter(e => e.username === username).length > 0) {
+            alert("Username already exists.")
+        } else {
+            if (username.length >= 3 && username.length <=30) {
+                return true;
+            } else {
+                if (username.length < 3) {
+                    alert("Username must be more than 3 characters.")
+                } else if (username.length > 30) {
+                    alert("Username must be less than 30 characters.")
+                }
+            }
+        }   
+    }
+
+    function passwordValidation() {
+        var re = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,30}$/;
+        if (re.test(password)) {
+            return true;
+        } else {
+            alert("Passwords must be between 8-30 characters, and include at least one symbol, uppercase letter, lowercase letter, and number.")
+        }
+    }
+    
+    function birthdayValidation() {
+        if (birthday < current) {
+            return true;
+        } else {
+            alert("Birthday must be before today.")
+        }
+    }
+
+    function emailValidation() {
+        var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (re.test(email)) {
+            return true;
+        } else {
+            alert("Please use a valid email.")
+        }
     }
 
 
 
     const createUser = () => {
-        if (username.length >= 3) {
-            if (Date(birthday) < Date(current)) {
-                Axios.post("http://localhost:3001/users/add", {
-                username,
-                password,
-                birthday,
-                email,
-            }).then((response) => {
-            alert("User Created!");
-            setListOfUsers([...listOfUsers, {
-                username,
-                password,
-                birthday,
-                email,
-                },
-            ]);
-        });
-            } else {
-                alert("Birthday must be before today...")
-            }
-            
-        } else {
-            alert("Username must be more than 3 characters!")
+        if (usernameValidation()) {
+            if (passwordValidation()) {
+                if (birthdayValidation()) {
+                    if (emailValidation()) {
+                        Axios.post("http://localhost:3001/users/add", {
+                            username,
+                            password,
+                            birthday,
+                            email,
+                            }).then((response) => {
+                            alert("User Created!");
+                            setListOfUsers([...listOfUsers, {
+                                username,
+                                password,
+                                birthday,
+                                email,
+                                },
+                            ]);
+                        });
+                    }
+                }
+            }  
         }
-        
     };
 
     return (
         <div>
-            Hello Create User!
-            <div>
-                <h1>{current}</h1>
-            </div>
             <div>
                 {listOfUsers.map((user) => {
                     return (
@@ -79,7 +109,9 @@ function CreateUser() {
                 })}
             </div>
             <div>
-                <input type="text" placeholder="Username..." required onChange={inputUsername} />
+                <input type="text" placeholder="Username..." required onChange={(event) => {
+                    setUsername(event.target.value);
+                }} />
                 <input type="password" placeholder="Password..." required onChange={(event) => {
                     setPassword(event.target.value);
                 }}/>
