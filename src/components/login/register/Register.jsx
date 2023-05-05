@@ -80,6 +80,7 @@ function Register(props) {
                             email,
                             }).then((response) => {
                             alert("User Created!");
+                            props.function2();
                             setListOfUsers([...listOfUsers, {
                                 username,
                                 password,
@@ -88,6 +89,7 @@ function Register(props) {
                                 },
                             ]);
                         });
+                        
                     }
                 }
             }  
@@ -117,7 +119,7 @@ function Register(props) {
                 <button className={styles.btn} onClick={createUser}>Create User</button>
                 <p className={styles.link} onClick={props.function}>Already have an account? Sign in here</p>
             </div>
-            <div>
+            {/* <div>
                 {listOfUsers.map((user) => {
                     return (
                         <div>
@@ -129,7 +131,7 @@ function Register(props) {
                         </div>
                     );
                 })}
-            </div>
+            </div> */}
         </div>
     );
 }

@@ -18,19 +18,19 @@ import CreateExercise from './components/create-exercise/Create-exercise';
 // import Register from './components/login/register/Register';
 
 
-function App() {
+function App(props) {
   return (
     <BrowserRouter>
     <main>
       <Navbar />
       <Routes>
-        <Route path="/home" element={<Home />}/>
+        <Route path="/" element={<Home function2={props.function2} />}/>
         <Route path="/queries" element={<Queries />}/>
         <Route path="/practice" element={<Practice />}/>
         <Route path="/eartraining" element={<EarTraining />}/>
         <Route path="/skill" element={<Skill />}/>
         <Route path="/theory" element={<Theory />}/>
-        <Route path="/" element={<Login />}/>
+        {/* <Route path="/" element={<Login />}/> */}
         <Route path="/profile" element={<Profile />}/>
         <Route path="/game" element={<Game />}/>
 

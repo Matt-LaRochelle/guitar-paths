@@ -12,15 +12,14 @@ function SignIn(props) {
             username,
             password,
             }).then((response) => {
-            alert("Success!");
+            // alert("Success!");
         });
+        props.function2();
     }
 
     return (
         <div>
         <h1 className={styles.title}>Sign In</h1>
-        <h3>Username: {username}</h3>
-        <h3>Password: {password}</h3>
             <form className={styles.form}>
                 <input className={styles.input} type='text' name="username" placeholder="Username" onChange={(event) => {
                     setUsername(event.target.value);
