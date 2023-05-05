@@ -12,12 +12,8 @@ function SignIn(props) {
             username,
             password,
             }).then((response) => {
-                if (response === "You good.") {
-                    alert("Success!");
-                props.function2();
-                } else {
-                    alert("No good.");
-                }
+            alert("Success!");
+            props.function2();
         });
     }
 
