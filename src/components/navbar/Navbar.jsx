@@ -9,7 +9,7 @@ const Navbar = () => {
 
     return (
         <header className={styles.navbar}>
-            <Link to="/home" ><img className={styles.image} src={Logo} alt="/" /></Link>
+            <Link to="home" ><img className={styles.image} src={Logo} alt="/" /></Link>
             <nav>
                 <ul className={nav ? [styles.menu, styles.active].join(' ') : [styles.menu]}>
                     <li>
@@ -25,15 +25,19 @@ const Navbar = () => {
                         {/* <Link to="theory" onClick={()=> setNav(false)}>Theory</Link> */}
                     </li>
                     <li>
-                        <Link to="/" onClick={()=> setNav(false)}>Log in</Link>
+                        {/* <Link to="/" onClick={()=> setNav(false)}>Log in</Link> */}
                     </li>
                     <li>
                         {/* <Link to="queries" onClick={()=> setNav(false)}><AiOutlineSearch size={25} style={{marginTop: "6px"}} /></Link> */}
                     </li>
                     <li>
-                        {/* <Link to="profile" onClick={()=> setNav(false)}><AiOutlineUser size={25} style={{marginTop: "6px"}} /></Link> */}
+                        <Link to="/" onClick={()=> setNav(false)}><AiOutlineUser size={25} style={{marginTop: "6px"}} /></Link>
                     </li>
-                    <li>
+
+                    {/* This section for the code camp tutorial on MERN */}
+
+
+                    {/* <li>
                         <Link to="/" onClick={()=> setNav(false)}>Exercise List</Link>
                     </li>
                     <li>
@@ -44,7 +48,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link to="user" onClick={()=> setNav(false)}>Create User</Link>
-                    </li>
+                    </li> */}
                 </ul>
             </nav>
             <div onClick={()=> setNav(!nav)} className={styles.mobile_btn}>

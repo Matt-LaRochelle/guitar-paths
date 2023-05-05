@@ -2,7 +2,7 @@ import React from "react";
 import styles from './Home.module.css';
 import jack from '../images/download.jpg';
 
-function Home(props) {
+function Home() {
     return (
         <div className={styles.container}>
             {/* <h1>Welcome Cowards</h1> */}
@@ -11,7 +11,7 @@ function Home(props) {
             <h2>Random tab of the week:</h2>
             <h2>Random tip of the week:</h2>
             <h2>Coming soon:</h2> */}
-            <p onClick={props.function2} className={styles.disclaimer}>
+            <p className={styles.disclaimer}>
                 Please excuse the appearance of this website as it is currently 
                 undergoing construction. As a novice coder, I am working 
                 diligently to ensure that all aspects of this online interface are 

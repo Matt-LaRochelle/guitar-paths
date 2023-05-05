@@ -19,7 +19,7 @@ router.route('/').post((req, res) => {
         .then((docs) => {
             console.log("result: ", docs);
             if (docs.password === password) {
-                console.log("You good.");
+                res.json("You good.");
             } else {
                 console.log("No good.");
             }

@@ -1,10 +1,11 @@
 import React from "react";
 import styles from './Profile.module.css';
 
-function Profile() {
+function Profile(props) {
     return (
         <div className={styles.container}>
             <h1>Profile</h1>
+            <button onClick={props.function2}>Log out</button>
             <div className={styles.songs}>
                 <div className={styles.mastered}>
                     <h2>Songs Mastered:</h2>
