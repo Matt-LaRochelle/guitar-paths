@@ -6,7 +6,7 @@ function Profile(props) {
         <div className={styles.container}>
             <h1>Profile</h1>
             <button onClick={props.function2}>Log out</button>
-            <div className={styles.songs}>
+            {/* <div className={styles.songs}>
                 <div className={styles.mastered}>
                     <h2>Songs Mastered:</h2>
                     <ul>
@@ -31,9 +31,17 @@ function Profile(props) {
                         <li>Song</li>
                     </ul>
                 </div>
+            </div> */}
+            <div className={styles.gameScores} >
+                <h1>Ear training high scores:</h1>
+                <h2>Single notes: 12</h2>
+                <h2>Intervals: 8</h2>
+                <h2>Chords: 2</h2>
+                <h2>Scales: 12</h2>
+                <h2>Chord Progressions: 5</h2>
             </div>
             <div className={styles.log}>
-                <h2>Practice Log:</h2>
+                <h1>Practice Log:</h1>
                 <h3>Week of 3/9/2023</h3>
                 <ul>
                     <li>1234 90bpm</li>
