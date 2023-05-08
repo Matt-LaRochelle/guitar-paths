@@ -8,23 +8,25 @@ function SignIn(props) {
     const [password, setPassword] = useState("");
 
     const login = () => {
-        Axios.post("http://localhost:3001/users/", {
+        Axios.post("http://localhost:3001/users/sign", {
             username,
             password,
             }).then((response) => {
+            console.log(response);
             alert("Success!");
             props.function2();
         });
+        
     }
 
     return (
         <div>
         <h1 className={styles.title}>Sign In</h1>
             <form className={styles.form}>
-                <input className={styles.input} type='text' name="username" placeholder="Username" onChange={(event) => {
+                <input className={styles.input} type='text' name="username" autoComplete="username" placeholder="Username" onChange={(event) => {
                     setUsername(event.target.value);
                 }}></input>
-                <input className={styles.input}type='password' name='password' placeholder="Password" onChange={(event) => {
+                <input className={styles.input} type='password' name='password' autoComplete="current-password" placeholder="Password" onChange={(event) => {
                     setPassword(event.target.value);
                 }}></input>
                 <button className={styles.submit} type='submit' onClick={login}>Log In</button>

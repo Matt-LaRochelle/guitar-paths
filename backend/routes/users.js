@@ -11,21 +11,24 @@ router.route('/').get((req, res) => {
 
 
 //Handles log in functionality
-router.route('/').post((req, res) => {
+router.route('/sign').post((req, res) => {
     const username = req.body.username;
     const password = req.body.password;
 
     User.findOne({username: username})
         .then((docs) => {
-            console.log("result: ", docs);
+            // console.log("result: ", docs);
             if (docs.password === password) {
-                console.log("You good.");
+                console.log("You good."); 
+                res.send("Password is correct.");
             } else {
                 console.log("No good.");
+                res.send("Password is incorrect.")
             }
         })
         .catch((err) => {
-            console.log(err)
+            console.log("error:", err)
+            res.send("Username not in database.")
         });
 });
 
