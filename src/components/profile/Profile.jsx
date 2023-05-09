@@ -2,9 +2,12 @@ import React from "react";
 import styles from './Profile.module.css';
 
 function Profile(props) {
+    const username = "This is my username"
+    
     return (
         <div className={styles.container}>
             <h1>Profile</h1>
+            <h2>Welcome {username}</h2>
             <button onClick={props.function2}>Log out</button>
             {/* <div className={styles.songs}>
                 <div className={styles.mastered}>

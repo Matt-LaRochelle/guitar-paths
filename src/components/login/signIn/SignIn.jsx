@@ -12,11 +12,15 @@ function SignIn(props) {
             username,
             password,
             }).then((response) => {
-            console.log(response);
-            alert("Success!");
-            props.function2();
-        });
-        
+            if (response.data === "Password is correct.") {
+                alert("Success!");
+                props.function2();
+            } else if (response.data === "Password is incorrect.") {
+                alert("Password is incorrect.");
+            } else if (response.data === "Username not in database.") {
+                alert("Username does not exist.");
+            }
+        });  
     }
 
     return (

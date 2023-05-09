@@ -60,7 +60,11 @@ function Register(props) {
     function emailValidation() {
         var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         if (re.test(email)) {
-            return true;
+            if (listOfUsers.filter(e => e.email === email).length > 0) {
+                alert("Email already in use, please use a different email.")
+            } else {
+                return true;
+            }
         } else {
             alert("Please use a valid email.")
         }
@@ -115,7 +119,7 @@ function Register(props) {
                 <input type="email" className={styles.input} required onChange={(event) => {
                     setEmail(event.target.value);
                 }}/>
-                <button className={styles.btn} onClick={createUser}>Create User</button>
+                <button className={styles.btn} onClick={(e) => { e.preventDefault(); createUser()}}>Create User</button>
                 <p className={styles.link} onClick={props.function}>Already have an account? Sign in here</p>
             </div>
             <div>
