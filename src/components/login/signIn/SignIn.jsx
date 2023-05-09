@@ -22,7 +22,7 @@ function SignIn(props) {
     return (
         <div>
         <h1 className={styles.title}>Sign In</h1>
-            <form className={styles.form} onSubmit={()=> {login()}}>
+            <form className={styles.form}>
                 <input className={styles.input} 
                         type='text' 
                         name="username" 
@@ -39,7 +39,7 @@ function SignIn(props) {
                         onChange={(event) => {
                     setPassword(event.target.value);
                 }}></input>
-                <button className={styles.submit} type='submit'>Log In</button>
+                <button className={styles.submit} type='submit' onClick={(e) => { e.preventDefault(); login()}}>Log In</button>
                 <p className={styles.link} onClick={props.function}>Don't have an account? Register here</p>
             </form>
         </div>
