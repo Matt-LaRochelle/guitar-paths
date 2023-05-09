@@ -89,7 +89,6 @@ function Register(props) {
                                 },
                             ]);
                         });
-                        
                     }
                 }
             }  
