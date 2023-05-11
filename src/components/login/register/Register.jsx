@@ -84,6 +84,7 @@ function Register(props) {
                             email,
                             }).then((response) => {
                             alert("User Created!");
+                            console.log(response);
                             props.function2();
                             setListOfUsers([...listOfUsers, {
                                 username,

@@ -12,15 +12,21 @@ function SignIn(props) {
             username,
             password,
             }).then((response) => {
-            if (response.data === "Password is correct.") {
-                alert("Success!");
-                props.function2();
-            } else if (response.data === "Password is incorrect.") {
-                alert("Password is incorrect.");
-            } else if (response.data === "Username not in database.") {
-                alert("Username does not exist.");
-            }
-        });  
+            if (response.status === 200) {
+                if (response.data === "Incorrect username.") {
+                    alert("Username does not exist.")
+                } else if (response.data === "Incorrect password.") {
+                    alert("Password is incorrect.");
+                } else if (response.data.username === username) {
+                    alert("Success!");
+                    console.log(response);
+                    alert(response.data.username);
+                    alert(response.data.token);
+                    props.function2();
+                }
+            } else if (response.status === 400) {
+                alert(response.data);
+        }});  
     }
 
     return (
