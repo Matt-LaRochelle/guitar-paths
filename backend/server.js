@@ -27,11 +27,13 @@ connection.once('open', () => {
 //Import the files
 const exercisesRouter = require('./routes/exercises');
 const usersRouter = require('./routes/users');
+const earTrainingRouter = require('./routes/earTraining')
 
 
 //use the files
 app.use('/exercises', exercisesRouter);
 app.use('/users', usersRouter);
+app.use('./earTraning', earTrainingRouter)
 
 //Start backend server
 app.listen(port, () => {

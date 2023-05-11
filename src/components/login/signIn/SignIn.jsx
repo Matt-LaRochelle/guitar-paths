@@ -21,6 +21,7 @@ function SignIn(props) {
                     alert("Success!");
                     console.log(response);
                     alert(response.data.username);
+                    props.function3(response.data.username);
                     alert(response.data.token);
                     props.function2();
                 }

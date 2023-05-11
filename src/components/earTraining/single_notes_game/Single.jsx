@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from './Single.module.css';
 import sharps from '../../images/note-names-sharps.gif'
 import flats from '../../images/note-names-flats.gif';
 import audioClip from '../noteSounds/noteSounds';
 import Help from './Help';
+import Axios from 'axios';
+
 
 import { AiOutlineCheckCircle, AiOutlineCloseCircle } from 'react-icons/ai';
 
 
-function Single() {
+function Single(props) {
 
     const audioClips = audioClip;
 
@@ -26,6 +28,21 @@ function Single() {
 
     //Green check mark or red x
     const [gotAnswer, setGotAnswer] = useState(null);
+
+    //Follows in the app the best high score today
+    const [highScore, setHighScore] = useState(0);
+
+    const [dbHighScore, setDbHighScore] = useState(0);
+
+    useEffect(() => {
+        Axios.get("http://localhost:3001/earTraining").then((response) => {
+            if (!response.data) {
+                console.log("New user!");
+            } else {
+                console.log(response.data);
+            }
+        })
+    }, []);
 
     function play_note() {
         const note = new Audio(sound);
@@ -55,6 +72,7 @@ function Single() {
                 setAnswer(audioClips[number].note_name);
                 
                 setGotAnswer(true);
+                setHighScore(highScore + 1);
                 setTimeout(() => {
                     setGotAnswer(null);
                 }, 1000);
@@ -77,6 +95,7 @@ function Single() {
                 setCount(4);
                 
                 setGotAnswer(true);
+                setHighScore(highScore + 1);
                 setTimeout(() => {
                     setGotAnswer(null);
                 }, 1000);
@@ -91,6 +110,7 @@ function Single() {
                 setCount(4);
                 
                 setGotAnswer(false);
+                setHighScore(0);
                 setTimeout(() => {
                     setGotAnswer(null);
                 }, 1000);
@@ -138,6 +158,8 @@ function Single() {
                     { gotAnswer === false ? <AiOutlineCloseCircle className={styles.incorrect} /> : null }
                 </div>
             </div>
+            <h3>{props.user}</h3>
+            <h3>High score: {highScore}</h3>
 
             {/* help menu */}
             <Help />

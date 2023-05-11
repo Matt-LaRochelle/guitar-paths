@@ -5,6 +5,11 @@ import Login from './components/login/Login';
 
 function App2() {
     const [signedIn, setSignedIn] = useState(false);
+    const [username, setUsername] = useState("");
+
+    function logUser(user) {
+        setUsername(user)
+    }
 
     function accessGranted() {
         setSignedIn(!signedIn);
@@ -12,7 +17,12 @@ function App2() {
 
     return (
         <div>
-            { signedIn ? <App function2={accessGranted} /> : <Login function2={accessGranted} />}
+            { signedIn ? <App 
+                            function2={accessGranted}
+                            function3={logUser}
+                            user={username} /> : <Login 
+                                                        function2={accessGranted}
+                                                        function3={logUser} />}
         </div>
     );
 }

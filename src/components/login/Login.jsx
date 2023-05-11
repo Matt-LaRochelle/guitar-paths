@@ -13,7 +13,7 @@ function Login(props) {
     return (
         <div>
             { register ? 
-                <SignIn function={handleClick} function2={props.function2} /> : 
+                <SignIn function={handleClick} function2={props.function2} function3={props.function3} user={props.user} /> : 
                 <Register function={handleClick} function2={props.function2} />}
         </div>
     );

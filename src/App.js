@@ -27,11 +27,11 @@ function App(props) {
         <Route path="/home" element={<Home />}/>
         <Route path="/queries" element={<Queries />}/>
         <Route path="/practice" element={<Practice />}/>
-        <Route path="/eartraining" element={<EarTraining />}/>
+        <Route path="/eartraining" element={<EarTraining user={props.user} />}/>
         <Route path="/skill" element={<Skill />}/>
         <Route path="/theory" element={<Theory />}/>
         {/* <Route path="/" element={<Login />}/> */}
-        <Route path="/" element={<Profile function2={props.function2} />}/>
+        <Route path="/" element={<Profile function2={props.function2} user={props.user} />}/>
         <Route path="/game" element={<Game />}/>
 
         {/* Added for tutorial: */}

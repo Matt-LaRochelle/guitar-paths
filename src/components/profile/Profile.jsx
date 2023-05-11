@@ -7,7 +7,7 @@ function Profile(props) {
     return (
         <div className={styles.container}>
             <h1>Profile</h1>
-            <h2>Welcome {username}</h2>
+            <h2>Welcome {props.user}</h2>
             <button onClick={props.function2}>Log out</button>
             {/* <div className={styles.songs}>
                 <div className={styles.mastered}>
