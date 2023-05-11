@@ -32,7 +32,8 @@ router.route('/sign').post(async(req, res) => {
         const user = await User.findOne({ username })
 
         if (!user) {
-            res.send('Incorrect username');
+            console.log("Incorrect username.")
+            res.send('Incorrect username.');
         } else {
             const match = await bcrypt.compare(password, user.password)
     
@@ -41,7 +42,7 @@ router.route('/sign').post(async(req, res) => {
             } else {
                 const token = createToken(user._id);
                 console.log(token)
-                res.status(200).json({user, token})
+                res.status(200).json({username, token})
             }
         }
     }
